@@ -2,12 +2,30 @@ project:
   type: website
 
 website:
-  title: "5000-website-Zenan"
+  title: "DSAN 5000 Website Project by Zenan Wang"
   navbar:
     left:
-      - href: index.qmd
-        text: Home
-      - about.qmd
+      - href: aboutyou.qmd
+        text: About me
+      - href: code.qmd
+        text: Code
+      - href: introduction.qmd
+        text: Introduction
+      - href: datagather.qmd
+        text: Data Gathering
+      - href: dataclean.qmd
+        text: Data Cleaning
+      - href: dataexplore.qmd
+        text: Data Exploration
+      - href: clustering.qmd
+        text: Clustering
+      - href: dimreduction.qmd
+        text: Dimensionality reduction
+      - href: decisiontree.qmd
+        text: Decision Trees
+      - href: conclusion.qmd
+        text: Conclusions
+      
 
 format:
   html:
