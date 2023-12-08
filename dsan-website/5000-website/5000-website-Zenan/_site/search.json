@@ -1,5 +1,19 @@
 [
   {
+    "objectID": "code.html",
+    "href": "code.html",
+    "title": "",
+    "section": "",
+    "text": "To Github: https://github.com/anly501/dsan-5000-project-WillWangUNC"
+  },
+  {
+    "objectID": "aboutyou.html",
+    "href": "aboutyou.html",
+    "title": "About Me",
+    "section": "",
+    "text": "from PIL import Image\nmyImage = Image.open(\"./images/e3ea6870d90cc5b2bbf7e24c4242f75.jpg\")\nmyImage.show()"
+  },
+  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "5000-website-Zenan",
@@ -7,17 +21,31 @@
     "text": "This is a Quarto website.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites."
   },
   {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
+    "objectID": "aboutyou.html#poloar",
+    "href": "aboutyou.html#poloar",
+    "title": "About Me",
     "section": "",
-    "text": "About this site"
+    "text": "1 + 1\n\n2"
   },
   {
-    "objectID": "aboutyou.html",
-    "href": "aboutyou.html",
-    "title": "About",
+    "objectID": "aboutyou.html#a-photo-of-me",
+    "href": "aboutyou.html#a-photo-of-me",
+    "title": "About Me",
+    "section": "A photo of me:",
+    "text": "A photo of me:\n\nfrom PIL import Image\nmyImage = Image.open(\"./images/e3ea6870d90cc5b2bbf7e24c4242f75.jpg\")\nmyImage.show()"
+  },
+  {
+    "objectID": "aboutyou.html#a-quick-self-introduction",
+    "href": "aboutyou.html#a-quick-self-introduction",
+    "title": "About Me",
     "section": "",
-    "text": "About this site"
+    "text": "from PIL import Image\nmyImage = Image.open(\"./images/e3ea6870d90cc5b2bbf7e24c4242f75.jpg\")\nmyImage.show()"
+  },
+  {
+    "objectID": "aboutyou.html#backgrounds",
+    "href": "aboutyou.html#backgrounds",
+    "title": "About Me",
+    "section": "Backgrounds:",
+    "text": "Backgrounds:\nHey everyone, I am Zenan Wang, commonly known as Will, hailing from Nanjing, China. I completed my undergraduate studies at UNC Chapel Hill, achieving a double major in Mathematics and Statistics. My interests include cycling, fitness activities, and indulging in video games for leisure.\n\nLinkedin link: https://www.linkedin.com/in/zenan-wang-062695260/"
   }
 ]
