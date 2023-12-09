@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>DSAN 5000 Website Project by Zenan Wang – datagather</title>
+<title>Data gathering</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,6 +19,40 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -59,6 +93,9 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" integrity="sha512-c3Nl8+7g4LMSTdrm621y7kf9v3SDPnhxLNhcjFJbKECVnmZHTdo+IRO05sNLTH/D3vA6u1X32ehoLC7WFVdheg==" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+<script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
 
 
 <link rel="stylesheet" href="styles.css">
@@ -70,11 +107,6 @@ ul.task-list li input[type="checkbox"] {
   <header id="quarto-header" class="headroom fixed-top">
     <nav class="navbar navbar-expand-lg navbar-dark ">
       <div class="navbar-container container-fluid">
-      <div class="navbar-brand-container">
-    <a class="navbar-brand" href="./index.html">
-    <span class="navbar-title">DSAN 5000 Website Project by Zenan Wang</span>
-    </a>
-  </div>
             <div id="quarto-search" class="" title="Search"></div>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
@@ -88,6 +120,10 @@ ul.task-list li input[type="checkbox"] {
   <li class="nav-item">
     <a class="nav-link" href="./code.html" rel="" target="">
  <span class="menu-text">Code</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./data.html" rel="" target="">
+ <span class="menu-text">Data</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="./introduction.html" rel="" target="">
@@ -133,15 +169,793 @@ ul.task-list li input[type="checkbox"] {
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction:</a></li>
+  <li><a href="#first-dataset" id="toc-first-dataset" class="nav-link" data-scroll-target="#first-dataset">First dataset:</a>
+  <ul class="collapse">
+  <li><a href="#name-tesla-deaths" id="toc-name-tesla-deaths" class="nav-link" data-scroll-target="#name-tesla-deaths">Name: Tesla Deaths</a></li>
+  <li><a href="#summary-of-the-data" id="toc-summary-of-the-data" class="nav-link" data-scroll-target="#summary-of-the-data">Summary of the data:</a>
+  <ul class="collapse">
+  <li><a href="#quick-exploration-of-the-data" id="toc-quick-exploration-of-the-data" class="nav-link" data-scroll-target="#quick-exploration-of-the-data">Quick exploration of the data:</a></li>
+  <li><a href="#overview-of-the-dataset" id="toc-overview-of-the-dataset" class="nav-link" data-scroll-target="#overview-of-the-dataset">Overview of the dataset</a></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#second-dataset" id="toc-second-dataset" class="nav-link" data-scroll-target="#second-dataset">Second dataset:</a>
+  <ul class="collapse">
+  <li><a href="#name-uk-road-safety-traffic-accidents-and-vehicles" id="toc-name-uk-road-safety-traffic-accidents-and-vehicles" class="nav-link" data-scroll-target="#name-uk-road-safety-traffic-accidents-and-vehicles">Name: UK Road Safety: Traffic Accidents and Vehicles</a></li>
+  <li><a href="#summary" id="toc-summary" class="nav-link" data-scroll-target="#summary">Summary:</a>
+  <ul class="collapse">
+  <li><a href="#overview-of-the-dataset-1" id="toc-overview-of-the-dataset-1" class="nav-link" data-scroll-target="#overview-of-the-dataset-1">Overview of the dataset</a></li>
+  <li><a href="#check-for-the-dimension-of-the-data-set" id="toc-check-for-the-dimension-of-the-data-set" class="nav-link" data-scroll-target="#check-for-the-dimension-of-the-data-set">Check for the dimension of the data set</a></li>
+  <li><a href="#check-for-null-values" id="toc-check-for-null-values" class="nav-link" data-scroll-target="#check-for-null-values">Check for null values</a></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#third-dataset-acquired-using-api" id="toc-third-dataset-acquired-using-api" class="nav-link" data-scroll-target="#third-dataset-acquired-using-api">Third dataset (acquired using API)</a>
+  <ul class="collapse">
+  <li><a href="#summary-1" id="toc-summary-1" class="nav-link" data-scroll-target="#summary-1">Summary:</a></li>
+  </ul></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Data gathering</h1>
+</div>
 
 
 
+<div class="quarto-title-meta">
 
+    
+  
+    
+  </div>
+  
+
+</header>
+
+<section id="introduction" class="level2">
+<h2 class="anchored" data-anchor-id="introduction">Introduction:</h2>
+<p>In recent years, the automotive industry has witnessed a transformative shift towards sustainable and eco-friendly transportation solutions, exemplified by the increasing popularity of electric vehicles (EVs). Among the trailblazers in this revolution is Tesla, a pioneering company that has significantly contributed to the rise of electric cars on our roads. As society embraces cleaner energy alternatives, concerns about the safety of electric cars, particularly in comparison to their traditional gas-powered counterparts, have become a focal point of discussion. This study endeavors to conduct a comprehensive analysis of traffic accidents involving electric cars, with a specific emphasis on Tesla vehicles, and draw meaningful comparisons with incidents involving traditional gas-powered cars. By examining relevant data, trends, and contributing factors, this research aims to shed light on the safety landscape of electric vehicles, providing valuable insights for both policymakers and the general public as we navigate the evolving landscape of transportation technologies.</p>
+</section>
+<section id="first-dataset" class="level1">
+<h1>First dataset:</h1>
+<section id="name-tesla-deaths" class="level3">
+<h3 class="anchored" data-anchor-id="name-tesla-deaths">Name: Tesla Deaths</h3>
+<p>link to the dataset: <a href="https://www.kaggle.com/datasets/thedevastator/tesla-accident-fatalities-analysis-and-statistic" class="uri">https://www.kaggle.com/datasets/thedevastator/tesla-accident-fatalities-analysis-and-statistic</a></p>
+</section>
+<section id="summary-of-the-data" class="level2">
+<h2 class="anchored" data-anchor-id="summary-of-the-data">Summary of the data:</h2>
+<ol type="1">
+<li>Case #: Unique identifier for each case. (String)</li>
+<li>Year: Year of the accident. (Integer)</li>
+<li>Date: Date of the accident. (Date)</li>
+<li>Country: The country where the accident occurred. (String)</li>
+<li>State: State where the accident occurred. (String)</li>
+<li>Description: Description of the accident. (String)</li>
+<li>Deaths: Number of Deaths (Int)</li>
+<li>Tesla driver: Whether the Tesla driver was killed in the accident. (Boolean)</li>
+<li>Tesla occupant: Whether a Tesla occupant was killed in the accident. (Boolean)</li>
+<li>Other Vehicle: whether the Tesla crashed another vehicle (Boolean)</li>
+<li>Cyclist/ Peds: Whether Tesla killed a Cyclist/Pedestrian in the accident. (Boolean)</li>
+<li>SLA + cycl / peds: Tesla + Cycle / Pedestrian (Boolean)</li>
+<li>Autopilot claimed: People who have claimed Auto Pilot (Boolean)</li>
+<li>Verified Tesla Autopilot Death: Verified Tesla Autopilot Death (Boolean)</li>
+<li>Verified Tesla Autopilot Death &amp; All Deaths Reported to NHTSA SGO : Verified Tesla</li>
+<li>Autopilot Death &amp; All Deaths Reported to NHTSA SGO (Boolean)</li>
+<li>Source: Source of the data. (String)</li>
+<li>Source: Source of the data. (String)</li>
+<li>Source: Source of the data. (String)</li>
+<li>Note: Note (String)</li>
+<li>Model: Model of the Tesla vehicle involved in the accident. (String)</li>
+<li>Source: Source of the data. (String)</li>
+<li>Deceased 1: 1st Dead person’s Name (String)</li>
+<li>Deceased 2: 2nd Dead person’s Name (String)</li>
+<li>Deceased 3: 3rd Dead person’s Name (String)</li>
+<li>Deceased 4: 4th Dead person’s Name (String)</li>
+</ol>
+<section id="quick-exploration-of-the-data" class="level3">
+<h3 class="anchored" data-anchor-id="quick-exploration-of-the-data">Quick exploration of the data:</h3>
+<div class="cell" data-execution_count="1">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> missingno <span class="im">as</span> msno</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> seaborn <span class="im">as</span> sns</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> nltk</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>nltk.download(<span class="st">'punkt'</span>)</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>nltk.download(<span class="st">'averaged_perceptron_tagger'</span>)</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> nltk <span class="im">import</span> word_tokenize</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> nltk.stem <span class="im">import</span> WordNetLemmatizer</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> nltk.corpus <span class="im">import</span> wordnet</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stderr">
+<pre><code>[nltk_data] Downloading package punkt to
+[nltk_data]     C:\Users\23898\AppData\Roaming\nltk_data...
+[nltk_data]   Package punkt is already up-to-date!
+[nltk_data] Downloading package averaged_perceptron_tagger to
+[nltk_data]     C:\Users\23898\AppData\Roaming\nltk_data...
+[nltk_data]   Package averaged_perceptron_tagger is already up-to-
+[nltk_data]       date!</code></pre>
+</div>
+</div>
+</section>
+<section id="overview-of-the-dataset" class="level3">
+<h3 class="anchored" data-anchor-id="overview-of-the-dataset">Overview of the dataset</h3>
+<div class="cell" data-execution_count="2">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.read_csv(<span class="st">"./Data/Tesla Deaths - Deaths.csv"</span>)</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>df.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-display" data-execution_count="42">
+<div>
+
+
+<table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">Case #</th>
+<th data-quarto-table-cell-role="th">Year</th>
+<th data-quarto-table-cell-role="th">Date</th>
+<th data-quarto-table-cell-role="th">Country</th>
+<th data-quarto-table-cell-role="th">State</th>
+<th data-quarto-table-cell-role="th">Description</th>
+<th data-quarto-table-cell-role="th">Deaths</th>
+<th data-quarto-table-cell-role="th">Tesla driver</th>
+<th data-quarto-table-cell-role="th">Tesla occupant</th>
+<th data-quarto-table-cell-role="th">Other vehicle</th>
+<th data-quarto-table-cell-role="th">...</th>
+<th data-quarto-table-cell-role="th">Verified Tesla Autopilot Deaths</th>
+<th data-quarto-table-cell-role="th">Verified Tesla Autopilot Deaths + All Deaths Reported to NHTSA SGO</th>
+<th data-quarto-table-cell-role="th">Unnamed: 16</th>
+<th data-quarto-table-cell-role="th">Unnamed: 17</th>
+<th data-quarto-table-cell-role="th">Source</th>
+<th data-quarto-table-cell-role="th">Note</th>
+<th data-quarto-table-cell-role="th">Deceased 1</th>
+<th data-quarto-table-cell-role="th">Deceased 2</th>
+<th data-quarto-table-cell-role="th">Deceased 3</th>
+<th data-quarto-table-cell-role="th">Deceased 4</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">0</td>
+<td>294.0</td>
+<td>2022.0</td>
+<td>1/17/2023</td>
+<td>USA</td>
+<td>CA</td>
+<td>Tesla crashes into back of semi</td>
+<td>1.0</td>
+<td>1</td>
+<td>-</td>
+<td>-</td>
+<td>...</td>
+<td>-</td>
+<td>-</td>
+<td>https://web.archive.org/web/20221222203930/ht...</td>
+<td>https://web.archive.org/web/20221222203930/ht...</td>
+<td>https://web.archive.org/web/20230118162813/ht...</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">1</td>
+<td>293.0</td>
+<td>2022.0</td>
+<td>1/7/2023</td>
+<td>Canada</td>
+<td>-</td>
+<td>Tesla crashes</td>
+<td>1.0</td>
+<td>1</td>
+<td>-</td>
+<td>-</td>
+<td>...</td>
+<td>-</td>
+<td>-</td>
+<td>https://web.archive.org/web/20221222203930/ht...</td>
+<td>https://web.archive.org/web/20221222203930/ht...</td>
+<td>https://web.archive.org/web/20230109041434/ht...</td>
+<td>NaN</td>
+<td>Taren Singh Lal</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">2</td>
+<td>292.0</td>
+<td>2022.0</td>
+<td>1/7/2023</td>
+<td>USA</td>
+<td>WA</td>
+<td>Tesla hits pole, catches on fire</td>
+<td>1.0</td>
+<td>-</td>
+<td>1</td>
+<td>-</td>
+<td>...</td>
+<td>-</td>
+<td>-</td>
+<td>https://web.archive.org/web/20221222203930/ht...</td>
+<td>https://web.archive.org/web/20221222203930/ht...</td>
+<td>https://web.archive.org/web/20230107232745/ht...</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">3</td>
+<td>291.0</td>
+<td>2022.0</td>
+<td>12/22/2022</td>
+<td>USA</td>
+<td>GA</td>
+<td>Tesla crashes and burns</td>
+<td>1.0</td>
+<td>1</td>
+<td>-</td>
+<td>-</td>
+<td>...</td>
+<td>-</td>
+<td>-</td>
+<td>https://web.archive.org/web/20221222203930/ht...</td>
+<td>https://web.archive.org/web/20221222203930/ht...</td>
+<td>https://web.archive.org/web/20221222203930/ht...</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">4</td>
+<td>290.0</td>
+<td>2022.0</td>
+<td>12/19/2022</td>
+<td>Canada</td>
+<td>-</td>
+<td>Tesla crashes into storefront</td>
+<td>1.0</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>...</td>
+<td>-</td>
+<td>-</td>
+<td>https://web.archive.org/web/20221223203725/ht...</td>
+<td>https://web.archive.org/web/20221223203725/ht...</td>
+<td>https://web.archive.org/web/20221223203725/ht...</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+<td>NaN</td>
+</tr>
+</tbody>
+</table>
+
+<p>5 rows × 24 columns</p>
+</div>
+</div>
+</div>
+</section>
+</section>
+</section>
+<section id="second-dataset" class="level1">
+<h1>Second dataset:</h1>
+<section id="name-uk-road-safety-traffic-accidents-and-vehicles" class="level3">
+<h3 class="anchored" data-anchor-id="name-uk-road-safety-traffic-accidents-and-vehicles">Name: UK Road Safety: Traffic Accidents and Vehicles</h3>
+<p><img src="./images/HEADER-MOBILE-GreatBritainroadtrafficaccidentreport_HxW0676x1006_72eadcd2-256c-4153-9c8e-5b2ba8731839.webp" class="img-fluid" width="300"></p>
+<section id="link-httpswww.kaggle.comdatasetstsiarasuk-road-safety-accidents-and-vehicles" class="level4">
+<h4 class="anchored" data-anchor-id="link-httpswww.kaggle.comdatasetstsiarasuk-road-safety-accidents-and-vehicles">link: <a href="https://www.kaggle.com/datasets/tsiaras/uk-road-safety-accidents-and-vehicles" class="uri">https://www.kaggle.com/datasets/tsiaras/uk-road-safety-accidents-and-vehicles</a></h4>
+</section>
+</section>
+<section id="summary" class="level2">
+<h2 class="anchored" data-anchor-id="summary">Summary:</h2>
+<p>The UK government collects and publishes (usually on an annual basis) detailed information about traffic accidents across the country. This information includes, but is not limited to, geographical locations, weather conditions, type of vehicles, number of casualties and vehicle manoeuvres, making this a very interesting and comprehensive dataset for analysis and research.</p>
+<p>The creation of this dataset was inspired by the one previously published by Dave Fisher-Hickey. However, this current dataset features the following significant improvements over its predecessor:</p>
+<ol type="1">
+<li>It covers a wider date range of events.</li>
+<li>Most of the coded data variables have been transformed to textual strings using relevant lookup tables, enabling more efficient and “human-readable” analysis.</li>
+<li>It features detailed information about the vehicles involved in the accidents.</li>
+</ol>
+<section id="overview-of-the-dataset-1" class="level3">
+<h3 class="anchored" data-anchor-id="overview-of-the-dataset-1">Overview of the dataset</h3>
+<div class="cell" data-execution_count="3">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>data <span class="op">=</span> pd.read_csv(<span class="st">'./Data/RoadAccident.csv'</span>)</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>data.drop([<span class="st">'Accident_Index'</span>,<span class="st">'Datetime'</span>], axis <span class="op">=</span> <span class="dv">1</span>,inplace<span class="op">=</span><span class="va">True</span>) </span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>data</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-display" data-execution_count="43">
+<div>
+
+
+<table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">Latitude</th>
+<th data-quarto-table-cell-role="th">Longitude</th>
+<th data-quarto-table-cell-role="th">Region</th>
+<th data-quarto-table-cell-role="th">Urban_or_Rural_Area</th>
+<th data-quarto-table-cell-role="th">X1st_Road_Class</th>
+<th data-quarto-table-cell-role="th">Driver_IMD_Decile</th>
+<th data-quarto-table-cell-role="th">Speed_limit</th>
+<th data-quarto-table-cell-role="th">Road_Type</th>
+<th data-quarto-table-cell-role="th">Road_Surface_Conditions</th>
+<th data-quarto-table-cell-role="th">Weather</th>
+<th data-quarto-table-cell-role="th">...</th>
+<th data-quarto-table-cell-role="th">Junction_Detail</th>
+<th data-quarto-table-cell-role="th">Junction_Location</th>
+<th data-quarto-table-cell-role="th">X1st_Point_of_Impact</th>
+<th data-quarto-table-cell-role="th">Driver_Journey_Purpose</th>
+<th data-quarto-table-cell-role="th">Engine_CC</th>
+<th data-quarto-table-cell-role="th">Propulsion_Code</th>
+<th data-quarto-table-cell-role="th">Vehicle_Make</th>
+<th data-quarto-table-cell-role="th">Vehicle_Category</th>
+<th data-quarto-table-cell-role="th">Vehicle_Manoeuvre</th>
+<th data-quarto-table-cell-role="th">Accident_Severity</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">0</td>
+<td>51.495653</td>
+<td>-0.179097</td>
+<td>London</td>
+<td>Urban</td>
+<td>C</td>
+<td>7</td>
+<td>30</td>
+<td>Single carriageway</td>
+<td>Dry</td>
+<td>Fine</td>
+<td>...</td>
+<td>Not at junction or within 20 metres</td>
+<td>Not at or within 20 metres of junction</td>
+<td>Front</td>
+<td>Other/Not known</td>
+<td>1781</td>
+<td>Petrol</td>
+<td>Audi</td>
+<td>Car</td>
+<td>Going ahead</td>
+<td>Slight</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">1</td>
+<td>51.499635</td>
+<td>-0.209915</td>
+<td>London</td>
+<td>Urban</td>
+<td>A</td>
+<td>3</td>
+<td>30</td>
+<td>Single carriageway</td>
+<td>Dry</td>
+<td>Fine</td>
+<td>...</td>
+<td>More than 4 arms (not roundabout)</td>
+<td>Mid Junction - on roundabout or on main road</td>
+<td>Offside</td>
+<td>Other/Not known</td>
+<td>2987</td>
+<td>Heavy oil</td>
+<td>Mercedes</td>
+<td>Car</td>
+<td>Waiting to go</td>
+<td>Slight</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">2</td>
+<td>51.492515</td>
+<td>-0.168130</td>
+<td>London</td>
+<td>Urban</td>
+<td>Unclassified</td>
+<td>5</td>
+<td>30</td>
+<td>Single carriageway</td>
+<td>Dry</td>
+<td>Fine</td>
+<td>...</td>
+<td>Crossroads</td>
+<td>Mid Junction - on roundabout or on main road</td>
+<td>Front</td>
+<td>Journey as part of work</td>
+<td>998</td>
+<td>Petrol</td>
+<td>Nissan</td>
+<td>Car</td>
+<td>Going ahead</td>
+<td>Slight</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">3</td>
+<td>51.504784</td>
+<td>-0.193863</td>
+<td>London</td>
+<td>Urban</td>
+<td>A</td>
+<td>2</td>
+<td>30</td>
+<td>Single carriageway</td>
+<td>Dry</td>
+<td>Fine</td>
+<td>...</td>
+<td>T or staggered junction</td>
+<td>Mid Junction - on roundabout or on main road</td>
+<td>Offside</td>
+<td>Journey as part of work</td>
+<td>2179</td>
+<td>Heavy oil</td>
+<td>Citroen</td>
+<td>Van</td>
+<td>Turning right</td>
+<td>Slight</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">4</td>
+<td>51.522072</td>
+<td>-0.212927</td>
+<td>London</td>
+<td>Urban</td>
+<td>B</td>
+<td>3</td>
+<td>30</td>
+<td>Single carriageway</td>
+<td>Wet or damp</td>
+<td>Fine</td>
+<td>...</td>
+<td>T or staggered junction</td>
+<td>Approaching junction or waiting/parked at junc...</td>
+<td>Nearside</td>
+<td>Journey as part of work</td>
+<td>2198</td>
+<td>Heavy oil</td>
+<td>Ford</td>
+<td>Van</td>
+<td>Overtaking</td>
+<td>Slight</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">75545</td>
+<td>56.531008</td>
+<td>-2.945169</td>
+<td>Scotland</td>
+<td>Rural</td>
+<td>A</td>
+<td>9</td>
+<td>70</td>
+<td>Dual carriageway</td>
+<td>Wet or damp</td>
+<td>Raining</td>
+<td>...</td>
+<td>T or staggered junction</td>
+<td>Approaching junction or waiting/parked at junc...</td>
+<td>Front</td>
+<td>Other/Not known</td>
+<td>2199</td>
+<td>Heavy oil</td>
+<td>Kia</td>
+<td>Car</td>
+<td>Going ahead</td>
+<td>Fatal_Serious</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">75546</td>
+<td>56.677867</td>
+<td>-3.688719</td>
+<td>Scotland</td>
+<td>Rural</td>
+<td>A</td>
+<td>10</td>
+<td>70</td>
+<td>Dual carriageway</td>
+<td>Dry</td>
+<td>Fine</td>
+<td>...</td>
+<td>T or staggered junction</td>
+<td>Cleared junction or waiting/parked at junction...</td>
+<td>Front</td>
+<td>Other/Not known</td>
+<td>1598</td>
+<td>Petrol</td>
+<td>Vauxhall</td>
+<td>Car</td>
+<td>Going ahead</td>
+<td>Fatal_Serious</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">75547</td>
+<td>55.720385</td>
+<td>-2.654035</td>
+<td>Scotland</td>
+<td>Rural</td>
+<td>A</td>
+<td>9</td>
+<td>60</td>
+<td>Single carriageway</td>
+<td>Dry</td>
+<td>Fine</td>
+<td>...</td>
+<td>Not at junction or within 20 metres</td>
+<td>Not at or within 20 metres of junction</td>
+<td>Front</td>
+<td>Other/Not known</td>
+<td>1598</td>
+<td>Heavy oil</td>
+<td>Audi</td>
+<td>Car</td>
+<td>Going ahead</td>
+<td>Fatal_Serious</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">75548</td>
+<td>54.850068</td>
+<td>-4.925632</td>
+<td>Scotland</td>
+<td>Rural</td>
+<td>B</td>
+<td>5</td>
+<td>60</td>
+<td>Single carriageway</td>
+<td>Dry</td>
+<td>Fine</td>
+<td>...</td>
+<td>Not at junction or within 20 metres</td>
+<td>Not at or within 20 metres of junction</td>
+<td>Front</td>
+<td>Other/Not known</td>
+<td>1000</td>
+<td>Petrol</td>
+<td>BMW</td>
+<td>Motorcycle</td>
+<td>Going ahead</td>
+<td>Fatal_Serious</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">75549</td>
+<td>55.158556</td>
+<td>-4.195310</td>
+<td>Scotland</td>
+<td>Rural</td>
+<td>A</td>
+<td>2</td>
+<td>60</td>
+<td>Single carriageway</td>
+<td>Dry</td>
+<td>Fine</td>
+<td>...</td>
+<td>Not at junction or within 20 metres</td>
+<td>Not at or within 20 metres of junction</td>
+<td>Front</td>
+<td>Journey as part of work</td>
+<td>2143</td>
+<td>Heavy oil</td>
+<td>Mercedes</td>
+<td>Van</td>
+<td>Going ahead</td>
+<td>Fatal_Serious</td>
+</tr>
+</tbody>
+</table>
+
+<p>75550 rows × 31 columns</p>
+</div>
+</div>
+</div>
+</section>
+<section id="check-for-the-dimension-of-the-data-set" class="level3">
+<h3 class="anchored" data-anchor-id="check-for-the-dimension-of-the-data-set">Check for the dimension of the data set</h3>
+<div class="cell" data-execution_count="4">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'There are a total of </span><span class="sc">{}</span><span class="st"> rows and </span><span class="sc">{}</span><span class="st"> columns in the original dataset'</span>.<span class="bu">format</span>(data.shape[<span class="dv">0</span>],data.shape[<span class="dv">1</span>]))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>There are a total of 75550 rows and 31 columns in the original dataset</code></pre>
+</div>
+</div>
+</section>
+<section id="check-for-null-values" class="level3">
+<h3 class="anchored" data-anchor-id="check-for-null-values">Check for null values</h3>
+<div class="cell" data-execution_count="5">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Any null values in the original dataset?: </span><span class="sc">{}</span><span class="st">"</span>.<span class="bu">format</span>(data.isnull().values.<span class="bu">any</span>()))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>Any null values in the original dataset?: False</code></pre>
+</div>
+</div>
+</section>
+</section>
+</section>
+<section id="third-dataset-acquired-using-api" class="level1">
+<h1>Third dataset (acquired using API)</h1>
+<section id="summary-1" class="level2">
+<h2 class="anchored" data-anchor-id="summary-1">Summary:</h2>
+<p>I obtained the ensuing dataset by utilizing the News-API to search for articles pertaining to Tesla accidents. I also processed and curated the articles, saving them in a structured dataset for subsequent analysis. Furthermore, I generated a word cloud to see prominent keywords within the corpus.</p>
+<div class="cell" data-execution_count="6">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> requests</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> json</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> re</span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.feature_extraction.text <span class="im">import</span> CountVectorizer</span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>API_KEY<span class="op">=</span><span class="st">'2a0218c20cdd48d29d44f1271c267a25'</span></span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>baseURL <span class="op">=</span> <span class="st">"https://newsapi.org/v2/everything?"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<div class="cell" data-execution_count="7">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>total_requests<span class="op">=</span> <span class="dv">20</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>verbose<span class="op">=</span><span class="va">True</span></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>TOPIC<span class="op">=</span><span class="st">'Tesla accident'</span></span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>URLpost <span class="op">=</span> {<span class="st">'apiKey'</span>: API_KEY,</span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>            <span class="st">'q'</span>: <span class="st">'+'</span><span class="op">+</span>TOPIC,</span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>            <span class="st">'sortBy'</span>: <span class="st">'relevancy'</span>,</span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a>            <span class="st">'totalRequests'</span>: <span class="dv">1</span>}</span>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a>response <span class="op">=</span> requests.get(baseURL, URLpost)  </span>
+<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a>response <span class="op">=</span> response.json() </span>
+<span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-12"><a href="#cb10-12" aria-hidden="true" tabindex="-1"></a><span class="co"># PRETTY PRINT</span></span>
+<span id="cb10-13"><a href="#cb10-13" aria-hidden="true" tabindex="-1"></a><span class="co"># https://www.digitalocean.com/community/tutorials/python-pretty-print-json</span></span>
+<span id="cb10-14"><a href="#cb10-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-15"><a href="#cb10-15" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> datetime <span class="im">import</span> datetime</span>
+<span id="cb10-16"><a href="#cb10-16" aria-hidden="true" tabindex="-1"></a>timestamp <span class="op">=</span> datetime.now().strftime(<span class="st">"%Y-%m-</span><span class="sc">%d</span><span class="st">-H%H-M%M-S%S"</span>)</span>
+<span id="cb10-17"><a href="#cb10-17" aria-hidden="true" tabindex="-1"></a><span class="cf">with</span> <span class="bu">open</span>(timestamp<span class="op">+</span><span class="st">'-newapi-raw-data.json'</span>, <span class="st">'w'</span>) <span class="im">as</span> file_georetown:</span>
+<span id="cb10-18"><a href="#cb10-18" aria-hidden="true" tabindex="-1"></a>    json.dump(response, file_georetown, indent<span class="op">=</span><span class="dv">4</span>)</span>
+<span id="cb10-19"><a href="#cb10-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-20"><a href="#cb10-20" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> string_cleaner(input_string):</span>
+<span id="cb10-21"><a href="#cb10-21" aria-hidden="true" tabindex="-1"></a>    <span class="cf">try</span>: </span>
+<span id="cb10-22"><a href="#cb10-22" aria-hidden="true" tabindex="-1"></a>        out<span class="op">=</span>re.sub(<span class="vs">r"""</span></span>
+<span id="cb10-23"><a href="#cb10-23" aria-hidden="true" tabindex="-1"></a><span class="vs">                    [,.;@#?!&amp;$-]+  # Accept one or more copies of punctuation</span></span>
+<span id="cb10-24"><a href="#cb10-24" aria-hidden="true" tabindex="-1"></a><span class="vs">                    \ *           # plus zero or more copies of a space,</span></span>
+<span id="cb10-25"><a href="#cb10-25" aria-hidden="true" tabindex="-1"></a><span class="vs">                    """</span>,</span>
+<span id="cb10-26"><a href="#cb10-26" aria-hidden="true" tabindex="-1"></a>                    <span class="st">" "</span>,          <span class="co"># and replace it with a single space</span></span>
+<span id="cb10-27"><a href="#cb10-27" aria-hidden="true" tabindex="-1"></a>                    input_string, flags<span class="op">=</span>re.VERBOSE)</span>
+<span id="cb10-28"><a href="#cb10-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-29"><a href="#cb10-29" aria-hidden="true" tabindex="-1"></a>        <span class="co">#REPLACE SELECT CHARACTERS WITH NOTHING</span></span>
+<span id="cb10-30"><a href="#cb10-30" aria-hidden="true" tabindex="-1"></a>        out <span class="op">=</span> re.sub(<span class="st">'[’.]+'</span>, <span class="st">''</span>, input_string)</span>
+<span id="cb10-31"><a href="#cb10-31" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-32"><a href="#cb10-32" aria-hidden="true" tabindex="-1"></a>        <span class="co">#ELIMINATE DUPLICATE WHITESPACES USING WILDCARDS</span></span>
+<span id="cb10-33"><a href="#cb10-33" aria-hidden="true" tabindex="-1"></a>        out <span class="op">=</span> re.sub(<span class="vs">r'\s+'</span>, <span class="st">' '</span>, out)</span>
+<span id="cb10-34"><a href="#cb10-34" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-35"><a href="#cb10-35" aria-hidden="true" tabindex="-1"></a>        <span class="co">#CONVERT TO LOWER CASE</span></span>
+<span id="cb10-36"><a href="#cb10-36" aria-hidden="true" tabindex="-1"></a>        out<span class="op">=</span>out.lower()</span>
+<span id="cb10-37"><a href="#cb10-37" aria-hidden="true" tabindex="-1"></a>    <span class="cf">except</span>:</span>
+<span id="cb10-38"><a href="#cb10-38" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="st">"ERROR"</span>)</span>
+<span id="cb10-39"><a href="#cb10-39" aria-hidden="true" tabindex="-1"></a>        out<span class="op">=</span><span class="st">''</span></span>
+<span id="cb10-40"><a href="#cb10-40" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> out</span>
+<span id="cb10-41"><a href="#cb10-41" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-42"><a href="#cb10-42" aria-hidden="true" tabindex="-1"></a>article_list<span class="op">=</span>response[<span class="st">'articles'</span>]   </span>
+<span id="cb10-43"><a href="#cb10-43" aria-hidden="true" tabindex="-1"></a>article_keys<span class="op">=</span>article_list[<span class="dv">0</span>].keys()</span>
+<span id="cb10-44"><a href="#cb10-44" aria-hidden="true" tabindex="-1"></a>index<span class="op">=</span><span class="dv">0</span></span>
+<span id="cb10-45"><a href="#cb10-45" aria-hidden="true" tabindex="-1"></a>cleaned_data1<span class="op">=</span>[]<span class="op">;</span>  </span>
+<span id="cb10-46"><a href="#cb10-46" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> article <span class="kw">in</span> article_list:</span>
+<span id="cb10-47"><a href="#cb10-47" aria-hidden="true" tabindex="-1"></a>    tmp<span class="op">=</span>[]</span>
+<span id="cb10-48"><a href="#cb10-48" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span>(verbose):</span>
+<span id="cb10-49"><a href="#cb10-49" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="st">"#------------------------------------------"</span>)</span>
+<span id="cb10-50"><a href="#cb10-50" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="st">"#"</span>,index)</span>
+<span id="cb10-51"><a href="#cb10-51" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="st">"#------------------------------------------"</span>)</span>
+<span id="cb10-52"><a href="#cb10-52" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-53"><a href="#cb10-53" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> key <span class="kw">in</span> article_keys:</span>
+<span id="cb10-54"><a href="#cb10-54" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span>(verbose):</span>
+<span id="cb10-55"><a href="#cb10-55" aria-hidden="true" tabindex="-1"></a>            <span class="bu">print</span>(<span class="st">"----------------"</span>)</span>
+<span id="cb10-56"><a href="#cb10-56" aria-hidden="true" tabindex="-1"></a>            <span class="bu">print</span>(key)</span>
+<span id="cb10-57"><a href="#cb10-57" aria-hidden="true" tabindex="-1"></a>            <span class="bu">print</span>(article[key])</span>
+<span id="cb10-58"><a href="#cb10-58" aria-hidden="true" tabindex="-1"></a>            <span class="bu">print</span>(<span class="st">"----------------"</span>)</span>
+<span id="cb10-59"><a href="#cb10-59" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-60"><a href="#cb10-60" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span>(key<span class="op">==</span><span class="st">'source'</span>):</span>
+<span id="cb10-61"><a href="#cb10-61" aria-hidden="true" tabindex="-1"></a>            src<span class="op">=</span>string_cleaner(article[key][<span class="st">'name'</span>])</span>
+<span id="cb10-62"><a href="#cb10-62" aria-hidden="true" tabindex="-1"></a>            tmp.append(src) </span>
+<span id="cb10-63"><a href="#cb10-63" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-64"><a href="#cb10-64" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span>(key<span class="op">==</span><span class="st">'author'</span>):</span>
+<span id="cb10-65"><a href="#cb10-65" aria-hidden="true" tabindex="-1"></a>            author<span class="op">=</span>string_cleaner(article[key])</span>
+<span id="cb10-66"><a href="#cb10-66" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-67"><a href="#cb10-67" aria-hidden="true" tabindex="-1"></a>            <span class="cf">if</span>(src <span class="kw">in</span> author): </span>
+<span id="cb10-68"><a href="#cb10-68" aria-hidden="true" tabindex="-1"></a>                <span class="bu">print</span>(<span class="st">" AUTHOR ERROR:"</span>,author)<span class="op">;</span>author<span class="op">=</span><span class="st">'NA'</span></span>
+<span id="cb10-69"><a href="#cb10-69" aria-hidden="true" tabindex="-1"></a>            tmp.append(author)</span>
+<span id="cb10-70"><a href="#cb10-70" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-71"><a href="#cb10-71" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span>(key<span class="op">==</span><span class="st">'title'</span>):</span>
+<span id="cb10-72"><a href="#cb10-72" aria-hidden="true" tabindex="-1"></a>            tmp.append(string_cleaner(article[key]))</span>
+<span id="cb10-73"><a href="#cb10-73" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-74"><a href="#cb10-74" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span>(key<span class="op">==</span><span class="st">'description'</span>):</span>
+<span id="cb10-75"><a href="#cb10-75" aria-hidden="true" tabindex="-1"></a>            tmp.append(string_cleaner(article[key]))</span>
+<span id="cb10-76"><a href="#cb10-76" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-77"><a href="#cb10-77" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span>(key<span class="op">==</span><span class="st">'content'</span>):</span>
+<span id="cb10-78"><a href="#cb10-78" aria-hidden="true" tabindex="-1"></a>            tmp.append(string_cleaner(article[key]))</span>
+<span id="cb10-79"><a href="#cb10-79" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-80"><a href="#cb10-80" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span>(key<span class="op">==</span><span class="st">'publishedAt'</span>):</span>
+<span id="cb10-81"><a href="#cb10-81" aria-hidden="true" tabindex="-1"></a>           <span class="co">#DEFINE DATA PATERN FOR RE TO CHECK  .* --&gt; wildcard</span></span>
+<span id="cb10-82"><a href="#cb10-82" aria-hidden="true" tabindex="-1"></a>            ref <span class="op">=</span> re.<span class="bu">compile</span>(<span class="st">'.*-.*-.*T.*:.*:.*Z'</span>)</span>
+<span id="cb10-83"><a href="#cb10-83" aria-hidden="true" tabindex="-1"></a>            date<span class="op">=</span>article[key]</span>
+<span id="cb10-84"><a href="#cb10-84" aria-hidden="true" tabindex="-1"></a>            <span class="cf">if</span>(<span class="kw">not</span> ref.match(date)):</span>
+<span id="cb10-85"><a href="#cb10-85" aria-hidden="true" tabindex="-1"></a>               <span class="bu">print</span>(<span class="st">" DATE ERROR:"</span>,date)<span class="op">;</span> date<span class="op">=</span><span class="st">"NA"</span></span>
+<span id="cb10-86"><a href="#cb10-86" aria-hidden="true" tabindex="-1"></a>            tmp.append(date)</span>
+<span id="cb10-87"><a href="#cb10-87" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-88"><a href="#cb10-88" aria-hidden="true" tabindex="-1"></a>    cleaned_data1.append(tmp)</span>
+<span id="cb10-89"><a href="#cb10-89" aria-hidden="true" tabindex="-1"></a>    index<span class="op">+=</span><span class="dv">1</span></span>
+<span id="cb10-90"><a href="#cb10-90" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-91"><a href="#cb10-91" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.DataFrame(cleaned_data1).iloc[:, <span class="dv">2</span>:<span class="dv">4</span>]</span>
+<span id="cb10-92"><a href="#cb10-92" aria-hidden="true" tabindex="-1"></a>df.columns <span class="op">=</span> [<span class="st">"title"</span>, <span class="st">"description"</span>]</span>
+<span id="cb10-93"><a href="#cb10-93" aria-hidden="true" tabindex="-1"></a>df.to_csv(<span class="st">'./Data/newapiTesla.csv'</span>, index<span class="op">=</span><span class="va">False</span>)</span>
+<span id="cb10-94"><a href="#cb10-94" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-95"><a href="#cb10-95" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> generate_word_cloud(my_text):</span>
+<span id="cb10-96"><a href="#cb10-96" aria-hidden="true" tabindex="-1"></a>    <span class="im">from</span> wordcloud <span class="im">import</span> WordCloud, STOPWORDS</span>
+<span id="cb10-97"><a href="#cb10-97" aria-hidden="true" tabindex="-1"></a>    <span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb10-98"><a href="#cb10-98" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> plot_cloud(wordcloud):</span>
+<span id="cb10-99"><a href="#cb10-99" aria-hidden="true" tabindex="-1"></a>        plt.figure(figsize<span class="op">=</span>(<span class="dv">40</span>, <span class="dv">30</span>))</span>
+<span id="cb10-100"><a href="#cb10-100" aria-hidden="true" tabindex="-1"></a>        plt.imshow(wordcloud) </span>
+<span id="cb10-101"><a href="#cb10-101" aria-hidden="true" tabindex="-1"></a>        plt.axis(<span class="st">"off"</span>)</span>
+<span id="cb10-102"><a href="#cb10-102" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-103"><a href="#cb10-103" aria-hidden="true" tabindex="-1"></a>    wordcloud <span class="op">=</span> WordCloud(</span>
+<span id="cb10-104"><a href="#cb10-104" aria-hidden="true" tabindex="-1"></a>        width <span class="op">=</span> <span class="dv">3000</span>,</span>
+<span id="cb10-105"><a href="#cb10-105" aria-hidden="true" tabindex="-1"></a>        height <span class="op">=</span> <span class="dv">2000</span>, </span>
+<span id="cb10-106"><a href="#cb10-106" aria-hidden="true" tabindex="-1"></a>        random_state<span class="op">=</span><span class="dv">1</span>, </span>
+<span id="cb10-107"><a href="#cb10-107" aria-hidden="true" tabindex="-1"></a>        background_color<span class="op">=</span><span class="st">'salmon'</span>, </span>
+<span id="cb10-108"><a href="#cb10-108" aria-hidden="true" tabindex="-1"></a>        colormap<span class="op">=</span><span class="st">'Pastel1'</span>, </span>
+<span id="cb10-109"><a href="#cb10-109" aria-hidden="true" tabindex="-1"></a>        collocations<span class="op">=</span><span class="va">False</span>,</span>
+<span id="cb10-110"><a href="#cb10-110" aria-hidden="true" tabindex="-1"></a>        stopwords <span class="op">=</span> STOPWORDS).generate(my_text)</span>
+<span id="cb10-111"><a href="#cb10-111" aria-hidden="true" tabindex="-1"></a>    plot_cloud(wordcloud)</span>
+<span id="cb10-112"><a href="#cb10-112" aria-hidden="true" tabindex="-1"></a>    plt.show()</span>
+<span id="cb10-113"><a href="#cb10-113" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.read_csv(<span class="st">"./Data/newapiTesla.csv"</span>)</span>
+<span id="cb10-114"><a href="#cb10-114" aria-hidden="true" tabindex="-1"></a>text <span class="op">=</span> df.iat[<span class="dv">0</span>,<span class="dv">1</span>] <span class="op">+</span> df.iat[<span class="dv">1</span>,<span class="dv">1</span>] <span class="op">+</span> df.iat[<span class="dv">2</span>,<span class="dv">1</span>]</span>
+<span id="cb10-115"><a href="#cb10-115" aria-hidden="true" tabindex="-1"></a>generate_word_cloud(text)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+
+
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

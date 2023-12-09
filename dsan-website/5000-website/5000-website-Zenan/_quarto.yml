@@ -8,11 +8,13 @@ website:
         text: About me
       - href: code.qmd
         text: Code
+      - href: data.qmd
+        text: Data
       - href: introduction.qmd
         text: Introduction
-      - href: datagather.qmd
+      - href: datagather.ipynb
         text: Data Gathering
-      - href: dataclean.qmd
+      - href: dataclean.ipynb
         text: Data Cleaning
       - href: dataexplore.qmd
         text: Data Exploration
