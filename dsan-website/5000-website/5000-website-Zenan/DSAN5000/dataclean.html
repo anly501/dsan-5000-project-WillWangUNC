@@ -271,7 +271,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> new_df</span>
 <span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>df.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
-<div class="cell-output cell-output-display" data-execution_count="39">
+<div class="cell-output cell-output-display" data-execution_count="3">
 <div>
 
 
@@ -386,7 +386,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>msno.bar(df)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
-<div class="cell-output cell-output-display" data-execution_count="40">
+<div class="cell-output cell-output-display" data-execution_count="4">
 <pre><code>&lt;Axes: &gt;</code></pre>
 </div>
 <div class="cell-output cell-output-display">
@@ -405,7 +405,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>    df[df.columns[i]] <span class="op">=</span> df[df.columns[i]].fillna(<span class="st">'-'</span>)</span>
 <span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>msno.bar(df)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
-<div class="cell-output cell-output-display" data-execution_count="41">
+<div class="cell-output cell-output-display" data-execution_count="5">
 <pre><code>&lt;Axes: &gt;</code></pre>
 </div>
 <div class="cell-output cell-output-display">
@@ -421,7 +421,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> df.dropna()</span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>msno.bar(df)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
-<div class="cell-output cell-output-display" data-execution_count="42">
+<div class="cell-output cell-output-display" data-execution_count="6">
 <pre><code>&lt;Axes: &gt;</code></pre>
 </div>
 <div class="cell-output cell-output-display">
@@ -434,7 +434,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>df.columns <span class="op">=</span> [<span class="st">'Date'</span>,<span class="st">'Country'</span>,<span class="st">'State'</span>,<span class="st">'Description'</span>,<span class="st">'Deaths'</span>,<span class="st">"Tesla_driver"</span>,<span class="st">"Tesla_occupant"</span>,<span class="st">"Other_vehicle"</span>,<span class="st">"CP"</span>,<span class="st">"tsla+cp"</span>,<span class="st">"Model"</span>,<span class="st">"Claimed"</span>,<span class="st">"VTAD"</span>]</span>
 <span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>df.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
-<div class="cell-output cell-output-display" data-execution_count="43">
+<div class="cell-output cell-output-display" data-execution_count="7">
 <div>
 
 
@@ -576,9 +576,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb12-12"><a href="#cb12-12" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">"Count"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
-<pre><code>The dataset contains 3 different data types and they are: int64, float64, object</code></pre>
+<pre><code>The dataset contains 3 different data types and they are: float64, object, int64</code></pre>
 </div>
-<div class="cell-output cell-output-display" data-execution_count="45">
+<div class="cell-output cell-output-display" data-execution_count="9">
 <pre><code>Text(0, 0.5, 'Count')</code></pre>
 </div>
 <div class="cell-output cell-output-display">
@@ -665,7 +665,7 @@ dtype: int64</code></pre>
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb21"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>data[<span class="st">'Datetime'</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
-<div class="cell-output cell-output-display" data-execution_count="49">
+<div class="cell-output cell-output-display" data-execution_count="13">
 <pre><code>0        1/19/2010 17:30
 1         2/8/2010 11:24
 2          3/3/2010 6:25
@@ -741,19 +741,19 @@ Name: Datetime, Length: 75550, dtype: object</code></pre>
 <span id="cb26-17"><a href="#cb26-17" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
-<pre><code>casualties: 0
-bad: 0
-accident: 1
-injury: 0
-flawed: 1
+<pre><code>flawed: 1
 negative: 0
-deadly: 0
-death: 1
 problem: 0
-casualty: 0</code></pre>
+deadly: 0
+bad: 0
+casualties: 0
+casualty: 0
+accident: 1
+death: 1
+injury: 0</code></pre>
 </div>
 <div class="cell-output cell-output-display">
-<p><img src="dataclean_files/figure-html/cell-18-output-2.png" width="369" height="302"></p>
+<p><img src="dataclean_files/figure-html/cell-18-output-2.png" width="366" height="302"></p>
 </div>
 </div>
 <div class="cell" data-execution_count="18">
@@ -770,19 +770,19 @@ casualty: 0</code></pre>
 <span id="cb28-9"><a href="#cb28-9" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
-<pre><code>casualties: 0
-bad: 2
-accident: 8
-injury: 0
-flawed: 0
+<pre><code>flawed: 0
 negative: 0
-deadly: 0
-death: 2
 problem: 0
-casualty: 0</code></pre>
+deadly: 0
+bad: 2
+casualties: 0
+casualty: 0
+accident: 8
+death: 2
+injury: 0</code></pre>
 </div>
 <div class="cell-output cell-output-display">
-<p><img src="dataclean_files/figure-html/cell-19-output-2.png" width="356" height="302"></p>
+<p><img src="dataclean_files/figure-html/cell-19-output-2.png" width="353" height="302"></p>
 </div>
 </div>
 </section>
