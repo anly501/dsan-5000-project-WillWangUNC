@@ -185,16 +185,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </ul></li>
   <li><a href="#second-dataset" id="toc-second-dataset" class="nav-link" data-scroll-target="#second-dataset">Second dataset:</a>
   <ul class="collapse">
-  <li><a href="#name-uk-road-safety-traffic-accidents-and-vehicles" id="toc-name-uk-road-safety-traffic-accidents-and-vehicles" class="nav-link" data-scroll-target="#name-uk-road-safety-traffic-accidents-and-vehicles">Name: UK Road Safety: Traffic Accidents and Vehicles</a></li>
+  <li><a href="#name-uk-road-safety-traffic-accidents-and-vehicles-gas-car" id="toc-name-uk-road-safety-traffic-accidents-and-vehicles-gas-car" class="nav-link" data-scroll-target="#name-uk-road-safety-traffic-accidents-and-vehicles-gas-car">Name: UK Road Safety: Traffic Accidents and Vehicles (gas car)</a></li>
   <li><a href="#summary" id="toc-summary" class="nav-link" data-scroll-target="#summary">Summary:</a>
   <ul class="collapse">
   <li><a href="#overview-of-the-dataset-1" id="toc-overview-of-the-dataset-1" class="nav-link" data-scroll-target="#overview-of-the-dataset-1">Overview of the dataset</a></li>
   <li><a href="#check-for-the-dimension-of-the-data-set" id="toc-check-for-the-dimension-of-the-data-set" class="nav-link" data-scroll-target="#check-for-the-dimension-of-the-data-set">Check for the dimension of the data set</a></li>
   <li><a href="#check-for-null-values" id="toc-check-for-null-values" class="nav-link" data-scroll-target="#check-for-null-values">Check for null values</a></li>
   </ul></li>
-  </ul></li>
-  <li><a href="#third-dataset-acquired-using-api" id="toc-third-dataset-acquired-using-api" class="nav-link" data-scroll-target="#third-dataset-acquired-using-api">Third dataset (acquired using API)</a>
-  <ul class="collapse">
+  <li><a href="#third-dataset-acquired-using-news-api-and-focused-on-the-topic-of-tesla-related-accident" id="toc-third-dataset-acquired-using-news-api-and-focused-on-the-topic-of-tesla-related-accident" class="nav-link" data-scroll-target="#third-dataset-acquired-using-news-api-and-focused-on-the-topic-of-tesla-related-accident">Third dataset (acquired using News-API and focused on the topic of ‘Tesla-related accident’)</a></li>
   <li><a href="#summary-1" id="toc-summary-1" class="nav-link" data-scroll-target="#summary-1">Summary:</a></li>
   </ul></li>
   </ul>
@@ -296,7 +294,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.read_csv(<span class="st">"./Data/Tesla Deaths - Deaths.csv"</span>)</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>df.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
-<div class="cell-output cell-output-display" data-execution_count="16">
+<div class="cell-output cell-output-display" data-execution_count="2">
 <div>
 
 
@@ -460,8 +458,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="second-dataset" class="level1">
 <h1>Second dataset:</h1>
-<section id="name-uk-road-safety-traffic-accidents-and-vehicles" class="level3">
-<h3 class="anchored" data-anchor-id="name-uk-road-safety-traffic-accidents-and-vehicles">Name: UK Road Safety: Traffic Accidents and Vehicles</h3>
+<section id="name-uk-road-safety-traffic-accidents-and-vehicles-gas-car" class="level3">
+<h3 class="anchored" data-anchor-id="name-uk-road-safety-traffic-accidents-and-vehicles-gas-car">Name: UK Road Safety: Traffic Accidents and Vehicles (gas car)</h3>
 <p><img src="./images/HEADER-MOBILE-GreatBritainroadtrafficaccidentreport_HxW0676x1006_72eadcd2-256c-4153-9c8e-5b2ba8731839.webp" class="img-fluid" width="300"></p>
 <section id="link-httpswww.kaggle.comdatasetstsiarasuk-road-safety-accidents-and-vehicles" class="level4">
 <h4 class="anchored" data-anchor-id="link-httpswww.kaggle.comdatasetstsiarasuk-road-safety-accidents-and-vehicles">link: <a href="https://www.kaggle.com/datasets/tsiaras/uk-road-safety-accidents-and-vehicles" class="uri">https://www.kaggle.com/datasets/tsiaras/uk-road-safety-accidents-and-vehicles</a></h4>
@@ -485,7 +483,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>data.drop([<span class="st">'Accident_Index'</span>,<span class="st">'Datetime'</span>], axis <span class="op">=</span> <span class="dv">1</span>,inplace<span class="op">=</span><span class="va">True</span>) </span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>data</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
-<div class="cell-output cell-output-display" data-execution_count="17">
+<div class="cell-output cell-output-display" data-execution_count="3">
 <div>
 
 
@@ -814,9 +812,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </section>
 </section>
+<section id="third-dataset-acquired-using-news-api-and-focused-on-the-topic-of-tesla-related-accident" class="level2">
+<h2 class="anchored" data-anchor-id="third-dataset-acquired-using-news-api-and-focused-on-the-topic-of-tesla-related-accident">Third dataset (acquired using News-API and focused on the topic of ‘Tesla-related accident’)</h2>
 </section>
-<section id="third-dataset-acquired-using-api" class="level1">
-<h1>Third dataset (acquired using API)</h1>
 <section id="summary-1" class="level2">
 <h2 class="anchored" data-anchor-id="summary-1">Summary:</h2>
 <p>I obtained the ensuing dataset by utilizing the News-API to search for articles pertaining to Tesla accidents. I also processed and curated the articles, saving them in a structured dataset for subsequent analysis. Furthermore, I generated a word cloud to see prominent keywords within the corpus.</p>
