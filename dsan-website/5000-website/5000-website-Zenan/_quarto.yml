@@ -6,7 +6,7 @@ website:
     left:
       - href: aboutyou.ipynb
         text: About me
-      - href: code.qmd
+      - href: code.ipynb
         text: Code
       - href: data.qmd
         text: Data
