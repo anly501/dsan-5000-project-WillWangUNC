@@ -18,6 +18,8 @@ website:
         text: Data Cleaning
       - href: dataexplore.ipynb
         text: Data Exploration
+      - href: naive.ipynb
+        text: Naïve Bayes
       - href: clustering.qmd
         text: Clustering
       - href: dimreduction.qmd

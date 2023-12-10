@@ -201,6 +201,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#second-dataset-uk-road-safety-traffic-accidents-and-vehicles-gas-car" id="toc-second-dataset-uk-road-safety-traffic-accidents-and-vehicles-gas-car" class="nav-link" data-scroll-target="#second-dataset-uk-road-safety-traffic-accidents-and-vehicles-gas-car">Second dataset: UK Road Safety: Traffic Accidents and Vehicles (gas car)</a>
   <ul class="collapse">
   <li><a href="#plot-count-plots-for-the-categorical-data-and-histogram-for-numerical-data" id="toc-plot-count-plots-for-the-categorical-data-and-histogram-for-numerical-data" class="nav-link" data-scroll-target="#plot-count-plots-for-the-categorical-data-and-histogram-for-numerical-data">Plot count plots for the categorical data and histogram for numerical data</a></li>
+  <li><a href="#look-at-the-distribution-of-all-numerical-variables" id="toc-look-at-the-distribution-of-all-numerical-variables" class="nav-link" data-scroll-target="#look-at-the-distribution-of-all-numerical-variables">Look at the distribution of all numerical variables</a></li>
+  <li><a href="#summary-of-the-above-distribution-plots" id="toc-summary-of-the-above-distribution-plots" class="nav-link" data-scroll-target="#summary-of-the-above-distribution-plots">Summary of the above distribution plots:</a></li>
+  <li><a href="#look-at-the-heatmap-of-the-numerical-variables" id="toc-look-at-the-heatmap-of-the-numerical-variables" class="nav-link" data-scroll-target="#look-at-the-heatmap-of-the-numerical-variables">Look at the heatmap of the numerical variables</a></li>
+  <li><a href="#the-above-heatmap-does-not-indicate-any-unusual-correlation." id="toc-the-above-heatmap-does-not-indicate-any-unusual-correlation." class="nav-link" data-scroll-target="#the-above-heatmap-does-not-indicate-any-unusual-correlation.">The above heatmap does not indicate any unusual correlation.</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -296,7 +300,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>df.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
-<div class="cell-output cell-output-display" data-execution_count="2">
+<div class="cell-output cell-output-display" data-execution_count="19">
 <div>
 
 
@@ -424,7 +428,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>    df.loc[df.index[i], <span class="st">"event_day"</span>] <span class="op">=</span> <span class="bu">int</span>(df[<span class="st">"Date"</span>].values[i].split(<span class="st">'/'</span>)[<span class="dv">1</span>])</span>
 <span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>df[<span class="st">'Date'</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
-<div class="cell-output cell-output-display" data-execution_count="3">
+<div class="cell-output cell-output-display" data-execution_count="20">
 <pre><code>0       1/17/2023
 1        1/7/2023
 2        1/7/2023
@@ -454,11 +458,11 @@ Name: Date, Length: 294, dtype: object</code></pre>
 <span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>    plt.text(x[i], height <span class="op">+</span> <span class="fl">0.25</span>, <span class="st">'</span><span class="sc">%.1f</span><span class="st">'</span> <span class="op">%</span>height, ha<span class="op">=</span><span class="st">'center'</span>, va<span class="op">=</span><span class="st">'bottom'</span>, size <span class="op">=</span> <span class="dv">12</span>)</span>
 <span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>plt.bar(x,y,color<span class="op">=</span><span class="st">'#e35f62'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
-<div class="cell-output cell-output-display" data-execution_count="4">
+<div class="cell-output cell-output-display" data-execution_count="21">
 <pre><code>&lt;BarContainer object of 23 artists&gt;</code></pre>
 </div>
 <div class="cell-output cell-output-display">
-<p><img src="dataexplore_files/figure-html/cell-5-output-2.png" width="1542" height="633"></p>
+<p><img src="dataexplore_files/figure-html/cell-5-output-2.png" width="1539" height="633"></p>
 </div>
 </div>
 </section>
@@ -478,11 +482,11 @@ Name: Date, Length: 294, dtype: object</code></pre>
 <span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">"Number of events"</span>)</span>
 <span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a>plt.bar(x,y)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
-<div class="cell-output cell-output-display" data-execution_count="5">
+<div class="cell-output cell-output-display" data-execution_count="22">
 <pre><code>&lt;BarContainer object of 12 artists&gt;</code></pre>
 </div>
 <div class="cell-output cell-output-display">
-<p><img src="dataexplore_files/figure-html/cell-6-output-2.png" width="1552" height="671"></p>
+<p><img src="dataexplore_files/figure-html/cell-6-output-2.png" width="1550" height="672"></p>
 </div>
 </div>
 </section>
@@ -549,10 +553,6 @@ Name: Date, Length: 294, dtype: object</code></pre>
 <span id="cb11-24"><a href="#cb11-24" aria-hidden="true" tabindex="-1"></a>kmeans.fit(X)</span>
 <span id="cb11-25"><a href="#cb11-25" aria-hidden="true" tabindex="-1"></a>clusters <span class="op">=</span> kmeans.predict(X)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
-<div class="cell-output cell-output-stderr">
-<pre><code>C:\Users\23898\anaconda\lib\site-packages\sklearn\cluster\_kmeans.py:1412: FutureWarning: The default value of `n_init` will change from 10 to 'auto' in 1.4. Set the value of `n_init` explicitly to suppress the warning
-  super()._check_params_vs_input(X, default_n_init=10)</code></pre>
-</div>
 </div>
 </section>
 <section id="lets-see-how-the-classification-goes." class="level3">
@@ -560,9 +560,9 @@ Name: Date, Length: 294, dtype: object</code></pre>
 <div class="cell" data-execution_count="8">
 <details>
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>df[<span class="st">"Description"</span>].value_counts()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>df[<span class="st">"Description"</span>].value_counts()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
-<div class="cell-output cell-output-display" data-execution_count="8">
+<div class="cell-output cell-output-display" data-execution_count="25">
 <pre><code>Description
  Tesla kills pedestrian                         10
  Tesla kills motorcyclist                        6
@@ -584,56 +584,56 @@ Name: count, Length: 248, dtype: int64</code></pre>
 <div class="cell" data-execution_count="9">
 <details>
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>df.loc[:, <span class="st">"cluster"</span>] <span class="op">=</span> <span class="dv">0</span></span>
-<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i, item <span class="kw">in</span> <span class="bu">enumerate</span>(df[<span class="st">"Description"</span>]):</span>
-<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> cluster, description <span class="kw">in</span> <span class="bu">zip</span>(clusters, data):</span>
-<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> item <span class="op">==</span> description:</span>
-<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a>            df[<span class="st">"cluster"</span>][i] <span class="op">=</span> cluster</span>
-<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a>accident_0 <span class="op">=</span> []</span>
-<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a>accident_1 <span class="op">=</span> []</span>
-<span id="cb15-8"><a href="#cb15-8" aria-hidden="true" tabindex="-1"></a>accident_2 <span class="op">=</span> []</span>
-<span id="cb15-9"><a href="#cb15-9" aria-hidden="true" tabindex="-1"></a>accident_3 <span class="op">=</span> []</span>
-<span id="cb15-10"><a href="#cb15-10" aria-hidden="true" tabindex="-1"></a>accident_4 <span class="op">=</span> []</span>
-<span id="cb15-11"><a href="#cb15-11" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i, cluster <span class="kw">in</span> <span class="bu">enumerate</span>(clusters):</span>
-<span id="cb15-12"><a href="#cb15-12" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> cluster <span class="op">==</span> <span class="dv">0</span>:</span>
-<span id="cb15-13"><a href="#cb15-13" aria-hidden="true" tabindex="-1"></a>        accident_0.append(data[i])</span>
-<span id="cb15-14"><a href="#cb15-14" aria-hidden="true" tabindex="-1"></a>    <span class="cf">elif</span> cluster <span class="op">==</span> <span class="dv">1</span>:</span>
-<span id="cb15-15"><a href="#cb15-15" aria-hidden="true" tabindex="-1"></a>        accident_1.append(data[i])</span>
-<span id="cb15-16"><a href="#cb15-16" aria-hidden="true" tabindex="-1"></a>    <span class="cf">elif</span> cluster <span class="op">==</span> <span class="dv">2</span>:</span>
-<span id="cb15-17"><a href="#cb15-17" aria-hidden="true" tabindex="-1"></a>        accident_2.append(data[i])</span>
-<span id="cb15-18"><a href="#cb15-18" aria-hidden="true" tabindex="-1"></a>    <span class="cf">elif</span> cluster <span class="op">==</span> <span class="dv">3</span>:</span>
-<span id="cb15-19"><a href="#cb15-19" aria-hidden="true" tabindex="-1"></a>        accident_3.append(data[i])</span>
-<span id="cb15-20"><a href="#cb15-20" aria-hidden="true" tabindex="-1"></a>    <span class="cf">elif</span> cluster <span class="op">==</span> <span class="dv">4</span>:</span>
-<span id="cb15-21"><a href="#cb15-21" aria-hidden="true" tabindex="-1"></a>        accident_4.append(data[i])</span>
-<span id="cb15-22"><a href="#cb15-22" aria-hidden="true" tabindex="-1"></a>accident_0_score <span class="op">=</span> []</span>
-<span id="cb15-23"><a href="#cb15-23" aria-hidden="true" tabindex="-1"></a>accident_1_score <span class="op">=</span> []</span>
-<span id="cb15-24"><a href="#cb15-24" aria-hidden="true" tabindex="-1"></a>accident_2_score <span class="op">=</span> []</span>
-<span id="cb15-25"><a href="#cb15-25" aria-hidden="true" tabindex="-1"></a>accident_3_score <span class="op">=</span> []</span>
-<span id="cb15-26"><a href="#cb15-26" aria-hidden="true" tabindex="-1"></a>accident_4_score <span class="op">=</span> []</span>
-<span id="cb15-27"><a href="#cb15-27" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-28"><a href="#cb15-28" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> get_score_list(a,b1):</span>
-<span id="cb15-29"><a href="#cb15-29" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(a)):</span>
-<span id="cb15-30"><a href="#cb15-30" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> b <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(df[<span class="st">"Description"</span>].value_counts().index)):</span>
-<span id="cb15-31"><a href="#cb15-31" aria-hidden="true" tabindex="-1"></a>            <span class="cf">if</span> df[<span class="st">"Description"</span>].value_counts().index[b] <span class="op">==</span> a[i]:</span>
-<span id="cb15-32"><a href="#cb15-32" aria-hidden="true" tabindex="-1"></a>                b1.append(df[<span class="st">"Description"</span>].value_counts().values[b])</span>
-<span id="cb15-33"><a href="#cb15-33" aria-hidden="true" tabindex="-1"></a>                </span>
-<span id="cb15-34"><a href="#cb15-34" aria-hidden="true" tabindex="-1"></a>get_score_list(accident_0,accident_0_score)</span>
-<span id="cb15-35"><a href="#cb15-35" aria-hidden="true" tabindex="-1"></a>get_score_list(accident_1,accident_1_score)</span>
-<span id="cb15-36"><a href="#cb15-36" aria-hidden="true" tabindex="-1"></a>get_score_list(accident_2,accident_2_score)</span>
-<span id="cb15-37"><a href="#cb15-37" aria-hidden="true" tabindex="-1"></a>get_score_list(accident_3,accident_3_score)</span>
-<span id="cb15-38"><a href="#cb15-38" aria-hidden="true" tabindex="-1"></a>get_score_list(accident_4,accident_4_score)</span>
-<span id="cb15-39"><a href="#cb15-39" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> [<span class="dv">0</span>,<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>]</span>
-<span id="cb15-40"><a href="#cb15-40" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> [<span class="bu">len</span>(accident_0),<span class="bu">len</span>(accident_1),<span class="bu">len</span>(accident_2),<span class="bu">len</span>(accident_3),<span class="bu">len</span>(accident_4)]</span>
-<span id="cb15-41"><a href="#cb15-41" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">20</span>,<span class="dv">10</span>))</span>
-<span id="cb15-42"><a href="#cb15-42" aria-hidden="true" tabindex="-1"></a><span class="co"># plt.title("accident type's counts")</span></span>
-<span id="cb15-43"><a href="#cb15-43" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">"accident type"</span>)</span>
-<span id="cb15-44"><a href="#cb15-44" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">"counts of accident type"</span>)</span>
-<span id="cb15-45"><a href="#cb15-45" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(x)):</span>
-<span id="cb15-46"><a href="#cb15-46" aria-hidden="true" tabindex="-1"></a>    height <span class="op">=</span> y[i]</span>
-<span id="cb15-47"><a href="#cb15-47" aria-hidden="true" tabindex="-1"></a>    plt.text(x[i], height <span class="op">+</span> <span class="fl">0.25</span>, <span class="st">'</span><span class="sc">%.1f</span><span class="st">'</span> <span class="op">%</span>height, ha<span class="op">=</span><span class="st">'center'</span>, va<span class="op">=</span><span class="st">'bottom'</span>, size <span class="op">=</span> <span class="dv">12</span>)</span>
-<span id="cb15-48"><a href="#cb15-48" aria-hidden="true" tabindex="-1"></a>plt.bar(x,y,color<span class="op">=</span><span class="st">'red'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>df.loc[:, <span class="st">"cluster"</span>] <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i, item <span class="kw">in</span> <span class="bu">enumerate</span>(df[<span class="st">"Description"</span>]):</span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> cluster, description <span class="kw">in</span> <span class="bu">zip</span>(clusters, data):</span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> item <span class="op">==</span> description:</span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a>            df[<span class="st">"cluster"</span>][i] <span class="op">=</span> cluster</span>
+<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a>accident_0 <span class="op">=</span> []</span>
+<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a>accident_1 <span class="op">=</span> []</span>
+<span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a>accident_2 <span class="op">=</span> []</span>
+<span id="cb14-9"><a href="#cb14-9" aria-hidden="true" tabindex="-1"></a>accident_3 <span class="op">=</span> []</span>
+<span id="cb14-10"><a href="#cb14-10" aria-hidden="true" tabindex="-1"></a>accident_4 <span class="op">=</span> []</span>
+<span id="cb14-11"><a href="#cb14-11" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i, cluster <span class="kw">in</span> <span class="bu">enumerate</span>(clusters):</span>
+<span id="cb14-12"><a href="#cb14-12" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> cluster <span class="op">==</span> <span class="dv">0</span>:</span>
+<span id="cb14-13"><a href="#cb14-13" aria-hidden="true" tabindex="-1"></a>        accident_0.append(data[i])</span>
+<span id="cb14-14"><a href="#cb14-14" aria-hidden="true" tabindex="-1"></a>    <span class="cf">elif</span> cluster <span class="op">==</span> <span class="dv">1</span>:</span>
+<span id="cb14-15"><a href="#cb14-15" aria-hidden="true" tabindex="-1"></a>        accident_1.append(data[i])</span>
+<span id="cb14-16"><a href="#cb14-16" aria-hidden="true" tabindex="-1"></a>    <span class="cf">elif</span> cluster <span class="op">==</span> <span class="dv">2</span>:</span>
+<span id="cb14-17"><a href="#cb14-17" aria-hidden="true" tabindex="-1"></a>        accident_2.append(data[i])</span>
+<span id="cb14-18"><a href="#cb14-18" aria-hidden="true" tabindex="-1"></a>    <span class="cf">elif</span> cluster <span class="op">==</span> <span class="dv">3</span>:</span>
+<span id="cb14-19"><a href="#cb14-19" aria-hidden="true" tabindex="-1"></a>        accident_3.append(data[i])</span>
+<span id="cb14-20"><a href="#cb14-20" aria-hidden="true" tabindex="-1"></a>    <span class="cf">elif</span> cluster <span class="op">==</span> <span class="dv">4</span>:</span>
+<span id="cb14-21"><a href="#cb14-21" aria-hidden="true" tabindex="-1"></a>        accident_4.append(data[i])</span>
+<span id="cb14-22"><a href="#cb14-22" aria-hidden="true" tabindex="-1"></a>accident_0_score <span class="op">=</span> []</span>
+<span id="cb14-23"><a href="#cb14-23" aria-hidden="true" tabindex="-1"></a>accident_1_score <span class="op">=</span> []</span>
+<span id="cb14-24"><a href="#cb14-24" aria-hidden="true" tabindex="-1"></a>accident_2_score <span class="op">=</span> []</span>
+<span id="cb14-25"><a href="#cb14-25" aria-hidden="true" tabindex="-1"></a>accident_3_score <span class="op">=</span> []</span>
+<span id="cb14-26"><a href="#cb14-26" aria-hidden="true" tabindex="-1"></a>accident_4_score <span class="op">=</span> []</span>
+<span id="cb14-27"><a href="#cb14-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-28"><a href="#cb14-28" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> get_score_list(a,b1):</span>
+<span id="cb14-29"><a href="#cb14-29" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(a)):</span>
+<span id="cb14-30"><a href="#cb14-30" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> b <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(df[<span class="st">"Description"</span>].value_counts().index)):</span>
+<span id="cb14-31"><a href="#cb14-31" aria-hidden="true" tabindex="-1"></a>            <span class="cf">if</span> df[<span class="st">"Description"</span>].value_counts().index[b] <span class="op">==</span> a[i]:</span>
+<span id="cb14-32"><a href="#cb14-32" aria-hidden="true" tabindex="-1"></a>                b1.append(df[<span class="st">"Description"</span>].value_counts().values[b])</span>
+<span id="cb14-33"><a href="#cb14-33" aria-hidden="true" tabindex="-1"></a>                </span>
+<span id="cb14-34"><a href="#cb14-34" aria-hidden="true" tabindex="-1"></a>get_score_list(accident_0,accident_0_score)</span>
+<span id="cb14-35"><a href="#cb14-35" aria-hidden="true" tabindex="-1"></a>get_score_list(accident_1,accident_1_score)</span>
+<span id="cb14-36"><a href="#cb14-36" aria-hidden="true" tabindex="-1"></a>get_score_list(accident_2,accident_2_score)</span>
+<span id="cb14-37"><a href="#cb14-37" aria-hidden="true" tabindex="-1"></a>get_score_list(accident_3,accident_3_score)</span>
+<span id="cb14-38"><a href="#cb14-38" aria-hidden="true" tabindex="-1"></a>get_score_list(accident_4,accident_4_score)</span>
+<span id="cb14-39"><a href="#cb14-39" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> [<span class="dv">0</span>,<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">4</span>]</span>
+<span id="cb14-40"><a href="#cb14-40" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> [<span class="bu">len</span>(accident_0),<span class="bu">len</span>(accident_1),<span class="bu">len</span>(accident_2),<span class="bu">len</span>(accident_3),<span class="bu">len</span>(accident_4)]</span>
+<span id="cb14-41"><a href="#cb14-41" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">20</span>,<span class="dv">10</span>))</span>
+<span id="cb14-42"><a href="#cb14-42" aria-hidden="true" tabindex="-1"></a><span class="co"># plt.title("accident type's counts")</span></span>
+<span id="cb14-43"><a href="#cb14-43" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">"accident type"</span>)</span>
+<span id="cb14-44"><a href="#cb14-44" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">"counts of accident type"</span>)</span>
+<span id="cb14-45"><a href="#cb14-45" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(x)):</span>
+<span id="cb14-46"><a href="#cb14-46" aria-hidden="true" tabindex="-1"></a>    height <span class="op">=</span> y[i]</span>
+<span id="cb14-47"><a href="#cb14-47" aria-hidden="true" tabindex="-1"></a>    plt.text(x[i], height <span class="op">+</span> <span class="fl">0.25</span>, <span class="st">'</span><span class="sc">%.1f</span><span class="st">'</span> <span class="op">%</span>height, ha<span class="op">=</span><span class="st">'center'</span>, va<span class="op">=</span><span class="st">'bottom'</span>, size <span class="op">=</span> <span class="dv">12</span>)</span>
+<span id="cb14-48"><a href="#cb14-48" aria-hidden="true" tabindex="-1"></a>plt.bar(x,y,color<span class="op">=</span><span class="st">'red'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
-<div class="cell-output cell-output-display" data-execution_count="9">
+<div class="cell-output cell-output-display" data-execution_count="26">
 <pre><code>&lt;BarContainer object of 5 artists&gt;</code></pre>
 </div>
 <div class="cell-output cell-output-display">
@@ -647,9 +647,9 @@ Name: count, Length: 248, dtype: int64</code></pre>
 <div class="cell" data-execution_count="10">
 <details>
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>df[df[<span class="st">'cluster'</span>] <span class="op">==</span> <span class="dv">2</span>].head(<span class="dv">10</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>df[df[<span class="st">'cluster'</span>] <span class="op">==</span> <span class="dv">2</span>].head(<span class="dv">10</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
-<div class="cell-output cell-output-display" data-execution_count="10">
+<div class="cell-output cell-output-display" data-execution_count="27">
 <div>
 
 
@@ -890,9 +890,9 @@ Name: count, Length: 248, dtype: int64</code></pre>
 <div class="cell" data-execution_count="11">
 <details>
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>df[df[<span class="st">'cluster'</span>] <span class="op">==</span> <span class="dv">0</span>].head(<span class="dv">10</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>df[df[<span class="st">'cluster'</span>] <span class="op">==</span> <span class="dv">0</span>].head(<span class="dv">10</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
-<div class="cell-output cell-output-display" data-execution_count="11">
+<div class="cell-output cell-output-display" data-execution_count="28">
 <div>
 
 
@@ -1132,12 +1132,12 @@ Name: count, Length: 248, dtype: int64</code></pre>
 <div class="cell" data-execution_count="12">
 <details>
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">0</span>,<span class="dv">5</span>):</span>
-<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>    df[df[<span class="st">"cluster"</span>]<span class="op">==</span>i][<span class="st">"Deaths"</span>].value_counts().sort_index().plot(figsize<span class="op">=</span>(<span class="dv">20</span>,<span class="dv">8</span>))</span>
-<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>    plt.xlabel(<span class="st">"total Death"</span>)</span>
-<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a>    plt.ylabel(<span class="st">"ac type Counts"</span>)</span>
-<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a>    plt.title(<span class="st">"ac type Counts - Death"</span>)</span>
-<span id="cb19-6"><a href="#cb19-6" aria-hidden="true" tabindex="-1"></a>    plt.legend(<span class="st">"01234"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">0</span>,<span class="dv">5</span>):</span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>    df[df[<span class="st">"cluster"</span>]<span class="op">==</span>i][<span class="st">"Deaths"</span>].value_counts().sort_index().plot(figsize<span class="op">=</span>(<span class="dv">20</span>,<span class="dv">8</span>))</span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>    plt.xlabel(<span class="st">"total Death"</span>)</span>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a>    plt.ylabel(<span class="st">"ac type Counts"</span>)</span>
+<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a>    plt.title(<span class="st">"ac type Counts - Death"</span>)</span>
+<span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a>    plt.legend(<span class="st">"01234"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-display">
 <p><img src="dataexplore_files/figure-html/cell-13-output-1.png" width="1557" height="671"></p>
@@ -1149,47 +1149,47 @@ Name: count, Length: 248, dtype: int64</code></pre>
 <div class="cell" data-execution_count="13">
 <details>
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> make_Graph(feature):</span>
-<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>    x_s <span class="op">=</span> df[feature].value_counts().sort_index().index</span>
-<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a>    y_s <span class="op">=</span> df[feature].value_counts().sort_index().values</span>
-<span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a>    y0_s <span class="op">=</span> df[df[<span class="st">"cluster"</span>]<span class="op">==</span><span class="dv">0</span>][feature].value_counts().sort_index()</span>
-<span id="cb20-5"><a href="#cb20-5" aria-hidden="true" tabindex="-1"></a>    y1_s <span class="op">=</span> df[df[<span class="st">"cluster"</span>]<span class="op">==</span><span class="dv">1</span>][feature].value_counts().sort_index()</span>
-<span id="cb20-6"><a href="#cb20-6" aria-hidden="true" tabindex="-1"></a>    y2_s <span class="op">=</span> df[df[<span class="st">"cluster"</span>]<span class="op">==</span><span class="dv">2</span>][feature].value_counts().sort_index()</span>
-<span id="cb20-7"><a href="#cb20-7" aria-hidden="true" tabindex="-1"></a>    y3_s <span class="op">=</span> df[df[<span class="st">"cluster"</span>]<span class="op">==</span><span class="dv">3</span>][feature].value_counts().sort_index()</span>
-<span id="cb20-8"><a href="#cb20-8" aria-hidden="true" tabindex="-1"></a>    y4_s <span class="op">=</span> df[df[<span class="st">"cluster"</span>]<span class="op">==</span><span class="dv">4</span>][feature].value_counts().sort_index()</span>
-<span id="cb20-9"><a href="#cb20-9" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> fill_y(x,y):</span>
-<span id="cb20-10"><a href="#cb20-10" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> i <span class="kw">in</span> x:</span>
-<span id="cb20-11"><a href="#cb20-11" aria-hidden="true" tabindex="-1"></a>            <span class="cf">if</span> i <span class="kw">not</span> <span class="kw">in</span> y.index:</span>
-<span id="cb20-12"><a href="#cb20-12" aria-hidden="true" tabindex="-1"></a>                y[i] <span class="op">=</span> <span class="dv">0</span></span>
-<span id="cb20-13"><a href="#cb20-13" aria-hidden="true" tabindex="-1"></a>    fill_y(x_s,y0_s)</span>
-<span id="cb20-14"><a href="#cb20-14" aria-hidden="true" tabindex="-1"></a>    fill_y(x_s,y1_s)</span>
-<span id="cb20-15"><a href="#cb20-15" aria-hidden="true" tabindex="-1"></a>    fill_y(x_s,y2_s)</span>
-<span id="cb20-16"><a href="#cb20-16" aria-hidden="true" tabindex="-1"></a>    fill_y(x_s,y3_s)</span>
-<span id="cb20-17"><a href="#cb20-17" aria-hidden="true" tabindex="-1"></a>    fill_y(x_s,y4_s)</span>
-<span id="cb20-18"><a href="#cb20-18" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb20-19"><a href="#cb20-19" aria-hidden="true" tabindex="-1"></a><span class="co">#     plt.figure(figsize=(10,8))</span></span>
-<span id="cb20-20"><a href="#cb20-20" aria-hidden="true" tabindex="-1"></a>    ax,ax0,ax1,ax2,ax3,ax4 <span class="op">=</span> plt.gca(),plt.gca(),plt.gca(),plt.gca(),plt.gca(),plt.gca()</span>
-<span id="cb20-21"><a href="#cb20-21" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb20-22"><a href="#cb20-22" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(x_s)):</span>
-<span id="cb20-23"><a href="#cb20-23" aria-hidden="true" tabindex="-1"></a>        height <span class="op">=</span> y_s[i]</span>
-<span id="cb20-24"><a href="#cb20-24" aria-hidden="true" tabindex="-1"></a>        plt.text(x_s[i], height <span class="op">+</span> <span class="fl">0.15</span>, <span class="st">'</span><span class="sc">%.1f</span><span class="st">'</span> <span class="op">%</span>height, ha<span class="op">=</span><span class="st">'center'</span>, va<span class="op">=</span><span class="st">'bottom'</span>, size <span class="op">=</span> <span class="dv">12</span>)</span>
-<span id="cb20-25"><a href="#cb20-25" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb20-26"><a href="#cb20-26" aria-hidden="true" tabindex="-1"></a>    ax.bar(x_s, y_s, color<span class="op">=</span><span class="st">'orange'</span>, linestyle<span class="op">=</span><span class="st">'--'</span>)</span>
-<span id="cb20-27"><a href="#cb20-27" aria-hidden="true" tabindex="-1"></a>    ax.set_ylabel(feature<span class="op">+</span><span class="st">' - Counts'</span>, fontsize<span class="op">=</span><span class="dv">10</span>)</span>
-<span id="cb20-28"><a href="#cb20-28" aria-hidden="true" tabindex="-1"></a>    ax.tick_params(<span class="st">'y'</span>, colors<span class="op">=</span><span class="st">'blue'</span>) </span>
-<span id="cb20-29"><a href="#cb20-29" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb20-30"><a href="#cb20-30" aria-hidden="true" tabindex="-1"></a>    ax0.plot(x_s, y0_s.sort_index().values, color<span class="op">=</span><span class="st">'yellow'</span>, linestyle<span class="op">=</span><span class="st">'--'</span>,label <span class="op">=</span> <span class="st">"0"</span>)</span>
-<span id="cb20-31"><a href="#cb20-31" aria-hidden="true" tabindex="-1"></a>    ax1.plot(x_s, y1_s.sort_index().values, color<span class="op">=</span><span class="st">'blue'</span>, linestyle<span class="op">=</span><span class="st">'--'</span>,label <span class="op">=</span> <span class="st">"1"</span>)</span>
-<span id="cb20-32"><a href="#cb20-32" aria-hidden="true" tabindex="-1"></a>    ax2.plot(x_s, y2_s.sort_index().values, color<span class="op">=</span><span class="st">'red'</span>, linestyle<span class="op">=</span><span class="st">'--'</span>,label <span class="op">=</span> <span class="st">"2"</span>)</span>
-<span id="cb20-33"><a href="#cb20-33" aria-hidden="true" tabindex="-1"></a>    ax3.plot(x_s, y3_s.sort_index().values, color<span class="op">=</span><span class="st">'pink'</span>, linestyle<span class="op">=</span><span class="st">'--'</span>,label <span class="op">=</span> <span class="st">"3"</span>)</span>
-<span id="cb20-34"><a href="#cb20-34" aria-hidden="true" tabindex="-1"></a>    ax4.plot(x_s, y4_s.sort_index().values, color<span class="op">=</span><span class="st">'green'</span>, linestyle<span class="op">=</span><span class="st">'--'</span>,label <span class="op">=</span> <span class="st">"4"</span>)</span>
-<span id="cb20-35"><a href="#cb20-35" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb20-36"><a href="#cb20-36" aria-hidden="true" tabindex="-1"></a>    ax1.set_xlabel(feature, fontsize<span class="op">=</span><span class="dv">10</span>)</span>
-<span id="cb20-37"><a href="#cb20-37" aria-hidden="true" tabindex="-1"></a>    plt.title(feature<span class="op">+</span><span class="st">" Accident counts &amp; Accident Type counts"</span>,fontsize<span class="op">=</span><span class="dv">13</span>)</span>
-<span id="cb20-38"><a href="#cb20-38" aria-hidden="true" tabindex="-1"></a>    plt.tight_layout()</span>
-<span id="cb20-39"><a href="#cb20-39" aria-hidden="true" tabindex="-1"></a>    plt.legend()</span>
-<span id="cb20-40"><a href="#cb20-40" aria-hidden="true" tabindex="-1"></a>    plt.figure(figsize<span class="op">=</span>(<span class="dv">20</span>,<span class="dv">8</span>))</span>
-<span id="cb20-41"><a href="#cb20-41" aria-hidden="true" tabindex="-1"></a>make_Graph(<span class="st">"event_year"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> make_Graph(feature):</span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>    x_s <span class="op">=</span> df[feature].value_counts().sort_index().index</span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>    y_s <span class="op">=</span> df[feature].value_counts().sort_index().values</span>
+<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a>    y0_s <span class="op">=</span> df[df[<span class="st">"cluster"</span>]<span class="op">==</span><span class="dv">0</span>][feature].value_counts().sort_index()</span>
+<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a>    y1_s <span class="op">=</span> df[df[<span class="st">"cluster"</span>]<span class="op">==</span><span class="dv">1</span>][feature].value_counts().sort_index()</span>
+<span id="cb19-6"><a href="#cb19-6" aria-hidden="true" tabindex="-1"></a>    y2_s <span class="op">=</span> df[df[<span class="st">"cluster"</span>]<span class="op">==</span><span class="dv">2</span>][feature].value_counts().sort_index()</span>
+<span id="cb19-7"><a href="#cb19-7" aria-hidden="true" tabindex="-1"></a>    y3_s <span class="op">=</span> df[df[<span class="st">"cluster"</span>]<span class="op">==</span><span class="dv">3</span>][feature].value_counts().sort_index()</span>
+<span id="cb19-8"><a href="#cb19-8" aria-hidden="true" tabindex="-1"></a>    y4_s <span class="op">=</span> df[df[<span class="st">"cluster"</span>]<span class="op">==</span><span class="dv">4</span>][feature].value_counts().sort_index()</span>
+<span id="cb19-9"><a href="#cb19-9" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> fill_y(x,y):</span>
+<span id="cb19-10"><a href="#cb19-10" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> i <span class="kw">in</span> x:</span>
+<span id="cb19-11"><a href="#cb19-11" aria-hidden="true" tabindex="-1"></a>            <span class="cf">if</span> i <span class="kw">not</span> <span class="kw">in</span> y.index:</span>
+<span id="cb19-12"><a href="#cb19-12" aria-hidden="true" tabindex="-1"></a>                y[i] <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb19-13"><a href="#cb19-13" aria-hidden="true" tabindex="-1"></a>    fill_y(x_s,y0_s)</span>
+<span id="cb19-14"><a href="#cb19-14" aria-hidden="true" tabindex="-1"></a>    fill_y(x_s,y1_s)</span>
+<span id="cb19-15"><a href="#cb19-15" aria-hidden="true" tabindex="-1"></a>    fill_y(x_s,y2_s)</span>
+<span id="cb19-16"><a href="#cb19-16" aria-hidden="true" tabindex="-1"></a>    fill_y(x_s,y3_s)</span>
+<span id="cb19-17"><a href="#cb19-17" aria-hidden="true" tabindex="-1"></a>    fill_y(x_s,y4_s)</span>
+<span id="cb19-18"><a href="#cb19-18" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb19-19"><a href="#cb19-19" aria-hidden="true" tabindex="-1"></a><span class="co">#     plt.figure(figsize=(10,8))</span></span>
+<span id="cb19-20"><a href="#cb19-20" aria-hidden="true" tabindex="-1"></a>    ax,ax0,ax1,ax2,ax3,ax4 <span class="op">=</span> plt.gca(),plt.gca(),plt.gca(),plt.gca(),plt.gca(),plt.gca()</span>
+<span id="cb19-21"><a href="#cb19-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-22"><a href="#cb19-22" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(x_s)):</span>
+<span id="cb19-23"><a href="#cb19-23" aria-hidden="true" tabindex="-1"></a>        height <span class="op">=</span> y_s[i]</span>
+<span id="cb19-24"><a href="#cb19-24" aria-hidden="true" tabindex="-1"></a>        plt.text(x_s[i], height <span class="op">+</span> <span class="fl">0.15</span>, <span class="st">'</span><span class="sc">%.1f</span><span class="st">'</span> <span class="op">%</span>height, ha<span class="op">=</span><span class="st">'center'</span>, va<span class="op">=</span><span class="st">'bottom'</span>, size <span class="op">=</span> <span class="dv">12</span>)</span>
+<span id="cb19-25"><a href="#cb19-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-26"><a href="#cb19-26" aria-hidden="true" tabindex="-1"></a>    ax.bar(x_s, y_s, color<span class="op">=</span><span class="st">'orange'</span>, linestyle<span class="op">=</span><span class="st">'--'</span>)</span>
+<span id="cb19-27"><a href="#cb19-27" aria-hidden="true" tabindex="-1"></a>    ax.set_ylabel(feature<span class="op">+</span><span class="st">' - Counts'</span>, fontsize<span class="op">=</span><span class="dv">10</span>)</span>
+<span id="cb19-28"><a href="#cb19-28" aria-hidden="true" tabindex="-1"></a>    ax.tick_params(<span class="st">'y'</span>, colors<span class="op">=</span><span class="st">'blue'</span>) </span>
+<span id="cb19-29"><a href="#cb19-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-30"><a href="#cb19-30" aria-hidden="true" tabindex="-1"></a>    ax0.plot(x_s, y0_s.sort_index().values, color<span class="op">=</span><span class="st">'yellow'</span>, linestyle<span class="op">=</span><span class="st">'--'</span>,label <span class="op">=</span> <span class="st">"0"</span>)</span>
+<span id="cb19-31"><a href="#cb19-31" aria-hidden="true" tabindex="-1"></a>    ax1.plot(x_s, y1_s.sort_index().values, color<span class="op">=</span><span class="st">'blue'</span>, linestyle<span class="op">=</span><span class="st">'--'</span>,label <span class="op">=</span> <span class="st">"1"</span>)</span>
+<span id="cb19-32"><a href="#cb19-32" aria-hidden="true" tabindex="-1"></a>    ax2.plot(x_s, y2_s.sort_index().values, color<span class="op">=</span><span class="st">'red'</span>, linestyle<span class="op">=</span><span class="st">'--'</span>,label <span class="op">=</span> <span class="st">"2"</span>)</span>
+<span id="cb19-33"><a href="#cb19-33" aria-hidden="true" tabindex="-1"></a>    ax3.plot(x_s, y3_s.sort_index().values, color<span class="op">=</span><span class="st">'pink'</span>, linestyle<span class="op">=</span><span class="st">'--'</span>,label <span class="op">=</span> <span class="st">"3"</span>)</span>
+<span id="cb19-34"><a href="#cb19-34" aria-hidden="true" tabindex="-1"></a>    ax4.plot(x_s, y4_s.sort_index().values, color<span class="op">=</span><span class="st">'green'</span>, linestyle<span class="op">=</span><span class="st">'--'</span>,label <span class="op">=</span> <span class="st">"4"</span>)</span>
+<span id="cb19-35"><a href="#cb19-35" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-36"><a href="#cb19-36" aria-hidden="true" tabindex="-1"></a>    ax1.set_xlabel(feature, fontsize<span class="op">=</span><span class="dv">10</span>)</span>
+<span id="cb19-37"><a href="#cb19-37" aria-hidden="true" tabindex="-1"></a>    plt.title(feature<span class="op">+</span><span class="st">" Accident counts &amp; Accident Type counts"</span>,fontsize<span class="op">=</span><span class="dv">13</span>)</span>
+<span id="cb19-38"><a href="#cb19-38" aria-hidden="true" tabindex="-1"></a>    plt.tight_layout()</span>
+<span id="cb19-39"><a href="#cb19-39" aria-hidden="true" tabindex="-1"></a>    plt.legend()</span>
+<span id="cb19-40"><a href="#cb19-40" aria-hidden="true" tabindex="-1"></a>    plt.figure(figsize<span class="op">=</span>(<span class="dv">20</span>,<span class="dv">8</span>))</span>
+<span id="cb19-41"><a href="#cb19-41" aria-hidden="true" tabindex="-1"></a>make_Graph(<span class="st">"event_year"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-display">
 <p><img src="dataexplore_files/figure-html/cell-14-output-1.png" width="662" height="470"></p>
@@ -1209,40 +1209,40 @@ Name: count, Length: 248, dtype: int64</code></pre>
 <div class="cell" data-execution_count="14">
 <details>
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> collections <span class="im">import</span> Counter</span>
-<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
-<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> warnings</span>
-<span id="cb22-5"><a href="#cb22-5" aria-hidden="true" tabindex="-1"></a>warnings.simplefilter(<span class="st">'ignore'</span>)</span>
-<span id="cb22-6"><a href="#cb22-6" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.pipeline <span class="im">import</span> Pipeline</span>
-<span id="cb22-7"><a href="#cb22-7" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> scipy.stats <span class="im">as</span> stats</span>
-<span id="cb22-8"><a href="#cb22-8" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.model_selection <span class="im">import</span> train_test_split, GridSearchCV</span>
-<span id="cb22-9"><a href="#cb22-9" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn <span class="im">import</span> metrics</span>
-<span id="cb22-10"><a href="#cb22-10" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.preprocessing <span class="im">import</span> StandardScaler</span>
-<span id="cb22-11"><a href="#cb22-11" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.preprocessing <span class="im">import</span> LabelEncoder</span>
-<span id="cb22-12"><a href="#cb22-12" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.model_selection <span class="im">import</span> StratifiedKFold</span>
-<span id="cb22-13"><a href="#cb22-13" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
-<span id="cb22-14"><a href="#cb22-14" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> seaborn <span class="im">as</span> sns</span>
-<span id="cb22-15"><a href="#cb22-15" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.model_selection <span class="im">import</span> RandomizedSearchCV</span>
-<span id="cb22-16"><a href="#cb22-16" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> scipy.stats <span class="im">import</span> boxcox</span>
-<span id="cb22-17"><a href="#cb22-17" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pickle</span>
-<span id="cb22-18"><a href="#cb22-18" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> numpy.random <span class="im">import</span> seed</span>
-<span id="cb22-19"><a href="#cb22-19" aria-hidden="true" tabindex="-1"></a>seed(<span class="dv">862</span>)</span>
-<span id="cb22-20"><a href="#cb22-20" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> tensorflow.random <span class="im">import</span> set_seed</span>
-<span id="cb22-21"><a href="#cb22-21" aria-hidden="true" tabindex="-1"></a>set_seed(<span class="dv">862</span>)</span>
-<span id="cb22-22"><a href="#cb22-22" aria-hidden="true" tabindex="-1"></a>data <span class="op">=</span> pd.read_csv(<span class="st">"./Data/RoadAccident.csv"</span>)</span>
-<span id="cb22-23"><a href="#cb22-23" aria-hidden="true" tabindex="-1"></a>data.drop([<span class="st">'Accident_Index'</span>,<span class="st">'Datetime'</span>], axis <span class="op">=</span> <span class="dv">1</span>,inplace<span class="op">=</span><span class="va">True</span>) </span>
-<span id="cb22-24"><a href="#cb22-24" aria-hidden="true" tabindex="-1"></a>d <span class="op">=</span> {<span class="st">"Feature"</span>:[i <span class="cf">for</span> i <span class="kw">in</span> data.columns]    ,<span class="st">"Nunique"</span> :data.nunique().values ,<span class="st">'Type'</span> : data.dtypes.values, <span class="st">"No: of nulls"</span> : data.isnull().<span class="bu">sum</span>() }</span>
-<span id="cb22-25"><a href="#cb22-25" aria-hidden="true" tabindex="-1"></a>description <span class="op">=</span> pd.DataFrame(data <span class="op">=</span> d)</span>
-<span id="cb22-26"><a href="#cb22-26" aria-hidden="true" tabindex="-1"></a>description</span>
-<span id="cb22-27"><a href="#cb22-27" aria-hidden="true" tabindex="-1"></a>data[<span class="st">"Season"</span>]<span class="op">=</span>data[<span class="st">"Season"</span>].astype(<span class="bu">str</span>)</span>
-<span id="cb22-28"><a href="#cb22-28" aria-hidden="true" tabindex="-1"></a>data[<span class="st">"Month_of_Year"</span>]<span class="op">=</span>data[<span class="st">"Month_of_Year"</span>].astype(<span class="bu">str</span>)</span>
-<span id="cb22-29"><a href="#cb22-29" aria-hidden="true" tabindex="-1"></a>data[<span class="st">"Day_of_Week"</span>]<span class="op">=</span>data[<span class="st">"Day_of_Week"</span>].astype(<span class="bu">str</span>)</span>
-<span id="cb22-30"><a href="#cb22-30" aria-hidden="true" tabindex="-1"></a>data[<span class="st">"Year"</span>]<span class="op">=</span>data[<span class="st">"Year"</span>].astype(<span class="bu">str</span>)</span>
-<span id="cb22-31"><a href="#cb22-31" aria-hidden="true" tabindex="-1"></a>data[<span class="st">"Number_of_Vehicles"</span>]<span class="op">=</span>data[<span class="st">"Number_of_Vehicles"</span>].astype(<span class="bu">str</span>)</span>
-<span id="cb22-32"><a href="#cb22-32" aria-hidden="true" tabindex="-1"></a>Counter(data[<span class="st">'Accident_Severity'</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> collections <span class="im">import</span> Counter</span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> warnings</span>
+<span id="cb21-5"><a href="#cb21-5" aria-hidden="true" tabindex="-1"></a>warnings.simplefilter(<span class="st">'ignore'</span>)</span>
+<span id="cb21-6"><a href="#cb21-6" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.pipeline <span class="im">import</span> Pipeline</span>
+<span id="cb21-7"><a href="#cb21-7" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> scipy.stats <span class="im">as</span> stats</span>
+<span id="cb21-8"><a href="#cb21-8" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.model_selection <span class="im">import</span> train_test_split, GridSearchCV</span>
+<span id="cb21-9"><a href="#cb21-9" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn <span class="im">import</span> metrics</span>
+<span id="cb21-10"><a href="#cb21-10" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.preprocessing <span class="im">import</span> StandardScaler</span>
+<span id="cb21-11"><a href="#cb21-11" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.preprocessing <span class="im">import</span> LabelEncoder</span>
+<span id="cb21-12"><a href="#cb21-12" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.model_selection <span class="im">import</span> StratifiedKFold</span>
+<span id="cb21-13"><a href="#cb21-13" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb21-14"><a href="#cb21-14" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> seaborn <span class="im">as</span> sns</span>
+<span id="cb21-15"><a href="#cb21-15" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.model_selection <span class="im">import</span> RandomizedSearchCV</span>
+<span id="cb21-16"><a href="#cb21-16" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> scipy.stats <span class="im">import</span> boxcox</span>
+<span id="cb21-17"><a href="#cb21-17" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pickle</span>
+<span id="cb21-18"><a href="#cb21-18" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> numpy.random <span class="im">import</span> seed</span>
+<span id="cb21-19"><a href="#cb21-19" aria-hidden="true" tabindex="-1"></a>seed(<span class="dv">862</span>)</span>
+<span id="cb21-20"><a href="#cb21-20" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> tensorflow.random <span class="im">import</span> set_seed</span>
+<span id="cb21-21"><a href="#cb21-21" aria-hidden="true" tabindex="-1"></a>set_seed(<span class="dv">862</span>)</span>
+<span id="cb21-22"><a href="#cb21-22" aria-hidden="true" tabindex="-1"></a>data <span class="op">=</span> pd.read_csv(<span class="st">"./Data/RoadAccident.csv"</span>)</span>
+<span id="cb21-23"><a href="#cb21-23" aria-hidden="true" tabindex="-1"></a>data.drop([<span class="st">'Accident_Index'</span>,<span class="st">'Datetime'</span>], axis <span class="op">=</span> <span class="dv">1</span>,inplace<span class="op">=</span><span class="va">True</span>) </span>
+<span id="cb21-24"><a href="#cb21-24" aria-hidden="true" tabindex="-1"></a>d <span class="op">=</span> {<span class="st">"Feature"</span>:[i <span class="cf">for</span> i <span class="kw">in</span> data.columns]    ,<span class="st">"Nunique"</span> :data.nunique().values ,<span class="st">'Type'</span> : data.dtypes.values, <span class="st">"No: of nulls"</span> : data.isnull().<span class="bu">sum</span>() }</span>
+<span id="cb21-25"><a href="#cb21-25" aria-hidden="true" tabindex="-1"></a>description <span class="op">=</span> pd.DataFrame(data <span class="op">=</span> d)</span>
+<span id="cb21-26"><a href="#cb21-26" aria-hidden="true" tabindex="-1"></a>description</span>
+<span id="cb21-27"><a href="#cb21-27" aria-hidden="true" tabindex="-1"></a>data[<span class="st">"Season"</span>]<span class="op">=</span>data[<span class="st">"Season"</span>].astype(<span class="bu">str</span>)</span>
+<span id="cb21-28"><a href="#cb21-28" aria-hidden="true" tabindex="-1"></a>data[<span class="st">"Month_of_Year"</span>]<span class="op">=</span>data[<span class="st">"Month_of_Year"</span>].astype(<span class="bu">str</span>)</span>
+<span id="cb21-29"><a href="#cb21-29" aria-hidden="true" tabindex="-1"></a>data[<span class="st">"Day_of_Week"</span>]<span class="op">=</span>data[<span class="st">"Day_of_Week"</span>].astype(<span class="bu">str</span>)</span>
+<span id="cb21-30"><a href="#cb21-30" aria-hidden="true" tabindex="-1"></a>data[<span class="st">"Year"</span>]<span class="op">=</span>data[<span class="st">"Year"</span>].astype(<span class="bu">str</span>)</span>
+<span id="cb21-31"><a href="#cb21-31" aria-hidden="true" tabindex="-1"></a>data[<span class="st">"Number_of_Vehicles"</span>]<span class="op">=</span>data[<span class="st">"Number_of_Vehicles"</span>].astype(<span class="bu">str</span>)</span>
+<span id="cb21-32"><a href="#cb21-32" aria-hidden="true" tabindex="-1"></a>Counter(data[<span class="st">'Accident_Severity'</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
-<div class="cell-output cell-output-display" data-execution_count="14">
+<div class="cell-output cell-output-display" data-execution_count="31">
 <pre><code>Counter({'Slight': 56705, 'Fatal_Serious': 18845})</code></pre>
 </div>
 </div>
@@ -1251,16 +1251,16 @@ Name: count, Length: 248, dtype: int64</code></pre>
 <div class="cell" data-execution_count="15">
 <details>
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>cat_data  <span class="op">=</span> data.select_dtypes(exclude<span class="op">=</span>[np.number])</span>
-<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> cat_data:  </span>
-<span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a>  plt.figure(figsize<span class="op">=</span>(<span class="dv">10</span>,<span class="dv">10</span>))<span class="co"># Creating an empty plot </span></span>
-<span id="cb24-4"><a href="#cb24-4" aria-hidden="true" tabindex="-1"></a>  ax<span class="op">=</span>sns.countplot(x<span class="op">=</span>cat_data[i],hue<span class="op">=</span>data[<span class="st">"Accident_Severity"</span>])<span class="co"># Countplot of airlines</span></span>
-<span id="cb24-5"><a href="#cb24-5" aria-hidden="true" tabindex="-1"></a>  plt.tick_params(labelsize<span class="op">=</span><span class="dv">10</span>)<span class="co"># changing the label sizes  </span></span>
-<span id="cb24-6"><a href="#cb24-6" aria-hidden="true" tabindex="-1"></a>  plt.ylabel(<span class="st">"Count"</span> ,fontsize<span class="op">=</span><span class="dv">10</span>) <span class="co">#Adding y-label</span></span>
-<span id="cb24-7"><a href="#cb24-7" aria-hidden="true" tabindex="-1"></a>  <span class="co">#plt.title("\n", cat_data.columns.values,"\n",fontsize=25) # Adding plot title</span></span>
-<span id="cb24-8"><a href="#cb24-8" aria-hidden="true" tabindex="-1"></a>  <span class="cf">for</span> p <span class="kw">in</span> ax.patches:</span>
-<span id="cb24-9"><a href="#cb24-9" aria-hidden="true" tabindex="-1"></a>      ax.annotate(<span class="st">'</span><span class="sc">{}</span><span class="st">'</span>.<span class="bu">format</span>(p.get_height()),(p.get_x()<span class="op">+</span><span class="fl">0.25</span>,p.get_height()<span class="op">+</span><span class="dv">5</span>)) <span class="co"># Adding the count above the bars</span></span>
-<span id="cb24-10"><a href="#cb24-10" aria-hidden="true" tabindex="-1"></a>  plt.show() </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>cat_data  <span class="op">=</span> data.select_dtypes(exclude<span class="op">=</span>[np.number])</span>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> cat_data:  </span>
+<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a>  plt.figure(figsize<span class="op">=</span>(<span class="dv">10</span>,<span class="dv">10</span>))<span class="co"># Creating an empty plot </span></span>
+<span id="cb23-4"><a href="#cb23-4" aria-hidden="true" tabindex="-1"></a>  ax<span class="op">=</span>sns.countplot(x<span class="op">=</span>cat_data[i],hue<span class="op">=</span>data[<span class="st">"Accident_Severity"</span>])<span class="co"># Countplot of airlines</span></span>
+<span id="cb23-5"><a href="#cb23-5" aria-hidden="true" tabindex="-1"></a>  plt.tick_params(labelsize<span class="op">=</span><span class="dv">10</span>)<span class="co"># changing the label sizes  </span></span>
+<span id="cb23-6"><a href="#cb23-6" aria-hidden="true" tabindex="-1"></a>  plt.ylabel(<span class="st">"Count"</span> ,fontsize<span class="op">=</span><span class="dv">10</span>) <span class="co">#Adding y-label</span></span>
+<span id="cb23-7"><a href="#cb23-7" aria-hidden="true" tabindex="-1"></a>  <span class="co">#plt.title("\n", cat_data.columns.values,"\n",fontsize=25) # Adding plot title</span></span>
+<span id="cb23-8"><a href="#cb23-8" aria-hidden="true" tabindex="-1"></a>  <span class="cf">for</span> p <span class="kw">in</span> ax.patches:</span>
+<span id="cb23-9"><a href="#cb23-9" aria-hidden="true" tabindex="-1"></a>      ax.annotate(<span class="st">'</span><span class="sc">{}</span><span class="st">'</span>.<span class="bu">format</span>(p.get_height()),(p.get_x()<span class="op">+</span><span class="fl">0.25</span>,p.get_height()<span class="op">+</span><span class="dv">5</span>)) <span class="co"># Adding the count above the bars</span></span>
+<span id="cb23-10"><a href="#cb23-10" aria-hidden="true" tabindex="-1"></a>  plt.show() </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-display">
 <p><img src="dataexplore_files/figure-html/cell-16-output-1.png" width="836" height="799"></p>
@@ -1329,6 +1329,89 @@ Name: count, Length: 248, dtype: int64</code></pre>
 <p><img src="dataexplore_files/figure-html/cell-16-output-22.png" width="828" height="799"></p>
 </div>
 </div>
+</section>
+<section id="look-at-the-distribution-of-all-numerical-variables" class="level3">
+<h3 class="anchored" data-anchor-id="look-at-the-distribution-of-all-numerical-variables">Look at the distribution of all numerical variables</h3>
+<div class="cell" data-execution_count="16">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> diagnostic_plots(df, variable):</span>
+<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a>    plt.figure(figsize<span class="op">=</span>(<span class="dv">15</span>,<span class="dv">6</span>))</span>
+<span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a>    plt.subplot(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">1</span>)</span>
+<span id="cb24-4"><a href="#cb24-4" aria-hidden="true" tabindex="-1"></a>    df[variable].hist()</span>
+<span id="cb24-5"><a href="#cb24-5" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="bu">str</span>(variable))</span>
+<span id="cb24-6"><a href="#cb24-6" aria-hidden="true" tabindex="-1"></a>    plt.subplot(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">2</span>)</span>
+<span id="cb24-7"><a href="#cb24-7" aria-hidden="true" tabindex="-1"></a>    stats.probplot(df[variable], dist<span class="op">=</span><span class="st">"norm"</span>, plot<span class="op">=</span>plt)</span>
+<span id="cb24-8"><a href="#cb24-8" aria-hidden="true" tabindex="-1"></a>    plt.show()</span>
+<span id="cb24-9"><a href="#cb24-9" aria-hidden="true" tabindex="-1"></a>num_data  <span class="op">=</span> data.select_dtypes(include<span class="op">=</span>[np.number])</span>
+<span id="cb24-10"><a href="#cb24-10" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> num_data:</span>
+<span id="cb24-11"><a href="#cb24-11" aria-hidden="true" tabindex="-1"></a>    diagnostic_plots(num_data, i) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>Latitude
+Longitude
+Driver_IMD_Decile
+Speed_limit
+Day_of_Month
+Hour_of_Day
+Age_of_Driver
+Age_of_Vehicle
+Engine_CC</code></pre>
+</div>
+<div class="cell-output cell-output-display">
+<p><img src="dataexplore_files/figure-html/cell-17-output-2.png" width="1181" height="523"></p>
+</div>
+<div class="cell-output cell-output-display">
+<p><img src="dataexplore_files/figure-html/cell-17-output-3.png" width="1181" height="523"></p>
+</div>
+<div class="cell-output cell-output-display">
+<p><img src="dataexplore_files/figure-html/cell-17-output-4.png" width="1174" height="523"></p>
+</div>
+<div class="cell-output cell-output-display">
+<p><img src="dataexplore_files/figure-html/cell-17-output-5.png" width="1181" height="523"></p>
+</div>
+<div class="cell-output cell-output-display">
+<p><img src="dataexplore_files/figure-html/cell-17-output-6.png" width="1174" height="523"></p>
+</div>
+<div class="cell-output cell-output-display">
+<p><img src="dataexplore_files/figure-html/cell-17-output-7.png" width="1181" height="523"></p>
+</div>
+<div class="cell-output cell-output-display">
+<p><img src="dataexplore_files/figure-html/cell-17-output-8.png" width="1181" height="523"></p>
+</div>
+<div class="cell-output cell-output-display">
+<p><img src="dataexplore_files/figure-html/cell-17-output-9.png" width="1181" height="523"></p>
+</div>
+<div class="cell-output cell-output-display">
+<p><img src="dataexplore_files/figure-html/cell-17-output-10.png" width="1181" height="523"></p>
+</div>
+</div>
+</section>
+<section id="summary-of-the-above-distribution-plots" class="level3">
+<h3 class="anchored" data-anchor-id="summary-of-the-above-distribution-plots">Summary of the above distribution plots:</h3>
+<ol type="1">
+<li>For some categorical variable, there are many ranks that have very low frequency. For example, only the ‘fine’ rank of the ‘Weather’ variable has significant count, hence the other ranks might be grouped into one for easy processing.</li>
+<li>For some numerical variables, some features are not normally distributed. This would be taken care of in future analysis.</li>
+</ol>
+</section>
+<section id="look-at-the-heatmap-of-the-numerical-variables" class="level3">
+<h3 class="anchored" data-anchor-id="look-at-the-heatmap-of-the-numerical-variables">Look at the heatmap of the numerical variables</h3>
+<div class="cell" data-execution_count="17">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a>corrmat <span class="op">=</span> data.select_dtypes(include<span class="op">=</span>[np.number]).corr()</span>
+<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a>top_corr_features <span class="op">=</span> corrmat.index</span>
+<span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">14</span>,<span class="dv">6</span>))</span>
+<span id="cb26-4"><a href="#cb26-4" aria-hidden="true" tabindex="-1"></a><span class="co">#plot heat map</span></span>
+<span id="cb26-5"><a href="#cb26-5" aria-hidden="true" tabindex="-1"></a>g<span class="op">=</span>sns.heatmap(data[top_corr_features].corr(),annot<span class="op">=</span><span class="va">True</span>,cmap<span class="op">=</span><span class="st">"RdYlGn"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-display">
+<p><img src="dataexplore_files/figure-html/cell-18-output-1.png" width="1081" height="490"></p>
+</div>
+</div>
+</section>
+<section id="the-above-heatmap-does-not-indicate-any-unusual-correlation." class="level3">
+<h3 class="anchored" data-anchor-id="the-above-heatmap-does-not-indicate-any-unusual-correlation.">The above heatmap does not indicate any unusual correlation.</h3>
 
 
 </section>
