@@ -1,295 +1,295 @@
 Date,Country,State,Description,Deaths,Tesla_driver,Tesla_occupant,Other_vehicle,CP,tsla+cp,Model,Claimed,VTAD
-1/17/2023, USA ,CA, Tesla crashes into back of semi ,1.0,  1 , - , - , - ,  1 , - , - , - 
-1/7/2023, Canada ,-, Tesla crashes ,1.0,  1 , - , - , - ,  1 , - , - , - 
-1/7/2023, USA ,WA," Tesla hits pole, catches on fire ",1.0, - ,  1 , - , - ,  1 , - , - , - 
-12/22/2022, USA ,GA, Tesla crashes and burns ,1.0,  1 , - , - , - ,  1 , - , - , - 
-12/19/2022, Canada ,-, Tesla crashes into storefront ,1.0, - , - , - ,  1 ,  1 , - , - , - 
-12/18/2022, USA ,CA, Tesla hit two other cars ,1.0, - ,  1 , - , - , - , - , - , - 
-12/17/2022, USA ,CA, Tesla hits pedestrian on highway ,1.0, - , - , - ,  1 ,  1 , - , - , - 
-12/11/2022, USA ,CA, Tesla crashes into wall ,1.0,  1 , - , - , - , - , - , - , - 
-12/11/2022, USA ,MO, Collision at intersection ,1.0, - , - ,  1 , - , - , - , - , - 
-12/6/2022, Canada ,-," Tesla veers, collides with truck ",1.0,  1 , - , - , - , - , - , - , - 
-11/28/2022, China ,-," Tesla runs red light, collides with two cars ",2.0, - , - ,  2 , - , - , Y , - , - 
-11/27/2022, USA ,CA," Tesla careens off road, hits trees ",1.0,  1 , - , - , - ,  1 , - , - , - 
-11/26/2022, USA ,AR, Tesla hits pedestrian ,1.0, - , - , - ,  1 ,  1 , - , - , - 
-11/18/2022, China ,-, Tesla crashes into dump truck ,1.0,  1 , - , - , - ,  1 , - , - , - 
-11/12/2022, Mexico ,-, Tesla hits Toyota ,1.0, - , - ,  1 , - , - , - , - , - 
-11/12/2022, USA ,CA, Multi-vehicle accident ,1.0, - , - ,  1 , - , - , - , - , - 
-11/11/2022, USA ,CA," Tesla hits wall, catches fire ",1.0, - ,  1 , - , - , - , - ,  1 , - 
-11/5/2022, China ,-, Out of control Tesla hits bicyclist and motorcyclist ,2.0, - , - ,  1 ,  1 ,  1 , - , - , - 
-11/4/2022, USA ,IL," Collision at intersection, Tesla driver dies in hospital ",1.0,  1 , - , - , - ,  1 , - , - , - 
-10/19/2022, USA ,CA, Multicar crash ,1.0,  1 , - , - , - ,  1 ,  1 , - , - 
-10/18/2022, USA ,FL," Tesla collides with minivan, engulfed by flames ",4.0,  1 ,  1 ,  2 , - ,  2 , - , - , - 
-10/12/2022, UK ,-, Tesla crashes into ditch ,1.0,  1 , - , - , - ,  1 ,  2 , - , - 
-10/9/2022, USA ,CA, Tesla hits concrete block ,1.0, - ,  1 , - , - ,  1 , - , - , - 
-10/1/2022, USA ,FL, Tesla hits tree and catches fire ,1.0,  1 , - , - , - ,  1 , - , - , - 
-9/18/2022, USA ,SC," Tesla crashes into tree, ignites ",2.0,  1 ,  1 , - , - ,  2 , - , - , - 
-9/18/2022, USA ,MD, Multi-car accident ,1.0, - , - ,  1 , - , - , - , - , - 
-9/16/2022, USA ,GA," Tesla loses control and crashes into bus shelter, kills man inside ",1.0, - , - , - ,  1 ,  1 , - ,  1 , - 
-9/13/2022, USA ,CA, Tesla runs off highway ,1.0,  1 , - , - , - ,  1 , - , - , - 
-9/12/2022, USA ,NY," Tesla runs off road, catches fire ",1.0,  1 , - , - , - , - , - ,-,-
-9/7/2022, USA ,CA, Motorcycle collides with Tesla ,1.0,  1 , - , - , - , - , - , - , - 
-8/30/2022, USA ,CA, Tesla hits motorcycle ,1.0, - , - ,  1 , - , - , - ,-, - 
-8/26/2022, USA ,FL, Tesla hits motorcycle ,1.0, - , - ,  1 , - , - ,  3 ,-,  1 
-8/24/2022, USA ,MA, Motorcyclist hits Tesla ,1.0, - , - ,  1 , - , - , - ,-, - 
-8/23/2022, USA ,SC, Multi-car accident on highway ,2.0, - , - ,  2 , - , - ,  3 ,-,  2 
-8/21/2022, UK ,-," Car drives thru garage, hits Tesla, lands on railroad tracks ",1.0, - , - ,  1 , - , - , - ,-, - 
-8/20/2022, USA ,FL," Tesla swerves, runs off roadway, overturns ",1.0,  1 , - , - , - ,  1 , S ,-, - 
-8/20/2022, USA ,FL, Pedestrian hit in road ,1.0, - , - , - ,  1 ,  1 , - ,-, - 
-8/16/2022, Germany ,-," Tesla car crashes into tree, burns ",3.0, - , - , - , - ,  3 , - ,-, - 
-8/14/2022, USA ,CA, Tesla veers into oncoming traffic ,4.0,  1 ,  3 , - , - ,  4 , - ,-, - 
-8/14/2022, Finland ,-, Unlicensed driver hits pedestrian ,1.0, - , - , - ,  1 ,  1 , - ,-, - 
-8/2/2022, USA ,FL, Man in wheelchair hit crossing road ,1.0, - , - , - ,  1 ,  1 ,  3 ,-, - 
-7/27/2022, Canada ,-, Tesla hits cyclist ,1.0, - , - , - ,  1 ,  1 , - ,-, - 
-7/27/2022, USA ,ME, Tesla crashes at high speed ,1.0,  1 , - , - , - ,  1 , - ,-, - 
-7/24/2022, USA ,UT, Tesla hits motorcycle ,1.0, - , - ,  1 , - , - ,  3 ,  1 ,  1 
-7/16/2022, USA ,PA, Tesla goes airborne and crashes ,1.0,  1 , - , - , - ,  1 , - , - , - 
-7/12/2022, China ,-, Out of control Tesla hits pedestrians ,2.0, - , - , - ,  2 ,  2 , Y , - , - 
-7/8/2022, USA ,CA, 3-car accident involving Tesla ,1.0, - , - ,  1 , - , - , - , - , - 
-7/8/2022, USA ,HA, Motorcycle crashes into Tesla ,1.0, - , - ,  1 , - , - , - , - , - 
-7/7/2022, USA ,CA, Motorcycle hit by Tesla ,1.0, - , - ,  1 , - , - , Y ,  1 ,  1 
-7/6/2022, USA ,FL, Tesla hits parked tractor-trailer ,2.0,  1 ,  1 , - , - ,  2 , - ,  2 ,  2 
-7/5/2022, USA ,GA," Tesla strikes pole, burns ",1.0,  1 , - , - , - ,  1 , - , - , - 
-6/26/2022, USA ,CA, Tesla drives into opposite lane ,1.0, - , - ,  1 , - , - , - , - , - 
-6/20/2022, USA ,AL, Tesla crashes into car ,1.0, - , - ,  1 , - , - , - , - , - 
-6/20/2022, USA ,PA, Tesla hit and run ,1.0, - , - , - ,  1 ,  1 , - , - , - 
-6/20/2022, Canada ,-, Tesla runs into overpass ,1.0,  1 , - , - , - ,  1 , - , - , - 
-6/19/2022, USA , MI ," Tesla hits telephone pole, ignites ",2.0,  1 ,  1 , - , - ,  2 , - , - , - 
-6/17/2022, USA , CA , Head-on collision ,2.0,  1 ,  1 , - , - ,  2 , - , - , - 
-6/14/2022, USA , CA , Tesla moves into opposite lane and head-on crashes ,1.0, - , - ,  1 , - , - , - , - , - 
-6/13/2022, USA , CA , Two-car collision ,1.0,  1 , - , - , - ,  1 , - , - , - 
-6/7/2022, USA , CA , DUI crash ,1.0, - , - , - ,  1 ,  1 , - , - , - 
-6/3/2022, USA , NV , Motorcycle crashes into Tesla ,1.0, - , - ,  1 , - , - , - , - , - 
-5/28/2022, USA , NY , Tesla DUI crash ,1.0, - , - ,  1 , - , - , - , - , - 
-5/28/2022, USA , OR , Tesla loses control and crashes into car ,2.0,  1 , - ,  1 , - ,  1 , Y , - , - 
-5/28/2022, USA , CA , Speeding tesla crashes into tree ,1.0,  1 , - , - , - ,  1 , - , - , - 
-5/25/2022, USA , OR , Tesla crashes into pole ,1.0, - ,  1 , - , - ,  1 , S , - , - 
-5/23/2022, USA , AZ , Tesla driver hit in multicar accident ,1.0,  1 , - , - , - ,  1 , - , - , - 
-5/21/2022, China ,-, Tesla hits pedestrian ,1.0, - , - , - ,  1 ,  1 , - , - , - 
-5/19/2022, USA , NJ ," Tesla hits trees, ignites ",1.0,  1 , - , - , - ,  1 , - , - , - 
-5/19/2022, USA , NJ , Multiple car crash on highway ,1.0,  1 , - , - , - ,  1 , - , - , - 
-5/18/2022, USA , CA , Tesla hits pedestrian ,1.0, - , - , - ,  1 ,  1 ,  3 ,  1 , - 
-5/17/2022, USA , CO , Fiery crash ,1.0,  1 ,-,-,-,  1 ,  3 ,  1 , - 
-5/12/2022, Australia ,-, Tesla hit pedestrian who dies 5 days later from injuries ,1.0, - , - , - ,  1 ,  1 , X , - , - 
-5/11/2022, USA , CA , Tesla smashes into construction equipment ,3.0,  1 ,  2 , - , - ,  3 , S ,  1 , - 
-5/7/2022, USA , UT , Tesla DUI involving another vehicle ,2.0, - , - ,  2 , - , - , - , - , - 
-5/1/2022, USA , PA , Tesla DUI hits pedestrian ,1.0, - , - , - ,  1 ,  1 , - , - , - 
-4/29/2022, USA , NC ," Highway accident, Tesla goes airborne  ",1.0,  1 , - , - , - , - , - , - , - 
-4/14/2022, USA ,FL, Crash with motorcycle ,1.0,-,-,  1 ,-,-, Y ,  1 ,-
-4/10/2022, UK ,-, Two car accident ,1.0, - , - ,  1 , - , - , - , - , - 
-4/8/2022, Netherlands ,-, Head-on collision with truck and Tesla ,1.0, - , - , - , - ,  1 , - , - , - 
-3/26/2022, USA , CA ," DUI crash on highway, Tesla catches fire ",1.0, - , - , - , - ,  1 , - ,  1 , - 
-3/21/2022, USA , CA , Three car collision involving Tesla ,2.0, - , - ,  2 , - , - , - , - , - 
-3/20/2022, USA , CA , Car crosses double yellow and crashes with a Tesla ,2.0,  1 , - ,  1 , - ,  1 ,  3 , - , - 
-3/14/2022, USA , CA , Tesla collides into rail on highway ,2.0,  1 ,  1 , - , - ,  1 , - , - , - 
-3/14/2022, USA , FL , Tesla crash that ends in fire ,1.0,  1 , - , - , - ,  1 , - , - , - 
-3/13/2022, Switzerland ,-, Frontal collision between Tesla and VW ,1.0, - , - ,  1 , - ,  1 , - , - , - 
-3/12/2022, USA , NY , Tesla ignites on parkway ,1.0,  1 , - , - , - ,  1 , S , - , - 
-3/7/2022, China ,-," Tesla on Autopilot hits maintenance car, then BMW hits responder ",1.0, - , - , - ,  1 ,  1 , - ,  1 , - 
-3/7/2022, USA , CA , Car found overturned in a ravine ,1.0,  1 , - , - , - ,  1 , - , - , - 
-3/5/2022, USA , CA , Tesla crashes head on with other car ,1.0, - , - ,  1 , - , - , - , - , - 
-2/28/2022, USA , ID , Car found in water-swollen ditch ,1.0,  1 , - , - , - ,  1 , - , - , - 
-2/27/2022, USA , MO , Tesla breaksdown in traffic and causes pile-up ,1.0,  1 , - , - , - ,  1 , - , - , - 
-2/12/2022, USA , CA , Tesla crashes into a tree ,1.0,  1 , - , - , - ,  1 , - , - , - 
-2/7/2022, USA , FL ," Tesla loses control, hits pole, ignites ",1.0,  1 , - , - , - ,  1 , - , - , - 
-1/16/2022, USA , CA , Three-car collision near intersection ,1.0, - , - ,  1 , - , - , - , - , - 
-1/1/2022, USA , CA , Motorcyclist crashes into Tesla ,1.0, - , - ,  1 , - , - , X , - , - 
-1/1/2022, USA , CA , Single-collision on onramp ,1.0,  1 , - , - , - ,  1 , - , - , - 
-12/31/2021, USA , CA , Tesla crashes into trees ,2.0,  1 ,  1 , - , - ,  2 , - , - , - 
-12/28/2021, USA , CA , Multi-crash involving DUI ,1.0, - , - ,  1 , - , - , - ,  1 , - 
-12/24/2021, China ,-, Tesla loses control and drives into river ,1.0,  1 , - , - , - ,  1 , - , - , - 
-12/18/2021, USA , CA , Multi-car accident ,1.0, - , - ,  1 , - , - , Y , - , - 
-12/11/2021, France ,-, Crash in public area including 20 injuries ,1.0, - , - , - ,  1 ,  1 , - , - , - 
-12/7/2021, USA , AZ , Vehicular collision ,1.0,  1 , - , - , - ,  1 , - , - , - 
-12/7/2021, Germany ,-," Tesla crashes into trees, flames erupt ",1.0,  1 , - , - , - ,  1 , - , - , - 
-12/2/2021, China ,-, Motorbiker killed by Tesla ,1.0, - , - ,  1 , - , - , - , - , - 
-12/1/2021, USA , CA ," Collision with pole, battery ignited ",1.0,  1 , - , - , - ,  1 ,  3 , - , - 
-11/29/2021, USA , CA , DUI crash with parked car ,1.0, - , - ,  1 , - , - , - , - , - 
-11/15/2021, USA , CA , Pedestrian hit at crosswalk ,1.0, - , - , - , - ,  1 , - , - , - 
-11/8/2021, USA , AZ , Three car collision ,1.0, - , - ,  1 , - , - , - , - , - 
-11/8/2021, USA , OH ," Tesla hits fixture, catches fire ",1.0,  1 , - , - , - ,  1 , - , - , - 
-11/6/2021, USA , NV , DUI crash ,1.0, - ,  1 , - , - ,  1 , Y , - , - 
-11/4/2021, USA , FL , Tesla hits bicyclist before crashing ,1.0, - , - , - ,  1 ,  1 , - , - , - 
-10/28/2021, USA , GA , Multi-collision event on highway ,1.0, - , - ,  1 , - , - , - , - , - 
-10/15/2021, USA , AZ , Toyota hits Tesla ,1.0, - , - ,  1 , - , - , - , - , - 
-9/17/2021, USA , IA , Three-way car collision ,1.0, - , - ,  1 , - , - , - , - , - 
-9/13/2021, USA , FL ," Tesla suffers suspension failure, hits tree, and ignites on fire ",2.0,  1 ,  1 , - , - ,  2 ,  3 , - , - 
-9/4/2021, China ,-, Tesla hit pedestrian crossing road ,1.0, - , - , - ,  1 ,  1 , - , - , - 
-9/4/2021, USA , FL ," Tesla runs stop sign, crashes into house ",2.0, - ,  1 , - ,  1 ,  2 , S , - , - 
-8/29/2021, USA , NY ," Car hits utility pole, ignites ",2.0,  1 ,  1 , - , - ,  2 ,  3 , - , - 
-8/26/2021, Netherlands ,-, Tesla hits tree ,1.0,  1 , - , - , - ,  1 , - , - , - 
-8/25/2021, USA , AZ , Tesla runs a red light and hits another car ,3.0, - , - ,  3 , - , - , - , - , - 
-8/17/2021, USA , PA , Tesla crashes into guardrail ,1.0,  1 , - , - , - ,  1 ,  3 , - , - 
-7/26/2021, Netherlands ,-," Four vehicle collision, Tesla catches fire ",1.0,-,-,-, - ,-, - , - , - 
-7/26/2021, USA , NY , Pedestrian hit on shoulder ,1.0, - , - , - ,  1 ,  1 , - ,  1 ,  1 
-7/23/2021, USA , GA , Tesla Driver loses control and hits median barrier ,1.0,  1 , - , - , - ,  1 ,  3 , - , - 
-7/21/2021, USA , GA , Tesla driver hits man on shoulder of highway ,1.0, - , - , - ,  1 ,  1 , - , - , - 
-7/7/2021, USA , CA , Other driver dies in head-on collision ,1.0, - , - ,  1 , - , - , S , - , - 
-6/29/2021, USA , CA ," Car crashes into Tesla, fire breaks out ",2.0,  1 , - ,  1 , - ,  1 , - , - , - 
-6/19/2021, USA , MI ," Tesla hits power pole, runs off road, and ignites ",2.0,  1 ,  1 , - , - ,  2 , - , - , - 
-6/16/2021, USA , FL ," Tesla crashes, driver later dies in hospital ",1.0,  1 , - , - , - ,  1 , - , - , - 
-6/16/2021, Denmark ,-," Driver loses control of car, crashes into tree ",1.0,  1 , - , - , - ,  1 , - , - , - 
-6/11/2021, USA , WA , Tesla crashes through backyard fence ,1.0,  1 , - , - , - ,  1 , - , - , - 
-6/11/2021, USA , NY , Driver crashes into senior living facility ,1.0, - ,  1 , - , - ,  1 , - , - , - 
-6/1/2021, USA , WA ," Tesla hits concrete barrier, later catches on fire ",1.0,  1 , - , - , - ,  1 , - , - , - 
-5/26/2021, USA , VA , Tesla involved in multi-car highway accident ,4.0, - , - ,  4 , - , - , - , - , - 
-5/15/2021, China ,-, Tesla hits police officers and kills one ,1.0, - , - , - ,  1 ,  1 , - , - , - 
-5/7/2021, China ,-, Tesla runs into back of truck ,1.0,  1 , - , - , - ,  1 , - , - , - 
-5/5/2021, USA , CA , Multi-event collision with truck on highway ,1.0,  1 , - , - , - ,  1 , - ,  1 , - 
-4/17/2021, USA , TX ," Tesla crashes into tree, bursts into fire ",2.0,-,-, - , - ,  2 , S ,  2 , - 
-4/17/2021, China ,-, Tesla hits concrete barrier and spontaneously combusts ,1.0, - ,  1 , - , - ,  1 , - , - , - 
-4/16/2021, France ,-, Tesla crashes into tree with 5 occupants ,2.0,-,-, - , - ,  2 , - , - , - 
-4/14/2021, USA , TX , Head-on collision involving a Tesla ,1.0,  1 ,-,-,-,  1 , - , - , - 
-4/13/2021, Germany ,-," Tesla goes off road, hits a tree, and bursts into flames ",1.0,  1 , - , - , - ,  1 , S , - , - 
-4/3/2021, USA , PA ," Tesla loses control, hits railing and cut in half ",2.0,  1 ,  1 , - , - ,  2 , - , - , - 
-4/1/2021, China ,-," Driver hit traffic island, Tesla catches on fire ",1.0,  1 , - , - , - ,  1 ,  3 , - , - 
-3/21/2021, UK ,-," Pedestrian hit in collision, later dies in hospital weeks later ",1.0, - , - , - ,  1 ,  1 , - , - , - 
-3/20/2021, Belgium ,-," Driver runs over curb, loses control and hit pole ",1.0,  1 , - , - , - ,  1 , - , - , - 
-3/13/2021, UK ,-, Tesla crashes into stationary van ,1.0, - , - ,  1 , - , - ,  3 , - , - 
-3/10/2021, USA , CA ," Tesla crashes into tree, occupants killed ",2.0,  1 ,  1 , - , - ,  1 , - , - , - 
-3/7/2021, USA , OH , 3 car collision near intersection ,1.0, - , - ,  1 , - , - , - , - , - 
-2/22/2021, USA , CA , High speed crash into telephone poll ,1.0,  1 , - , - , - ,  1 , - , - , - 
-1/22/2021, USA , AZ ," Tesla crashes into tree, occupants killed ",2.0,  1 ,  1 , - , - ,  2 , - , - , - 
-1/21/2021, USA , CO ," Tesla hits car and car crashes, driver later dies ",1.0, - , - ,  1 , - , - , - , - , - 
-1/15/2021, USA , FL ," Head-on collision involving a Tesla, other driver dies ",1.0, - , - ,  1 , - , - , - , - , - 
-1/10/2021, USA , UT ," Car collides with Tesla, both drivers die ",2.0,  1 , - ,  1 , - , - , - , - , - 
-12/18/2020, Portugal ,-, Tesla driver crashes into pole and dies in resulting fire ,1.0,  1 ,-, - , - ,  1 , - , - , - 
-12/11/2020, USA , FL ," Pedestrians hit and run by Tesla, one died from injuries ",1.0, - , - , - ,  1 ,  1 , - , - , - 
-12/9/2020, South Korea ,-," Car goes out of control and crashes into a wall, ignites ",1.0, - ,  1 , - , - ,  1 , X ,  1 , - 
-12/4/2020, USA , CA ," Car loses control, goes airborne, hits telephone pole ",1.0, - ,  1 , - , - ,  1 , - , - , - 
-11/16/2020, USA , MO , Five-vehicle pileup involving truck ,1.0, - , - ,  1 , - , - , Y , - , - 
-10/31/2020, USA , CA ," Car hit by a Tesla, driver later died from injuries ",1.0, - , - ,  1 , - , - , Y , - , - 
-10/10/2020, USA , CA , Motorcyclist died after rear-ending a Tesla ,1.0, - , - ,  1 , - , - , Y , - , - 
-10/7/2020, Belgium ,-," Driver going wrong direction hits Tesla, driver later dies ",1.0, - , - ,  1 , - , - ,  3 ,-, - 
-9/17/2020, USA , GA ," Car loses control, hits bus shelter ",1.0,-,-,-,  1 ,  1 ,  3 ,  1 ,-
-9/12/2020, USA , CA ," Car lands on Tesla, other vehicle driver dies ",1.0, - , - ,  1 , - , - , - , - , - 
-9/6/2020, USA , IL ," Tesla runs thru red light, crashes, driver dies at scene ",1.0,  1 , - , - , - ,  1 , - , - , - 
-9/5/2020, China ,-," Tesla crashes into crowd, 2 dead and several injured ",2.0, - , - , - ,  2 ,  2 , X , - , - 
-8/24/2020, USA , VA ," Two car collision at intersection, other driver dies afterwards ",1.0, - , - ,  1 , - , - , X , - , - 
-8/13/2020, Germany ,-, Tesla crashes into tree ,1.0,  1 , - , - , - ,  1 , X ,  1 , - 
-8/12/2020, USA , CA , Tesla hits two cars along exit ramp & catches fire ,2.0,  1 ,  1 , - , - ,  1 , - ,  1 , - 
-8/2/2020, USA , CA ," Tesla crashes into tree, ignites, kills driver and passenger ",2.0,  1 ,  1 , - , - ,  1 , - , - , - 
-7/18/2020, USA , UT ," Tesla races other car, other car crashes ",1.0, - , - ,  1 , - , - , - , - , - 
-6/23/2020, USA , GA , Vehicle collides with Tesla at intersection ,1.0, - , - ,  1 , - , - , - , - , - 
-6/21/2020, Germany ,-," Tesla veers into other lane, crashes into oncoming car ",3.0, - , - ,  3 , - , - ,  3 ,  1 , - 
-6/17/2020, Canada ,-, Motorcyclist killed in crash with Tesla ,1.0, - , - ,  1 , - , - , - ,-, - 
-6/8/2020, Netherlands ,-, Driver has heart attack and crashes Tesla ,1.0,  1 , - , - , - ,  1 ,  3 , - , - 
-5/25/2020, USA , CA , Tesla goes off cliff and later found ,1.0,  1 , - , - , - ,  1 , - , - , - 
-5/14/2020, USA , CA , Two-car collision ,1.0, - , - ,  1 , - , - ,  3 ,  1 ,-
-5/5/2020, USA , CA , Drunk driver strikes Tesla ,1.0, - , - ,  1 , - , - , - , - , - 
-5/4/2020, Norway ,-, Tesla strikes and kills a man standing next to his truck ,1.0, - , - ,  1 , - , - , S ,  1 ,  1 
-4/24/2020, Netherlands ,-," Tesla runs off road, crashes, catches fire ",1.0,  1 , - , - , - ,  1 , - , - , - 
-4/3/2020, Taiwan ,-, Tesla rolls over and catches on fire ,1.0,  1 , - , - , - ,  1 ,  3 , - , - 
-4/1/2020, USA , OH , Tesla drive off road into tree ,1.0,  1 , - , - , - ,  1 ,  3 , - , - 
-3/8/2020, USA , GA , Motorcyclist rear ends Tesla ,1.0, - , - ,  1 , - , - , - , - , - 
-3/4/2020, Netherlands ,-, Three car collision ,1.0, - , - ,  1 , - , - , - , - , - 
-2/24/2020, USA , CA , Driver dies as Tesla goes down embankment ,1.0,  1 , - , - , - ,  1 , - , - , - 
-2/24/2020, Canada ,-, Tesla drives off cliff ,3.0,  1 ,  2 , - , - ,  3 ,  3 , - , - 
-1/31/2020, USA , FL , Nissan in front of Tesla loses control ,1.0, - , - ,  1 , - , - ,  3 , - , - 
-1/26/2020, USA , NJ , Tesla crashes into car at toll booth ,1.0, - , - ,  1 , - , - , X , - , - 
-1/21/2020, Germany ,-, Sudden unintended acceleration kills store patron ,1.0, - , - , - ,  1 ,  1 , S , - , - 
-1/19/2020, Taiwan ,-," Tesla t-bones sedan, kills pedestrian ",1.0, - , - , - ,  1 ,  1 , X , - , - 
-1/18/2020, USA , CA ," Tesla strikes sign, burns ",1.0,  1 , - , - , - ,  1 , S , - , - 
-1/5/2020, USA , UT ," Tesla runs red, strikes car, burns ",2.0, - , - ,  2 , - , - , - , - , - 
-1/4/2020, USA , FL , Tesla strikes Mercury ,1.0, - , - ,  1 , - , - ,  3 , - , - 
-12/29/2019, USA , IN , Tesla rear ends parked fire truck ,1.0, - ,  1 , - , - ,  1 ,  3 ,  1 ,  1 
-12/29/2019, USA , CA , Tesla runs red light after exiting freeway ,2.0, - , - ,  2 , - , - , S ,  2 ,  2 
-12/23/2019, Slovenia ,-, Drunk driver strikes Tesla ,1.0, - , - ,  1 , - , - , S , - , - 
-12/19/2019, USA , FL , Police SUV strikes Tesla ,2.0,  1 ,  1 , - , - ,  2 , - , - , - 
-12/11/2019, USA , CA , Tesla strikes turning Lexus ,1.0, - , - ,  1 , - , - , X , - , - 
-12/10/2019, USA , NV , Kia rear ends Tesla ,1.0, - , - ,  1 , - , - , - , - , - 
-12/1/2019, USA , TX , Struck Ford veers into Tesla's lane ,2.0, - , - ,  2 , - , - , - , - , - 
-11/24/2019, Taiwan ,-," Tesla strikes divider, driver falls to death ",1.0,  1 , - , - , - ,  1 ,  3 , - , - 
-11/22/2019, USA , CA , Tire strikes Tesla ,1.0,  1 , - , - , - ,  1 , - , - , - 
-11/21/2019, USA , CA , Tesla kills pedestrian ,1.0, - , - , - ,  1 ,  1 , S , - , - 
-11/20/2019, Austria ,-, Tesla strikes impact attenuator ,1.0,  1 , - , - , - ,  1 ,  3 , - , - 
-11/20/2019, USA , FL , Tesla turns into oncoming traffic ,1.0,  1 , - , - , - ,  1 ,  3 , - , - 
-11/20/2019, USA , CA , Tesla in multi vehicle crash ,1.0, - , - ,  1 , - , - , - , - , - 
-11/14/2019, Germany ,-, Tesla kills pedestrian ,1.0, - , - , - ,  1 ,  1 ,  3 , - , - 
-11/10/2019, USA , FL , Wrong way driver strikes Tesla ,1.0, - , - ,  1 , - , - , - , - , - 
-11/7/2019, USA , CA , Two car collision ,1.0, - , - ,  1 , - , - ,  3 , - , - 
-11/1/2019, Norway ,-, Three car collision ,1.0, - , - , - , - , - , S , - , - 
-10/19/2019, USA , PA ," Man thrown from vehicle, struck by Tesla ",1.0, - , - ,  1 , - , - , X ,  1 ,-
-10/17/2019, Germany ,-, Tesla turns into oncoming motorcyclist ,1.0, - , - ,  1 , - , - , S , - , - 
-10/12/2019, USA , CA ," Wrong way driver strikes Tesla, Tesla burns ",1.0, - , - ,  1 , - , - , S , - , - 
-9/22/2019, USA , NV , Tesla runs red light ,1.0, - , - ,  1 , - , - ,  3 , - , - 
-9/17/2019, USA , FL , Tesla into oncoming traffic ,1.0,  1 , - , - , - ,  1 , - ,  1 , - 
-9/11/2019, USA , OH , Subaru strikes Tesla ,1.0, - , - ,  1 , - , - , S , - , - 
-9/11/2019, USA , VA , Tesla kills motorcyclist ,1.0, - , - ,  1 , - , - , S , - , - 
-9/8/2019, USA , CA , Honda rear ends Tesla ,1.0, - , - ,  1 , - , - , - , - , - 
-9/7/2019, USA , PA ," Tesla drives through T intersection, into woods ",1.0, - ,  1 , - , - ,  1 ,  3 , - , - 
-9/1/2019, Germany ,-, Tesla into oncoming traffic ,2.0, - , - ,  2 , - , - , - , - , - 
-8/24/2019, USA , CA , Tesla rear ends Ford ,1.0, - , - ,  1 , - , - ,  3 ,  1 ,  1 
-8/15/2019, Germany ,-, Tesla kills motorcyclist ,1.0, - , - ,  1 , - , - , S , - , - 
-7/21/2019, USA , DE ," Tesla drives into office building, kills occupant ",1.0, - , - , - ,  1 ,  1 ,  3 , - , - 
-7/21/2019, USA , CA , Tesla kills pedestrian ,1.0, - , - , - ,  1 ,  1 ,  3 , - , - 
-7/13/2019, USA , CA , Tesla kills pedestrian ,1.0, - , - , - ,  1 ,  1 , - , - , - 
-7/8/2019, USA , IA , Car drifts into Tesla's lane ,1.0, - , - ,  1 , - , - , S , - , - 
-6/30/2019, USA , CA , Single car crash near Menifee ,1.0,  1 , - , - , - ,  1 ,  3 ,  1 , - 
-6/7/2019, Ukraine ,-, Tesla strikes construction vehicle ,1.0, - ,  1 , - , - ,  1 , X , - , - 
-6/4/2019, USA , CA , Six vehicle crash ,1.0, - , - ,  1 , - , - , S , - , - 
-5/31/2019, USA , CA , Tesla rear ends Ford ,1.0, - , - ,  1 , - , - , - , - , - 
-4/30/2019, Spain ,-, Car drifts into Tesla's lane ,1.0, - , - ,  1 , - , - , S , - , - 
-4/25/2019, USA , FL , Tesla kills pedestrian ,1.0, - , - , - ,  1 ,  1 , S ,  1 ,  1 
-4/15/2019, USA , CA , Tesla strikes on-ramp curb ,1.0, - ,  1 , - , - ,  1 , - , - , - 
-3/18/2019, Canada ,-," Tesla strikes pole, burns ",1.0,  1 , - , - , - ,  1 , X , - , - 
-3/10/2019, USA , FL , BMW strikes Tesla ,1.0, - ,  1 , - , - ,  1 ,  3 , - , - 
-3/1/2019, USA , FL , Autopilot into 18 wheeler ,1.0,  1 , - , - , - ,  1 ,  3 ,  1 ,  1 
-2/24/2019, USA , FL ," Tesla crashes into tree, burns ",1.0,  1 , - , - , - ,  1 , S , - , - 
-2/18/2019, USA , CA , Tesla rear ends stopped car ,1.0,  1 , - , - , - ,  1 , S , - , - 
-1/30/2019, Holland ,-, Driver mistakenly believes Autopilot is on ,1.0, - , - ,  1 , - , - , S ,  1 , - 
-12/30/2018, USA , VA ," Early morning, single car collision ",1.0,  1 , - , - , - ,  1 ,  3 , - , - 
-12/26/2018, USA , NH , Burned in New Ipswich crash ,1.0, - ,  1 , - , - ,  1 , X , - , - 
-11/15/2018, Denmark ,-, Tesla into oncoming traffic ,1.0, - , - ,  1 , - , - , S , - , - 
-11/10/2018, USA , FL , Tesla kills motorcyclist ,1.0, - , - ,  1 , - , - , X , - , - 
-11/9/2018, USA , CA , Tesla crashes into tree ,2.0, - ,  2 , - , - ,  2 , S , - , - 
-10/26/2018, Canada ,-, Tesla drives off road ,1.0, - ,  1 , - , - ,  1 , S , - , - 
-9/21/2018, USA , CA , Single car collision in Anaheim on SR-91 ,1.0,  1 , - , - , - ,  1 , S , - , - 
-9/15/2018, Japan ,-, Tesla rear ends stopped car ,2.0, - , - ,  2 , - , - , X , - , - 
-8/4/2018, Holland ,-, Tesla crashes into tree ,1.0, - ,  1 , - , - ,  1 , S ,-, - 
-7/24/2018, USA , MO , Concrete falls on Tesla ,1.0,  1 , - , - , - ,  1 , - , - , - 
-5/20/2018, USA , CA , Tesla drives into pond ,1.0,  1 , - , - , - ,  1 , S , - , - 
-5/10/2018, Switzerland ,-," Tesla drives into median, burns ",1.0,  1 , - , - , - ,  1 , - , - , - 
-5/8/2018, USA , FL , Two teens trapped in burning Tesla ,2.0,  1 ,  1 , - , - ,  2 , S , - , - 
-4/29/2018, Japan ,-, Sleeping Tesla driver kills motorcyclist ,1.0, - , - ,  1 , - , - , X ,  1 ,  1 
-4/28/2018, USA , OH , Ohio prom night crash ,1.0, - ,  1 , - , - ,  1 , S , - , - 
-3/23/2018, USA , CA , Autopilot into highway barrier ,1.0,  1 , - , - , - ,  1 , - ,  1 ,  1 
-3/12/2018, China ,-, Tesla kills pedestrian ,1.0, - , - , - ,  1 ,  1 , - , - , - 
-3/12/2018, Norway ,-, Sudden unintended acceleration into wall ,1.0,  1 , - , - , - ,  1 , - , - , - 
-11/22/2017, Switzerland ,-, Tesla rear ends stopped car ,1.0, - , - ,  1 , - , - , S , - , - 
-11/14/2017, Australia ,-, Tesla kills cyclist ,1.0, - , - , - ,  1 ,  1 , - , - , - 
-9/24/2017, USA , TN , Tesla drives off road ,1.0,  1 , - , - , - ,  1 , - , - , - 
-8/13/2017, USA , AZ , Tesla kills motorcyclist ,1.0, - , - ,  1 , - , - , - , - , - 
-7/21/2017, USA , AZ , Wrong way driver strikes Tesla ,1.0, - , - ,  1 , - , - , - , - , - 
-6/25/2017, USA , CA , Tesla strikes Camry ,1.0, - , - ,  1 , - , - , - , - , - 
-6/10/2017, USA , HI , Unclear; see note at right ,1.0, - , - ,  1 , - , - , S , - , - 
-5/11/2017, USA , FL , Tesla into oncoming traffic ,1.0, - , - ,  1 , - , - , - , - , - 
-4/26/2017, Norway ,-, Tesla into oncoming traffic ,1.0, - , - ,  1 , - , - , - , - , - 
-3/13/2017, USA , CA , Tesla kills pedestrian ,1.0, - , - , - ,  1 ,  1 , - , - , - 
-1/17/2017, Germany ,-, Driver died in pileup ,1.0,  1 , - , - , - ,  1 , - , - , - 
-12/20/2016, USA , CA , Tesla kills pedestrian ,1.0, - , - , - ,  1 ,  1 , X , - , - 
-11/23/2016, USA , IL , Driver dead in Winnebago County ,1.0,  1 , - , - , - ,  1 , S , - , - 
-11/3/2016, USA , IN , Indianapolis fire ,2.0,  1 ,  1 , - , - ,  2 , - , - , - 
-10/10/2016, USA , NH , Pileup ,1.0, - , - ,  1 , - , - , S , - , - 
-10/7/2016, USA , CA , Tesla kills motorcyclist ,1.0, - ,-,  1 , - , - , - , - , - 
-9/7/2016, Holland ,-, Drove into wooded ravine ,1.0,  1 , - , - , - ,  1 , - , - , - 
-9/1/2016, USA , FL , Motorcyclist rear ends Tesla ,1.0, - , - ,  1 , - , - , - , - , - 
-8/15/2016, USA , CA , Tesla rear ended ,1.0, - ,  1 , - , - ,  1 , S , - , - 
-7/29/2016, USA , FL , Tesla kills pedestrian ,1.0, - , - , - ,  1 ,  1 , - , - , - 
-7/22/2016, USA , CA , Passat strikes Tesla ,1.0, - , - ,  1 , - , - , S , - , - 
-6/8/2016, USA , HI , Nissan Altima wrong way into Tesla ,1.0, - , - ,  1 , - , - , - , - , - 
-5/7/2016, USA , FL , Autopilot into 18 wheeler ,1.0,  1 , - , - , - ,  1 , - ,  1 ,  1 
-4/22/2016, USA , CA , Pedestrian killed in pileup ,1.0, - , - , - ,  1 ,  1 , S , - , - 
-4/8/2016, USA , OH , Chevy Cobalt wrong way into Tesla ,1.0, - , - ,  1 , - , - , - , - , - 
-1/20/2016, China ,-, AutoPilot into street sweeper ,1.0,  1 , - , - , - ,  1 , S ,  1 ,  1 
-12/28/2015, USA , TX , Sudden unintended acceleration into pool ,1.0,  1 , - , - , - ,  1 , - , - , - 
-12/22/2015, Canada ,-, Struck by dumptruck ,1.0,  1 , - , - , - ,  1 , - ,-, - 
-11/18/2015, USA , CA , Tesla kills pedestrian ,1.0, - , - , - ,  1 ,  1 , - , - , - 
-6/22/2015, USA , CA , Tesla drives off cliff ,1.0,  1 , - , - , - ,  1 , - , - , - 
-1/22/2015, USA , CA , Tesla drives off cliff ,1.0,  1 , - , - , - ,  1 , S , - , - 
-12/30/2014, USA , CA , Tesla drives off cliff ,1.0,  1 , - , - , - ,  1 , - , - , - 
-7/14/2014, USA , CA , Tesla kills motorcyclist ,1.0, - , - ,  1 , - , - , - , - , - 
-7/4/2014, USA , CA , Thief crashes stolen Tesla ,1.0,  1 , - , - , - ,  1 , - , - , - 
-7/4/2014, USA , CA , Tesla rear ends stopped car ,3.0, - , - ,  3 , - , - , - , - , - 
-11/2/2013, USA , CA , Tesla kills cyclist ,1.0, - , - , - ,  1 ,  1 , - , - , - 
-4/2/2013, USA , CA , Tesla veers into opposite lane ,2.0, - , - ,  2 , - , - , S , - , - 
+1/17/2023, USA ,CA, Tesla crashes into back of semi ,1.0,1,0,0,0,1,0,0,0
+1/7/2023, Canada ,-, Tesla crashes ,1.0,1,0,0,0,1,0,0,0
+1/7/2023, USA ,WA," Tesla hits pole, catches on fire ",1.0,0,1,0,0,1,0,0,0
+12/22/2022, USA ,GA, Tesla crashes and burns ,1.0,1,0,0,0,1,0,0,0
+12/19/2022, Canada ,-, Tesla crashes into storefront ,1.0,0,0,0,1,1,0,0,0
+12/18/2022, USA ,CA, Tesla hit two other cars ,1.0,0,1,0,0,0,0,0,0
+12/17/2022, USA ,CA, Tesla hits pedestrian on highway ,1.0,0,0,0,1,1,0,0,0
+12/11/2022, USA ,CA, Tesla crashes into wall ,1.0,1,0,0,0,0,0,0,0
+12/11/2022, USA ,MO, Collision at intersection ,1.0,0,0,1,0,0,0,0,0
+12/6/2022, Canada ,-," Tesla veers, collides with truck ",1.0,1,0,0,0,0,0,0,0
+11/28/2022, China ,-," Tesla runs red light, collides with two cars ",2.0,0,0,2,0,0, Y ,0,0
+11/27/2022, USA ,CA," Tesla careens off road, hits trees ",1.0,1,0,0,0,1,0,0,0
+11/26/2022, USA ,AR, Tesla hits pedestrian ,1.0,0,0,0,1,1,0,0,0
+11/18/2022, China ,-, Tesla crashes into dump truck ,1.0,1,0,0,0,1,0,0,0
+11/12/2022, Mexico ,-, Tesla hits Toyota ,1.0,0,0,1,0,0,0,0,0
+11/12/2022, USA ,CA, Multi-vehicle accident ,1.0,0,0,1,0,0,0,0,0
+11/11/2022, USA ,CA," Tesla hits wall, catches fire ",1.0,0,1,0,0,0,0,1,0
+11/5/2022, China ,-, Out of control Tesla hits bicyclist and motorcyclist ,2.0,0,0,1,1,1,0,0,0
+11/4/2022, USA ,IL," Collision at intersection, Tesla driver dies in hospital ",1.0,1,0,0,0,1,0,0,0
+10/19/2022, USA ,CA, Multicar crash ,1.0,1,0,0,0,1,1,0,0
+10/18/2022, USA ,FL," Tesla collides with minivan, engulfed by flames ",4.0,1,1,2,0,2,0,0,0
+10/12/2022, UK ,-, Tesla crashes into ditch ,1.0,1,0,0,0,1,2,0,0
+10/9/2022, USA ,CA, Tesla hits concrete block ,1.0,0,1,0,0,1,0,0,0
+10/1/2022, USA ,FL, Tesla hits tree and catches fire ,1.0,1,0,0,0,1,0,0,0
+9/18/2022, USA ,SC," Tesla crashes into tree, ignites ",2.0,1,1,0,0,2,0,0,0
+9/18/2022, USA ,MD, Multi-car accident ,1.0,0,0,1,0,0,0,0,0
+9/16/2022, USA ,GA," Tesla loses control and crashes into bus shelter, kills man inside ",1.0,0,0,0,1,1,0,1,0
+9/13/2022, USA ,CA, Tesla runs off highway ,1.0,1,0,0,0,1,0,0,0
+9/12/2022, USA ,NY," Tesla runs off road, catches fire ",1.0,1,0,0,0,0,0,0,0
+9/7/2022, USA ,CA, Motorcycle collides with Tesla ,1.0,1,0,0,0,0,0,0,0
+8/30/2022, USA ,CA, Tesla hits motorcycle ,1.0,0,0,1,0,0,0,0,0
+8/26/2022, USA ,FL, Tesla hits motorcycle ,1.0,0,0,1,0,0,3,0,1
+8/24/2022, USA ,MA, Motorcyclist hits Tesla ,1.0,0,0,1,0,0,0,0,0
+8/23/2022, USA ,SC, Multi-car accident on highway ,2.0,0,0,2,0,0,3,0,2
+8/21/2022, UK ,-," Car drives thru garage, hits Tesla, lands on railroad tracks ",1.0,0,0,1,0,0,0,0,0
+8/20/2022, USA ,FL," Tesla swerves, runs off roadway, overturns ",1.0,1,0,0,0,1, S ,0,0
+8/20/2022, USA ,FL, Pedestrian hit in road ,1.0,0,0,0,1,1,0,0,0
+8/16/2022, Germany ,-," Tesla car crashes into tree, burns ",3.0,0,0,0,0,3,0,0,0
+8/14/2022, USA ,CA, Tesla veers into oncoming traffic ,4.0,1,3,0,0,4,0,0,0
+8/14/2022, Finland ,-, Unlicensed driver hits pedestrian ,1.0,0,0,0,1,1,0,0,0
+8/2/2022, USA ,FL, Man in wheelchair hit crossing road ,1.0,0,0,0,1,1,3,0,0
+7/27/2022, Canada ,-, Tesla hits cyclist ,1.0,0,0,0,1,1,0,0,0
+7/27/2022, USA ,ME, Tesla crashes at high speed ,1.0,1,0,0,0,1,0,0,0
+7/24/2022, USA ,UT, Tesla hits motorcycle ,1.0,0,0,1,0,0,3,1,1
+7/16/2022, USA ,PA, Tesla goes airborne and crashes ,1.0,1,0,0,0,1,0,0,0
+7/12/2022, China ,-, Out of control Tesla hits pedestrians ,2.0,0,0,0,2,2, Y ,0,0
+7/8/2022, USA ,CA, 3-car accident involving Tesla ,1.0,0,0,1,0,0,0,0,0
+7/8/2022, USA ,HA, Motorcycle crashes into Tesla ,1.0,0,0,1,0,0,0,0,0
+7/7/2022, USA ,CA, Motorcycle hit by Tesla ,1.0,0,0,1,0,0, Y ,1,1
+7/6/2022, USA ,FL, Tesla hits parked tractor-trailer ,2.0,1,1,0,0,2,0,2,2
+7/5/2022, USA ,GA," Tesla strikes pole, burns ",1.0,1,0,0,0,1,0,0,0
+6/26/2022, USA ,CA, Tesla drives into opposite lane ,1.0,0,0,1,0,0,0,0,0
+6/20/2022, USA ,AL, Tesla crashes into car ,1.0,0,0,1,0,0,0,0,0
+6/20/2022, USA ,PA, Tesla hit and run ,1.0,0,0,0,1,1,0,0,0
+6/20/2022, Canada ,-, Tesla runs into overpass ,1.0,1,0,0,0,1,0,0,0
+6/19/2022, USA , MI ," Tesla hits telephone pole, ignites ",2.0,1,1,0,0,2,0,0,0
+6/17/2022, USA , CA , Head-on collision ,2.0,1,1,0,0,2,0,0,0
+6/14/2022, USA , CA , Tesla moves into opposite lane and head-on crashes ,1.0,0,0,1,0,0,0,0,0
+6/13/2022, USA , CA , Two-car collision ,1.0,1,0,0,0,1,0,0,0
+6/7/2022, USA , CA , DUI crash ,1.0,0,0,0,1,1,0,0,0
+6/3/2022, USA , NV , Motorcycle crashes into Tesla ,1.0,0,0,1,0,0,0,0,0
+5/28/2022, USA , NY , Tesla DUI crash ,1.0,0,0,1,0,0,0,0,0
+5/28/2022, USA , OR , Tesla loses control and crashes into car ,2.0,1,0,1,0,1, Y ,0,0
+5/28/2022, USA , CA , Speeding tesla crashes into tree ,1.0,1,0,0,0,1,0,0,0
+5/25/2022, USA , OR , Tesla crashes into pole ,1.0,0,1,0,0,1, S ,0,0
+5/23/2022, USA , AZ , Tesla driver hit in multicar accident ,1.0,1,0,0,0,1,0,0,0
+5/21/2022, China ,-, Tesla hits pedestrian ,1.0,0,0,0,1,1,0,0,0
+5/19/2022, USA , NJ ," Tesla hits trees, ignites ",1.0,1,0,0,0,1,0,0,0
+5/19/2022, USA , NJ , Multiple car crash on highway ,1.0,1,0,0,0,1,0,0,0
+5/18/2022, USA , CA , Tesla hits pedestrian ,1.0,0,0,0,1,1,3,1,0
+5/17/2022, USA , CO , Fiery crash ,1.0,1,0,0,0,1,3,1,0
+5/12/2022, Australia ,-, Tesla hit pedestrian who dies 5 days later from injuries ,1.0,0,0,0,1,1, X ,0,0
+5/11/2022, USA , CA , Tesla smashes into construction equipment ,3.0,1,2,0,0,3, S ,1,0
+5/7/2022, USA , UT , Tesla DUI involving another vehicle ,2.0,0,0,2,0,0,0,0,0
+5/1/2022, USA , PA , Tesla DUI hits pedestrian ,1.0,0,0,0,1,1,0,0,0
+4/29/2022, USA , NC ," Highway accident, Tesla goes airborne  ",1.0,1,0,0,0,0,0,0,0
+4/14/2022, USA ,FL, Crash with motorcycle ,1.0,0,0,1,0,0, Y ,1,0
+4/10/2022, UK ,-, Two car accident ,1.0,0,0,1,0,0,0,0,0
+4/8/2022, Netherlands ,-, Head-on collision with truck and Tesla ,1.0,0,0,0,0,1,0,0,0
+3/26/2022, USA , CA ," DUI crash on highway, Tesla catches fire ",1.0,0,0,0,0,1,0,1,0
+3/21/2022, USA , CA , Three car collision involving Tesla ,2.0,0,0,2,0,0,0,0,0
+3/20/2022, USA , CA , Car crosses double yellow and crashes with a Tesla ,2.0,1,0,1,0,1,3,0,0
+3/14/2022, USA , CA , Tesla collides into rail on highway ,2.0,1,1,0,0,1,0,0,0
+3/14/2022, USA , FL , Tesla crash that ends in fire ,1.0,1,0,0,0,1,0,0,0
+3/13/2022, Switzerland ,-, Frontal collision between Tesla and VW ,1.0,0,0,1,0,1,0,0,0
+3/12/2022, USA , NY , Tesla ignites on parkway ,1.0,1,0,0,0,1, S ,0,0
+3/7/2022, China ,-," Tesla on Autopilot hits maintenance car, then BMW hits responder ",1.0,0,0,0,1,1,0,1,0
+3/7/2022, USA , CA , Car found overturned in a ravine ,1.0,1,0,0,0,1,0,0,0
+3/5/2022, USA , CA , Tesla crashes head on with other car ,1.0,0,0,1,0,0,0,0,0
+2/28/2022, USA , ID , Car found in water-swollen ditch ,1.0,1,0,0,0,1,0,0,0
+2/27/2022, USA , MO , Tesla breaksdown in traffic and causes pile-up ,1.0,1,0,0,0,1,0,0,0
+2/12/2022, USA , CA , Tesla crashes into a tree ,1.0,1,0,0,0,1,0,0,0
+2/7/2022, USA , FL ," Tesla loses control, hits pole, ignites ",1.0,1,0,0,0,1,0,0,0
+1/16/2022, USA , CA , Three-car collision near intersection ,1.0,0,0,1,0,0,0,0,0
+1/1/2022, USA , CA , Motorcyclist crashes into Tesla ,1.0,0,0,1,0,0, X ,0,0
+1/1/2022, USA , CA , Single-collision on onramp ,1.0,1,0,0,0,1,0,0,0
+12/31/2021, USA , CA , Tesla crashes into trees ,2.0,1,1,0,0,2,0,0,0
+12/28/2021, USA , CA , Multi-crash involving DUI ,1.0,0,0,1,0,0,0,1,0
+12/24/2021, China ,-, Tesla loses control and drives into river ,1.0,1,0,0,0,1,0,0,0
+12/18/2021, USA , CA , Multi-car accident ,1.0,0,0,1,0,0, Y ,0,0
+12/11/2021, France ,-, Crash in public area including 20 injuries ,1.0,0,0,0,1,1,0,0,0
+12/7/2021, USA , AZ , Vehicular collision ,1.0,1,0,0,0,1,0,0,0
+12/7/2021, Germany ,-," Tesla crashes into trees, flames erupt ",1.0,1,0,0,0,1,0,0,0
+12/2/2021, China ,-, Motorbiker killed by Tesla ,1.0,0,0,1,0,0,0,0,0
+12/1/2021, USA , CA ," Collision with pole, battery ignited ",1.0,1,0,0,0,1,3,0,0
+11/29/2021, USA , CA , DUI crash with parked car ,1.0,0,0,1,0,0,0,0,0
+11/15/2021, USA , CA , Pedestrian hit at crosswalk ,1.0,0,0,0,0,1,0,0,0
+11/8/2021, USA , AZ , Three car collision ,1.0,0,0,1,0,0,0,0,0
+11/8/2021, USA , OH ," Tesla hits fixture, catches fire ",1.0,1,0,0,0,1,0,0,0
+11/6/2021, USA , NV , DUI crash ,1.0,0,1,0,0,1, Y ,0,0
+11/4/2021, USA , FL , Tesla hits bicyclist before crashing ,1.0,0,0,0,1,1,0,0,0
+10/28/2021, USA , GA , Multi-collision event on highway ,1.0,0,0,1,0,0,0,0,0
+10/15/2021, USA , AZ , Toyota hits Tesla ,1.0,0,0,1,0,0,0,0,0
+9/17/2021, USA , IA , Three-way car collision ,1.0,0,0,1,0,0,0,0,0
+9/13/2021, USA , FL ," Tesla suffers suspension failure, hits tree, and ignites on fire ",2.0,1,1,0,0,2,3,0,0
+9/4/2021, China ,-, Tesla hit pedestrian crossing road ,1.0,0,0,0,1,1,0,0,0
+9/4/2021, USA , FL ," Tesla runs stop sign, crashes into house ",2.0,0,1,0,1,2, S ,0,0
+8/29/2021, USA , NY ," Car hits utility pole, ignites ",2.0,1,1,0,0,2,3,0,0
+8/26/2021, Netherlands ,-, Tesla hits tree ,1.0,1,0,0,0,1,0,0,0
+8/25/2021, USA , AZ , Tesla runs a red light and hits another car ,3.0,0,0,3,0,0,0,0,0
+8/17/2021, USA , PA , Tesla crashes into guardrail ,1.0,1,0,0,0,1,3,0,0
+7/26/2021, Netherlands ,-," Four vehicle collision, Tesla catches fire ",1.0,0,0,0,0,0,0,0,0
+7/26/2021, USA , NY , Pedestrian hit on shoulder ,1.0,0,0,0,1,1,0,1,1
+7/23/2021, USA , GA , Tesla Driver loses control and hits median barrier ,1.0,1,0,0,0,1,3,0,0
+7/21/2021, USA , GA , Tesla driver hits man on shoulder of highway ,1.0,0,0,0,1,1,0,0,0
+7/7/2021, USA , CA , Other driver dies in head-on collision ,1.0,0,0,1,0,0, S ,0,0
+6/29/2021, USA , CA ," Car crashes into Tesla, fire breaks out ",2.0,1,0,1,0,1,0,0,0
+6/19/2021, USA , MI ," Tesla hits power pole, runs off road, and ignites ",2.0,1,1,0,0,2,0,0,0
+6/16/2021, USA , FL ," Tesla crashes, driver later dies in hospital ",1.0,1,0,0,0,1,0,0,0
+6/16/2021, Denmark ,-," Driver loses control of car, crashes into tree ",1.0,1,0,0,0,1,0,0,0
+6/11/2021, USA , WA , Tesla crashes through backyard fence ,1.0,1,0,0,0,1,0,0,0
+6/11/2021, USA , NY , Driver crashes into senior living facility ,1.0,0,1,0,0,1,0,0,0
+6/1/2021, USA , WA ," Tesla hits concrete barrier, later catches on fire ",1.0,1,0,0,0,1,0,0,0
+5/26/2021, USA , VA , Tesla involved in multi-car highway accident ,4.0,0,0,4,0,0,0,0,0
+5/15/2021, China ,-, Tesla hits police officers and kills one ,1.0,0,0,0,1,1,0,0,0
+5/7/2021, China ,-, Tesla runs into back of truck ,1.0,1,0,0,0,1,0,0,0
+5/5/2021, USA , CA , Multi-event collision with truck on highway ,1.0,1,0,0,0,1,0,1,0
+4/17/2021, USA , TX ," Tesla crashes into tree, bursts into fire ",2.0,0,0,0,0,2, S ,2,0
+4/17/2021, China ,-, Tesla hits concrete barrier and spontaneously combusts ,1.0,0,1,0,0,1,0,0,0
+4/16/2021, France ,-, Tesla crashes into tree with 5 occupants ,2.0,0,0,0,0,2,0,0,0
+4/14/2021, USA , TX , Head-on collision involving a Tesla ,1.0,1,0,0,0,1,0,0,0
+4/13/2021, Germany ,-," Tesla goes off road, hits a tree, and bursts into flames ",1.0,1,0,0,0,1, S ,0,0
+4/3/2021, USA , PA ," Tesla loses control, hits railing and cut in half ",2.0,1,1,0,0,2,0,0,0
+4/1/2021, China ,-," Driver hit traffic island, Tesla catches on fire ",1.0,1,0,0,0,1,3,0,0
+3/21/2021, UK ,-," Pedestrian hit in collision, later dies in hospital weeks later ",1.0,0,0,0,1,1,0,0,0
+3/20/2021, Belgium ,-," Driver runs over curb, loses control and hit pole ",1.0,1,0,0,0,1,0,0,0
+3/13/2021, UK ,-, Tesla crashes into stationary van ,1.0,0,0,1,0,0,3,0,0
+3/10/2021, USA , CA ," Tesla crashes into tree, occupants killed ",2.0,1,1,0,0,1,0,0,0
+3/7/2021, USA , OH , 3 car collision near intersection ,1.0,0,0,1,0,0,0,0,0
+2/22/2021, USA , CA , High speed crash into telephone poll ,1.0,1,0,0,0,1,0,0,0
+1/22/2021, USA , AZ ," Tesla crashes into tree, occupants killed ",2.0,1,1,0,0,2,0,0,0
+1/21/2021, USA , CO ," Tesla hits car and car crashes, driver later dies ",1.0,0,0,1,0,0,0,0,0
+1/15/2021, USA , FL ," Head-on collision involving a Tesla, other driver dies ",1.0,0,0,1,0,0,0,0,0
+1/10/2021, USA , UT ," Car collides with Tesla, both drivers die ",2.0,1,0,1,0,0,0,0,0
+12/18/2020, Portugal ,-, Tesla driver crashes into pole and dies in resulting fire ,1.0,1,0,0,0,1,0,0,0
+12/11/2020, USA , FL ," Pedestrians hit and run by Tesla, one died from injuries ",1.0,0,0,0,1,1,0,0,0
+12/9/2020, South Korea ,-," Car goes out of control and crashes into a wall, ignites ",1.0,0,1,0,0,1, X ,1,0
+12/4/2020, USA , CA ," Car loses control, goes airborne, hits telephone pole ",1.0,0,1,0,0,1,0,0,0
+11/16/2020, USA , MO , Five-vehicle pileup involving truck ,1.0,0,0,1,0,0, Y ,0,0
+10/31/2020, USA , CA ," Car hit by a Tesla, driver later died from injuries ",1.0,0,0,1,0,0, Y ,0,0
+10/10/2020, USA , CA , Motorcyclist died after rear-ending a Tesla ,1.0,0,0,1,0,0, Y ,0,0
+10/7/2020, Belgium ,-," Driver going wrong direction hits Tesla, driver later dies ",1.0,0,0,1,0,0,3,0,0
+9/17/2020, USA , GA ," Car loses control, hits bus shelter ",1.0,0,0,0,1,1,3,1,0
+9/12/2020, USA , CA ," Car lands on Tesla, other vehicle driver dies ",1.0,0,0,1,0,0,0,0,0
+9/6/2020, USA , IL ," Tesla runs thru red light, crashes, driver dies at scene ",1.0,1,0,0,0,1,0,0,0
+9/5/2020, China ,-," Tesla crashes into crowd, 2 dead and several injured ",2.0,0,0,0,2,2, X ,0,0
+8/24/2020, USA , VA ," Two car collision at intersection, other driver dies afterwards ",1.0,0,0,1,0,0, X ,0,0
+8/13/2020, Germany ,-, Tesla crashes into tree ,1.0,1,0,0,0,1, X ,1,0
+8/12/2020, USA , CA , Tesla hits two cars along exit ramp & catches fire ,2.0,1,1,0,0,1,0,1,0
+8/2/2020, USA , CA ," Tesla crashes into tree, ignites, kills driver and passenger ",2.0,1,1,0,0,1,0,0,0
+7/18/2020, USA , UT ," Tesla races other car, other car crashes ",1.0,0,0,1,0,0,0,0,0
+6/23/2020, USA , GA , Vehicle collides with Tesla at intersection ,1.0,0,0,1,0,0,0,0,0
+6/21/2020, Germany ,-," Tesla veers into other lane, crashes into oncoming car ",3.0,0,0,3,0,0,3,1,0
+6/17/2020, Canada ,-, Motorcyclist killed in crash with Tesla ,1.0,0,0,1,0,0,0,0,0
+6/8/2020, Netherlands ,-, Driver has heart attack and crashes Tesla ,1.0,1,0,0,0,1,3,0,0
+5/25/2020, USA , CA , Tesla goes off cliff and later found ,1.0,1,0,0,0,1,0,0,0
+5/14/2020, USA , CA , Two-car collision ,1.0,0,0,1,0,0,3,1,0
+5/5/2020, USA , CA , Drunk driver strikes Tesla ,1.0,0,0,1,0,0,0,0,0
+5/4/2020, Norway ,-, Tesla strikes and kills a man standing next to his truck ,1.0,0,0,1,0,0, S ,1,1
+4/24/2020, Netherlands ,-," Tesla runs off road, crashes, catches fire ",1.0,1,0,0,0,1,0,0,0
+4/3/2020, Taiwan ,-, Tesla rolls over and catches on fire ,1.0,1,0,0,0,1,3,0,0
+4/1/2020, USA , OH , Tesla drive off road into tree ,1.0,1,0,0,0,1,3,0,0
+3/8/2020, USA , GA , Motorcyclist rear ends Tesla ,1.0,0,0,1,0,0,0,0,0
+3/4/2020, Netherlands ,-, Three car collision ,1.0,0,0,1,0,0,0,0,0
+2/24/2020, USA , CA , Driver dies as Tesla goes down embankment ,1.0,1,0,0,0,1,0,0,0
+2/24/2020, Canada ,-, Tesla drives off cliff ,3.0,1,2,0,0,3,3,0,0
+1/31/2020, USA , FL , Nissan in front of Tesla loses control ,1.0,0,0,1,0,0,3,0,0
+1/26/2020, USA , NJ , Tesla crashes into car at toll booth ,1.0,0,0,1,0,0, X ,0,0
+1/21/2020, Germany ,-, Sudden unintended acceleration kills store patron ,1.0,0,0,0,1,1, S ,0,0
+1/19/2020, Taiwan ,-," Tesla t-bones sedan, kills pedestrian ",1.0,0,0,0,1,1, X ,0,0
+1/18/2020, USA , CA ," Tesla strikes sign, burns ",1.0,1,0,0,0,1, S ,0,0
+1/5/2020, USA , UT ," Tesla runs red, strikes car, burns ",2.0,0,0,2,0,0,0,0,0
+1/4/2020, USA , FL , Tesla strikes Mercury ,1.0,0,0,1,0,0,3,0,0
+12/29/2019, USA , IN , Tesla rear ends parked fire truck ,1.0,0,1,0,0,1,3,1,1
+12/29/2019, USA , CA , Tesla runs red light after exiting freeway ,2.0,0,0,2,0,0, S ,2,2
+12/23/2019, Slovenia ,-, Drunk driver strikes Tesla ,1.0,0,0,1,0,0, S ,0,0
+12/19/2019, USA , FL , Police SUV strikes Tesla ,2.0,1,1,0,0,2,0,0,0
+12/11/2019, USA , CA , Tesla strikes turning Lexus ,1.0,0,0,1,0,0, X ,0,0
+12/10/2019, USA , NV , Kia rear ends Tesla ,1.0,0,0,1,0,0,0,0,0
+12/1/2019, USA , TX , Struck Ford veers into Tesla's lane ,2.0,0,0,2,0,0,0,0,0
+11/24/2019, Taiwan ,-," Tesla strikes divider, driver falls to death ",1.0,1,0,0,0,1,3,0,0
+11/22/2019, USA , CA , Tire strikes Tesla ,1.0,1,0,0,0,1,0,0,0
+11/21/2019, USA , CA , Tesla kills pedestrian ,1.0,0,0,0,1,1, S ,0,0
+11/20/2019, Austria ,-, Tesla strikes impact attenuator ,1.0,1,0,0,0,1,3,0,0
+11/20/2019, USA , FL , Tesla turns into oncoming traffic ,1.0,1,0,0,0,1,3,0,0
+11/20/2019, USA , CA , Tesla in multi vehicle crash ,1.0,0,0,1,0,0,0,0,0
+11/14/2019, Germany ,-, Tesla kills pedestrian ,1.0,0,0,0,1,1,3,0,0
+11/10/2019, USA , FL , Wrong way driver strikes Tesla ,1.0,0,0,1,0,0,0,0,0
+11/7/2019, USA , CA , Two car collision ,1.0,0,0,1,0,0,3,0,0
+11/1/2019, Norway ,-, Three car collision ,1.0,0,0,0,0,0, S ,0,0
+10/19/2019, USA , PA ," Man thrown from vehicle, struck by Tesla ",1.0,0,0,1,0,0, X ,1,0
+10/17/2019, Germany ,-, Tesla turns into oncoming motorcyclist ,1.0,0,0,1,0,0, S ,0,0
+10/12/2019, USA , CA ," Wrong way driver strikes Tesla, Tesla burns ",1.0,0,0,1,0,0, S ,0,0
+9/22/2019, USA , NV , Tesla runs red light ,1.0,0,0,1,0,0,3,0,0
+9/17/2019, USA , FL , Tesla into oncoming traffic ,1.0,1,0,0,0,1,0,1,0
+9/11/2019, USA , OH , Subaru strikes Tesla ,1.0,0,0,1,0,0, S ,0,0
+9/11/2019, USA , VA , Tesla kills motorcyclist ,1.0,0,0,1,0,0, S ,0,0
+9/8/2019, USA , CA , Honda rear ends Tesla ,1.0,0,0,1,0,0,0,0,0
+9/7/2019, USA , PA ," Tesla drives through T intersection, into woods ",1.0,0,1,0,0,1,3,0,0
+9/1/2019, Germany ,-, Tesla into oncoming traffic ,2.0,0,0,2,0,0,0,0,0
+8/24/2019, USA , CA , Tesla rear ends Ford ,1.0,0,0,1,0,0,3,1,1
+8/15/2019, Germany ,-, Tesla kills motorcyclist ,1.0,0,0,1,0,0, S ,0,0
+7/21/2019, USA , DE ," Tesla drives into office building, kills occupant ",1.0,0,0,0,1,1,3,0,0
+7/21/2019, USA , CA , Tesla kills pedestrian ,1.0,0,0,0,1,1,3,0,0
+7/13/2019, USA , CA , Tesla kills pedestrian ,1.0,0,0,0,1,1,0,0,0
+7/8/2019, USA , IA , Car drifts into Tesla's lane ,1.0,0,0,1,0,0, S ,0,0
+6/30/2019, USA , CA , Single car crash near Menifee ,1.0,1,0,0,0,1,3,1,0
+6/7/2019, Ukraine ,-, Tesla strikes construction vehicle ,1.0,0,1,0,0,1, X ,0,0
+6/4/2019, USA , CA , Six vehicle crash ,1.0,0,0,1,0,0, S ,0,0
+5/31/2019, USA , CA , Tesla rear ends Ford ,1.0,0,0,1,0,0,0,0,0
+4/30/2019, Spain ,-, Car drifts into Tesla's lane ,1.0,0,0,1,0,0, S ,0,0
+4/25/2019, USA , FL , Tesla kills pedestrian ,1.0,0,0,0,1,1, S ,1,1
+4/15/2019, USA , CA , Tesla strikes on-ramp curb ,1.0,0,1,0,0,1,0,0,0
+3/18/2019, Canada ,-," Tesla strikes pole, burns ",1.0,1,0,0,0,1, X ,0,0
+3/10/2019, USA , FL , BMW strikes Tesla ,1.0,0,1,0,0,1,3,0,0
+3/1/2019, USA , FL , Autopilot into 18 wheeler ,1.0,1,0,0,0,1,3,1,1
+2/24/2019, USA , FL ," Tesla crashes into tree, burns ",1.0,1,0,0,0,1, S ,0,0
+2/18/2019, USA , CA , Tesla rear ends stopped car ,1.0,1,0,0,0,1, S ,0,0
+1/30/2019, Holland ,-, Driver mistakenly believes Autopilot is on ,1.0,0,0,1,0,0, S ,1,0
+12/30/2018, USA , VA ," Early morning, single car collision ",1.0,1,0,0,0,1,3,0,0
+12/26/2018, USA , NH , Burned in New Ipswich crash ,1.0,0,1,0,0,1, X ,0,0
+11/15/2018, Denmark ,-, Tesla into oncoming traffic ,1.0,0,0,1,0,0, S ,0,0
+11/10/2018, USA , FL , Tesla kills motorcyclist ,1.0,0,0,1,0,0, X ,0,0
+11/9/2018, USA , CA , Tesla crashes into tree ,2.0,0,2,0,0,2, S ,0,0
+10/26/2018, Canada ,-, Tesla drives off road ,1.0,0,1,0,0,1, S ,0,0
+9/21/2018, USA , CA , Single car collision in Anaheim on SR-91 ,1.0,1,0,0,0,1, S ,0,0
+9/15/2018, Japan ,-, Tesla rear ends stopped car ,2.0,0,0,2,0,0, X ,0,0
+8/4/2018, Holland ,-, Tesla crashes into tree ,1.0,0,1,0,0,1, S ,0,0
+7/24/2018, USA , MO , Concrete falls on Tesla ,1.0,1,0,0,0,1,0,0,0
+5/20/2018, USA , CA , Tesla drives into pond ,1.0,1,0,0,0,1, S ,0,0
+5/10/2018, Switzerland ,-," Tesla drives into median, burns ",1.0,1,0,0,0,1,0,0,0
+5/8/2018, USA , FL , Two teens trapped in burning Tesla ,2.0,1,1,0,0,2, S ,0,0
+4/29/2018, Japan ,-, Sleeping Tesla driver kills motorcyclist ,1.0,0,0,1,0,0, X ,1,1
+4/28/2018, USA , OH , Ohio prom night crash ,1.0,0,1,0,0,1, S ,0,0
+3/23/2018, USA , CA , Autopilot into highway barrier ,1.0,1,0,0,0,1,0,1,1
+3/12/2018, China ,-, Tesla kills pedestrian ,1.0,0,0,0,1,1,0,0,0
+3/12/2018, Norway ,-, Sudden unintended acceleration into wall ,1.0,1,0,0,0,1,0,0,0
+11/22/2017, Switzerland ,-, Tesla rear ends stopped car ,1.0,0,0,1,0,0, S ,0,0
+11/14/2017, Australia ,-, Tesla kills cyclist ,1.0,0,0,0,1,1,0,0,0
+9/24/2017, USA , TN , Tesla drives off road ,1.0,1,0,0,0,1,0,0,0
+8/13/2017, USA , AZ , Tesla kills motorcyclist ,1.0,0,0,1,0,0,0,0,0
+7/21/2017, USA , AZ , Wrong way driver strikes Tesla ,1.0,0,0,1,0,0,0,0,0
+6/25/2017, USA , CA , Tesla strikes Camry ,1.0,0,0,1,0,0,0,0,0
+6/10/2017, USA , HI , Unclear; see note at right ,1.0,0,0,1,0,0, S ,0,0
+5/11/2017, USA , FL , Tesla into oncoming traffic ,1.0,0,0,1,0,0,0,0,0
+4/26/2017, Norway ,-, Tesla into oncoming traffic ,1.0,0,0,1,0,0,0,0,0
+3/13/2017, USA , CA , Tesla kills pedestrian ,1.0,0,0,0,1,1,0,0,0
+1/17/2017, Germany ,-, Driver died in pileup ,1.0,1,0,0,0,1,0,0,0
+12/20/2016, USA , CA , Tesla kills pedestrian ,1.0,0,0,0,1,1, X ,0,0
+11/23/2016, USA , IL , Driver dead in Winnebago County ,1.0,1,0,0,0,1, S ,0,0
+11/3/2016, USA , IN , Indianapolis fire ,2.0,1,1,0,0,2,0,0,0
+10/10/2016, USA , NH , Pileup ,1.0,0,0,1,0,0, S ,0,0
+10/7/2016, USA , CA , Tesla kills motorcyclist ,1.0,0,0,1,0,0,0,0,0
+9/7/2016, Holland ,-, Drove into wooded ravine ,1.0,1,0,0,0,1,0,0,0
+9/1/2016, USA , FL , Motorcyclist rear ends Tesla ,1.0,0,0,1,0,0,0,0,0
+8/15/2016, USA , CA , Tesla rear ended ,1.0,0,1,0,0,1, S ,0,0
+7/29/2016, USA , FL , Tesla kills pedestrian ,1.0,0,0,0,1,1,0,0,0
+7/22/2016, USA , CA , Passat strikes Tesla ,1.0,0,0,1,0,0, S ,0,0
+6/8/2016, USA , HI , Nissan Altima wrong way into Tesla ,1.0,0,0,1,0,0,0,0,0
+5/7/2016, USA , FL , Autopilot into 18 wheeler ,1.0,1,0,0,0,1,0,1,1
+4/22/2016, USA , CA , Pedestrian killed in pileup ,1.0,0,0,0,1,1, S ,0,0
+4/8/2016, USA , OH , Chevy Cobalt wrong way into Tesla ,1.0,0,0,1,0,0,0,0,0
+1/20/2016, China ,-, AutoPilot into street sweeper ,1.0,1,0,0,0,1, S ,1,1
+12/28/2015, USA , TX , Sudden unintended acceleration into pool ,1.0,1,0,0,0,1,0,0,0
+12/22/2015, Canada ,-, Struck by dumptruck ,1.0,1,0,0,0,1,0,0,0
+11/18/2015, USA , CA , Tesla kills pedestrian ,1.0,0,0,0,1,1,0,0,0
+6/22/2015, USA , CA , Tesla drives off cliff ,1.0,1,0,0,0,1,0,0,0
+1/22/2015, USA , CA , Tesla drives off cliff ,1.0,1,0,0,0,1, S ,0,0
+12/30/2014, USA , CA , Tesla drives off cliff ,1.0,1,0,0,0,1,0,0,0
+7/14/2014, USA , CA , Tesla kills motorcyclist ,1.0,0,0,1,0,0,0,0,0
+7/4/2014, USA , CA , Thief crashes stolen Tesla ,1.0,1,0,0,0,1,0,0,0
+7/4/2014, USA , CA , Tesla rear ends stopped car ,3.0,0,0,3,0,0,0,0,0
+11/2/2013, USA , CA , Tesla kills cyclist ,1.0,0,0,0,1,1,0,0,0
+4/2/2013, USA , CA , Tesla veers into opposite lane ,2.0,0,0,2,0,0, S ,0,0

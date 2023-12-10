@@ -56,14 +56,14 @@ Electric vehicles are often considered more environmentally friendly due to thei
 ### In conclusion, the competition between electric and gasoline vehicles is a multifaceted issue, with ongoing debates about the environmental impact, technological advancements, infrastructure development, economic factors, and consumer preferences. The future trajectory will likely involve a combination of market-driven forces, government policies, and technological breakthroughs, and diverse perspectives will continue to shape the discourse in this rapidly evolving landscape.
 
 ## 10 Questions I would to answer to better explore my topic:
-### Consumer Adoption Patterns:
-Question: What are the key factors influencing consumer adoption of electric vehicles over time, and how do these factors vary across different regions and demographics?
+### Safety:
+Question: Is an electric vehicle (EV) less controllable and more prone to casualties in the event of a crash?
 
-### Environmental Impact Analysis:
-Question: Can we quantify and compare the overall environmental impact, including carbon emissions, of electric vehicles and gasoline-powered cars, considering factors such as manufacturing, operation, and end-of-life disposal?
+### Accident severity:
+Question:  Is an accident involving an electric vehicle (EV) more likely to result in minor or severe outcomes?
 
-### Charging Infrastructure Optimization:
-Question: Where are the optimal locations for expanding electric vehicle charging infrastructure to maximize accessibility and usage, taking into account population density, travel patterns, and existing infrastructure?
+### Predict the accident outcome:
+Question: Is there a model available for predicting accident outcomes irrespective of whether the vehicle is electric or gasoline-powered?
 
 ### Economic Viability and Affordability:
 Question: How have the costs of electric vehicles and traditional cars evolved over time, and what factors contribute to the perceived affordability of each option? Can we predict future price trends?
