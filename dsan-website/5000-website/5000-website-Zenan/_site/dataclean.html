@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Data gathering</title>
+<title>Data cleaning</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -215,7 +215,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Data gathering</h1>
+<h1 class="title">Data cleaning</h1>
 </div>
 
 
@@ -580,7 +580,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb12-12"><a href="#cb12-12" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">"Count"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
-<pre><code>The dataset contains 3 different data types and they are: object, float64, int64</code></pre>
+<pre><code>The dataset contains 3 different data types and they are: object, int64, float64</code></pre>
 </div>
 <div class="cell-output cell-output-display" data-execution_count="9">
 <pre><code>Text(0, 0.5, 'Count')</code></pre>
@@ -745,16 +745,16 @@ Name: Datetime, Length: 75550, dtype: object</code></pre>
 <span id="cb26-17"><a href="#cb26-17" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
-<pre><code>accident: 1
-negative: 0
-death: 1
+<pre><code>casualty: 0
 problem: 0
-flawed: 1
-injury: 0
-casualties: 0
-deadly: 0
 bad: 0
-casualty: 0</code></pre>
+deadly: 0
+flawed: 1
+death: 1
+accident: 1
+negative: 0
+casualties: 0
+injury: 0</code></pre>
 </div>
 <div class="cell-output cell-output-display">
 <p><img src="dataclean_files/figure-html/cell-18-output-2.png" width="589" height="449"></p>
@@ -774,16 +774,16 @@ casualty: 0</code></pre>
 <span id="cb28-9"><a href="#cb28-9" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
-<pre><code>accident: 7
-negative: 0
-death: 2
+<pre><code>casualty: 0
 problem: 0
-flawed: 0
-injury: 0
-casualties: 0
-deadly: 0
 bad: 2
-casualty: 0</code></pre>
+deadly: 0
+flawed: 0
+death: 2
+accident: 7
+negative: 0
+casualties: 0
+injury: 0</code></pre>
 </div>
 <div class="cell-output cell-output-display">
 <p><img src="dataclean_files/figure-html/cell-19-output-2.png" width="576" height="449"></p>
