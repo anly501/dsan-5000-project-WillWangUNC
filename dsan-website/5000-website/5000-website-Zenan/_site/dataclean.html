@@ -177,7 +177,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <ul class="collapse">
   <li><a href="#link-to-raw-unprocessed-data-httpsgithub.comanly501dsan-5000-project-willwangunctreemaindsan-website5000-website5000-website-zenandata" id="toc-link-to-raw-unprocessed-data-httpsgithub.comanly501dsan-5000-project-willwangunctreemaindsan-website5000-website5000-website-zenandata" class="nav-link" data-scroll-target="#link-to-raw-unprocessed-data-httpsgithub.comanly501dsan-5000-project-willwangunctreemaindsan-website5000-website5000-website-zenandata">Link to raw (unprocessed) data: https://github.com/anly501/dsan-5000-project-WillWangUNC/tree/main/dsan-website/5000-website/5000-website-Zenan/Data</a></li>
   <li><a href="#link-to-cleaned-data-httpsgithub.comanly501dsan-5000-project-willwangunctreemaindsan-website5000-website5000-website-zenancleandata" id="toc-link-to-cleaned-data-httpsgithub.comanly501dsan-5000-project-willwangunctreemaindsan-website5000-website5000-website-zenancleandata" class="nav-link" data-scroll-target="#link-to-cleaned-data-httpsgithub.comanly501dsan-5000-project-willwangunctreemaindsan-website5000-website5000-website-zenancleandata">Link to cleaned data: https://github.com/anly501/dsan-5000-project-WillWangUNC/tree/main/dsan-website/5000-website/5000-website-Zenan/cleandata</a></li>
-  <li><a href="#first-dataset-tesla-deaths" id="toc-first-dataset-tesla-deaths" class="nav-link" data-scroll-target="#first-dataset-tesla-deaths">First dataset: Tesla Deaths</a>
+  <li><a href="#first-dataset-tesla-deaths---deaths" id="toc-first-dataset-tesla-deaths---deaths" class="nav-link" data-scroll-target="#first-dataset-tesla-deaths---deaths">First dataset: Tesla Deaths - Deaths</a>
   <ul class="collapse">
   <li><a href="#check-for-any-missing-values" id="toc-check-for-any-missing-values" class="nav-link" data-scroll-target="#check-for-any-missing-values">Check for any missing values</a></li>
   <li><a href="#the-missingno-correlation-heatmap-measures-nullity-correlation-how-strongly-the-presence-or-absence-of-one-variable-affects-the-presence-of-another." id="toc-the-missingno-correlation-heatmap-measures-nullity-correlation-how-strongly-the-presence-or-absence-of-one-variable-affects-the-presence-of-another." class="nav-link" data-scroll-target="#the-missingno-correlation-heatmap-measures-nullity-correlation-how-strongly-the-presence-or-absence-of-one-variable-affects-the-presence-of-another.">The missingno correlation heatmap measures nullity correlation: how strongly the presence or absence of one variable affects the presence of another.</a></li>
@@ -234,8 +234,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="link-to-cleaned-data-httpsgithub.comanly501dsan-5000-project-willwangunctreemaindsan-website5000-website5000-website-zenancleandata" class="level3">
 <h3 class="anchored" data-anchor-id="link-to-cleaned-data-httpsgithub.comanly501dsan-5000-project-willwangunctreemaindsan-website5000-website5000-website-zenancleandata">Link to cleaned data: <a href="https://github.com/anly501/dsan-5000-project-WillWangUNC/tree/main/dsan-website/5000-website/5000-website-Zenan/cleandata" class="uri">https://github.com/anly501/dsan-5000-project-WillWangUNC/tree/main/dsan-website/5000-website/5000-website-Zenan/cleandata</a></h3>
 </section>
-<section id="first-dataset-tesla-deaths" class="level2">
-<h2 class="anchored" data-anchor-id="first-dataset-tesla-deaths">First dataset: Tesla Deaths</h2>
+<section id="first-dataset-tesla-deaths---deaths" class="level2">
+<h2 class="anchored" data-anchor-id="first-dataset-tesla-deaths---deaths">First dataset: Tesla Deaths - Deaths</h2>
 <div class="cell" data-execution_count="1">
 <details>
 <summary>Code</summary>
@@ -576,13 +576,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb12-12"><a href="#cb12-12" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">"Count"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
-<pre><code>The dataset contains 3 different data types and they are: float64, int64, object</code></pre>
+<pre><code>The dataset contains 3 different data types and they are: object, int64, float64</code></pre>
 </div>
 <div class="cell-output cell-output-display" data-execution_count="9">
 <pre><code>Text(0, 0.5, 'Count')</code></pre>
 </div>
 <div class="cell-output cell-output-display">
-<p><img src="dataclean_files/figure-html/cell-10-output-3.png" width="387" height="302"></p>
+<p><img src="dataclean_files/figure-html/cell-10-output-3.png" width="610" height="449"></p>
 </div>
 </div>
 </section>
@@ -741,19 +741,19 @@ Name: Datetime, Length: 75550, dtype: object</code></pre>
 <span id="cb26-17"><a href="#cb26-17" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
-<pre><code>casualties: 0
-deadly: 0
-bad: 0
-flawed: 1
-accident: 1
+<pre><code>bad: 0
 negative: 0
-death: 1
+casualties: 0
+deadly: 0
 problem: 0
-injury: 0
-casualty: 0</code></pre>
+death: 1
+casualty: 0
+accident: 1
+flawed: 1
+injury: 0</code></pre>
 </div>
 <div class="cell-output cell-output-display">
-<p><img src="dataclean_files/figure-html/cell-18-output-2.png" width="369" height="302"></p>
+<p><img src="dataclean_files/figure-html/cell-18-output-2.png" width="589" height="449"></p>
 </div>
 </div>
 <div class="cell" data-execution_count="18">
@@ -770,19 +770,19 @@ casualty: 0</code></pre>
 <span id="cb28-9"><a href="#cb28-9" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
-<pre><code>casualties: 0
-deadly: 0
-bad: 2
-flawed: 0
-accident: 8
+<pre><code>bad: 2
 negative: 0
-death: 2
+casualties: 0
+deadly: 0
 problem: 0
-injury: 0
-casualty: 0</code></pre>
+death: 2
+casualty: 0
+accident: 8
+flawed: 0
+injury: 0</code></pre>
 </div>
 <div class="cell-output cell-output-display">
-<p><img src="dataclean_files/figure-html/cell-19-output-2.png" width="356" height="302"></p>
+<p><img src="dataclean_files/figure-html/cell-19-output-2.png" width="576" height="449"></p>
 </div>
 </div>
 </section>
