@@ -182,7 +182,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#feature-selection" id="toc-feature-selection" class="nav-link" data-scroll-target="#feature-selection">Feature Selection:</a></li>
   <li><a href="#feature-extraction" id="toc-feature-extraction" class="nav-link" data-scroll-target="#feature-extraction">Feature Extraction:</a></li>
   </ul></li>
-  <li><a href="#using-pca" id="toc-using-pca" class="nav-link" data-scroll-target="#using-pca">Using PCA</a>
+  <li><a href="#using-pca-on-the-dataset-tesla-deaths---deaths" id="toc-using-pca-on-the-dataset-tesla-deaths---deaths" class="nav-link" data-scroll-target="#using-pca-on-the-dataset-tesla-deaths---deaths">Using PCA on the dataset: Tesla Deaths - Deaths</a>
   <ul class="collapse">
   <li><a href="#import-necessary-libraries" id="toc-import-necessary-libraries" class="nav-link" data-scroll-target="#import-necessary-libraries">Import necessary libraries</a></li>
   <li><a href="#create-the-features-and-target-dataframes-and-plot-the-proportion-of-variance-explained-on-the-y-axis-of-the-bar-plot-composed-of-the-6-features" id="toc-create-the-features-and-target-dataframes-and-plot-the-proportion-of-variance-explained-on-the-y-axis-of-the-bar-plot-composed-of-the-6-features" class="nav-link" data-scroll-target="#create-the-features-and-target-dataframes-and-plot-the-proportion-of-variance-explained-on-the-y-axis-of-the-bar-plot-composed-of-the-6-features">Create the features and target dataframes and plot the proportion of variance explained on the y-axis of the bar plot (composed of the 6 features)</a></li>
@@ -198,6 +198,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#t-sne-plot-in-2d-coloured-by-class" id="toc-t-sne-plot-in-2d-coloured-by-class" class="nav-link" data-scroll-target="#t-sne-plot-in-2d-coloured-by-class">t-SNE plot in 2D coloured by class</a></li>
   </ul></li>
   <li><a href="#summary-1" id="toc-summary-1" class="nav-link" data-scroll-target="#summary-1">Summary</a></li>
+  <li><a href="#using-pca-on-the-dataset-traffic-accidents-and-vehicles-gas-car" id="toc-using-pca-on-the-dataset-traffic-accidents-and-vehicles-gas-car" class="nav-link" data-scroll-target="#using-pca-on-the-dataset-traffic-accidents-and-vehicles-gas-car">Using PCA on the dataset: Traffic Accidents and Vehicles (gas car)</a>
+  <ul class="collapse">
+  <li><a href="#now-we-have-a-cleaned-dataset-with-15-numerical-features-and-we-would-like-to-cluster-the-accidents-into-smaller-groups-in-terms-of-its-type" id="toc-now-we-have-a-cleaned-dataset-with-15-numerical-features-and-we-would-like-to-cluster-the-accidents-into-smaller-groups-in-terms-of-its-type" class="nav-link" data-scroll-target="#now-we-have-a-cleaned-dataset-with-15-numerical-features-and-we-would-like-to-cluster-the-accidents-into-smaller-groups-in-terms-of-its-type">Now we have a cleaned dataset with 15 numerical features, and we would like to cluster the accidents into smaller groups in terms of its type</a></li>
+  <li><a href="#start-pca-on-the-dataset-with-number-of-components-equal-to-2" id="toc-start-pca-on-the-dataset-with-number-of-components-equal-to-2" class="nav-link" data-scroll-target="#start-pca-on-the-dataset-with-number-of-components-equal-to-2">Start PCA on the dataset with number of components equal to 2</a></li>
+  <li><a href="#in-summary" id="toc-in-summary" class="nav-link" data-scroll-target="#in-summary">In summary:</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -242,8 +248,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ol>
 </section>
 </section>
-<section id="using-pca" class="level2">
-<h2 class="anchored" data-anchor-id="using-pca">Using PCA</h2>
+<section id="using-pca-on-the-dataset-tesla-deaths---deaths" class="level2">
+<h2 class="anchored" data-anchor-id="using-pca-on-the-dataset-tesla-deaths---deaths">Using PCA on the dataset: Tesla Deaths - Deaths</h2>
 <section id="import-necessary-libraries" class="level3">
 <h3 class="anchored" data-anchor-id="import-necessary-libraries">Import necessary libraries</h3>
 <div class="cell" data-execution_count="1">
@@ -274,12 +280,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'Proportion of variance explained'</span>)</span>
 <span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>plt.xticks([<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="2">
-<pre><code>([&lt;matplotlib.axis.XTick at 0x214e64bb4c0&gt;,
-  &lt;matplotlib.axis.XTick at 0x214e64bb490&gt;,
-  &lt;matplotlib.axis.XTick at 0x214e64bb0a0&gt;,
-  &lt;matplotlib.axis.XTick at 0x214e66bc3a0&gt;,
-  &lt;matplotlib.axis.XTick at 0x214e66bce50&gt;,
-  &lt;matplotlib.axis.XTick at 0x214e66bd900&gt;],
+<pre><code>([&lt;matplotlib.axis.XTick at 0x2234f5db4c0&gt;,
+  &lt;matplotlib.axis.XTick at 0x2234f5db490&gt;,
+  &lt;matplotlib.axis.XTick at 0x2234f5db0a0&gt;,
+  &lt;matplotlib.axis.XTick at 0x2234f7d8430&gt;,
+  &lt;matplotlib.axis.XTick at 0x2234f7d8ee0&gt;,
+  &lt;matplotlib.axis.XTick at 0x2234f7d9990&gt;],
  [Text(1, 0, '1'),
   Text(2, 0, '2'),
   Text(3, 0, '3'),
@@ -390,7 +396,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'tsne component 1'</span>)</span>
 <span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'tsne component 2'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
-<pre><code>C:\Users\23898\AppData\Local\Temp\ipykernel_17388\977625591.py:2: UserWarning: No data for colormapping provided via 'c'. Parameters 'cmap' will be ignored
+<pre><code>C:\Users\23898\AppData\Local\Temp\ipykernel_20076\977625591.py:2: UserWarning: No data for colormapping provided via 'c'. Parameters 'cmap' will be ignored
   plt.scatter(tsne_df.iloc[:,0], tsne_df.iloc[:,1], cmap="brg", s=40)</code></pre>
 </div>
 <div class="cell-output cell-output-display" data-execution_count="6">
@@ -405,8 +411,128 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="summary-1" class="level2">
 <h2 class="anchored" data-anchor-id="summary-1">Summary</h2>
 <p>Like PCA, this plot does not give useful information, since we can not tell where are the two clusters. Clustering methods such as ‘K-Means’ should be used.</p>
+</section>
+<section id="using-pca-on-the-dataset-traffic-accidents-and-vehicles-gas-car" class="level2">
+<h2 class="anchored" data-anchor-id="using-pca-on-the-dataset-traffic-accidents-and-vehicles-gas-car">Using PCA on the dataset: Traffic Accidents and Vehicles (gas car)</h2>
+<div class="cell" data-execution_count="7">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>data <span class="op">=</span> pd.read_csv(<span class="st">'./Data/RoadAccident.csv'</span>)</span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>column_datatypes <span class="op">=</span> <span class="bu">set</span>()</span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> column <span class="kw">in</span> data.columns:</span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>    column_datatypes.add(<span class="bu">str</span>(data[column].dtype))</span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>X <span class="op">=</span> data.drop(columns<span class="op">=</span><span class="st">'Accident_Severity'</span>)</span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> data[<span class="st">'Accident_Severity'</span>]</span>
+<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a>numerical_features <span class="op">=</span> <span class="bu">list</span>()</span>
+<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a>categorical_features <span class="op">=</span> <span class="bu">list</span>()</span>
+<span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> column <span class="kw">in</span> X.columns:</span>
+<span id="cb12-10"><a href="#cb12-10" aria-hidden="true" tabindex="-1"></a>    <span class="co"># In the dataset we only have float and int64.</span></span>
+<span id="cb12-11"><a href="#cb12-11" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> (data[column].dtype <span class="op">==</span> <span class="st">'float64'</span> <span class="kw">or</span> data[column].dtype <span class="op">==</span> <span class="st">'int64'</span>):</span>
+<span id="cb12-12"><a href="#cb12-12" aria-hidden="true" tabindex="-1"></a>        numerical_features.append(column)</span>
+<span id="cb12-13"><a href="#cb12-13" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Categorical</span></span>
+<span id="cb12-14"><a href="#cb12-14" aria-hidden="true" tabindex="-1"></a>    <span class="cf">elif</span> (data[column].dtype <span class="op">==</span> <span class="st">'object'</span>):</span>
+<span id="cb12-15"><a href="#cb12-15" aria-hidden="true" tabindex="-1"></a>        categorical_features.append(column)</span>
+<span id="cb12-16"><a href="#cb12-16" aria-hidden="true" tabindex="-1"></a>data <span class="op">=</span> X[numerical_features]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<section id="now-we-have-a-cleaned-dataset-with-15-numerical-features-and-we-would-like-to-cluster-the-accidents-into-smaller-groups-in-terms-of-its-type" class="level3">
+<h3 class="anchored" data-anchor-id="now-we-have-a-cleaned-dataset-with-15-numerical-features-and-we-would-like-to-cluster-the-accidents-into-smaller-groups-in-terms-of-its-type">Now we have a cleaned dataset with 15 numerical features, and we would like to cluster the accidents into smaller groups in terms of its type</h3>
+</section>
+<section id="start-pca-on-the-dataset-with-number-of-components-equal-to-2" class="level3">
+<h3 class="anchored" data-anchor-id="start-pca-on-the-dataset-with-number-of-components-equal-to-2">Start PCA on the dataset with number of components equal to 2</h3>
+<div class="cell" data-execution_count="8">
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>SS<span class="op">=</span>StandardScaler()</span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>X<span class="op">=</span>pd.DataFrame(SS.fit_transform(data), columns<span class="op">=</span>data.columns)</span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>pca <span class="op">=</span> PCA(n_components<span class="op">=</span><span class="dv">2</span>)</span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>X_pca <span class="op">=</span> pca.fit_transform(X)</span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>principal_df <span class="op">=</span> pd.DataFrame(data <span class="op">=</span> X_pca, columns <span class="op">=</span> [<span class="st">'PC1'</span>, <span class="st">'PC2'</span>])</span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a>principal_df.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="8">
+<div>
 
 
+<table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">PC1</th>
+<th data-quarto-table-cell-role="th">PC2</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">0</td>
+<td>-1.897439</td>
+<td>-1.586021</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">1</td>
+<td>-2.366626</td>
+<td>-1.582004</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">2</td>
+<td>-1.868297</td>
+<td>-0.569858</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">3</td>
+<td>-2.319698</td>
+<td>-0.338332</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">4</td>
+<td>-2.184419</td>
+<td>-0.264836</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+<div class="cell" data-execution_count="9">
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">8</span>,<span class="dv">6</span>))</span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>plt.scatter(principal_df.iloc[:,<span class="dv">0</span>], principal_df.iloc[:,<span class="dv">1</span>], s<span class="op">=</span><span class="fl">0.05</span>)</span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'PCA plot in 2D'</span>)</span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'PC1'</span>)</span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'PC2'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="9">
+<pre><code>Text(0, 0.5, 'PC2')</code></pre>
+</div>
+<div class="cell-output cell-output-display">
+<p><img src="dimreduction_files/figure-html/cell-10-output-2.png" width="662" height="523"></p>
+</div>
+</div>
+</section>
+<section id="in-summary" class="level3">
+<h3 class="anchored" data-anchor-id="in-summary">In summary:</h3>
+<p>The depicted group lacks a discernible clustering pattern. To address this, we need to employ a clustering method to delineate distinct clusters within the data.</p>
+<div class="cell" data-execution_count="10">
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>kmeans <span class="op">=</span> KMeans(n_clusters<span class="op">=</span><span class="dv">5</span>, n_init<span class="op">=</span><span class="dv">15</span>, max_iter<span class="op">=</span><span class="dv">500</span>, random_state<span class="op">=</span><span class="dv">0</span>)</span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>clusters <span class="op">=</span> kmeans.fit_predict(X)</span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>centroids <span class="op">=</span> kmeans.cluster_centers_</span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a>centroids_pca <span class="op">=</span> pca.transform(centroids)</span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">8</span>,<span class="dv">6</span>))</span>
+<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a>plt.scatter(principal_df.iloc[:,<span class="dv">0</span>], principal_df.iloc[:,<span class="dv">1</span>], c<span class="op">=</span>clusters, cmap<span class="op">=</span><span class="st">"brg"</span>, s<span class="op">=</span><span class="dv">40</span>)</span>
+<span id="cb16-7"><a href="#cb16-7" aria-hidden="true" tabindex="-1"></a>plt.scatter(x<span class="op">=</span>centroids_pca[:,<span class="dv">0</span>], y<span class="op">=</span>centroids_pca[:,<span class="dv">1</span>], marker<span class="op">=</span><span class="st">"x"</span>, s<span class="op">=</span><span class="dv">100</span>, linewidths<span class="op">=</span><span class="dv">3</span>, color<span class="op">=</span><span class="st">"black"</span>)</span>
+<span id="cb16-8"><a href="#cb16-8" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'PCA plot in 2D'</span>)</span>
+<span id="cb16-9"><a href="#cb16-9" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'PC1'</span>)</span>
+<span id="cb16-10"><a href="#cb16-10" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'PC2'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>C:\Users\23898\anaconda\lib\site-packages\sklearn\base.py:464: UserWarning: X does not have valid feature names, but PCA was fitted with feature names
+  warnings.warn(</code></pre>
+</div>
+<div class="cell-output cell-output-display" data-execution_count="10">
+<pre><code>Text(0, 0.5, 'PC2')</code></pre>
+</div>
+<div class="cell-output cell-output-display">
+<p><img src="dimreduction_files/figure-html/cell-11-output-3.png" width="662" height="523"></p>
+</div>
+</div>
+
+
+</section>
 </section>
 
 </main> <!-- /main -->

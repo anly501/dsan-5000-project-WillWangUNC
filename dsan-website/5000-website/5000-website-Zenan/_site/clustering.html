@@ -185,6 +185,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#visualize-the-results-using-a-violin-plot" id="toc-visualize-the-results-using-a-violin-plot" class="nav-link" data-scroll-target="#visualize-the-results-using-a-violin-plot">Visualize the results using a violin plot</a></li>
   <li><a href="#in-summary-1" id="toc-in-summary-1" class="nav-link" data-scroll-target="#in-summary-1">In summary:</a></li>
   </ul></li>
+  <li><a href="#clustering-on-the-dataset-traffic-accidents-and-vehicles-gas-car" id="toc-clustering-on-the-dataset-traffic-accidents-and-vehicles-gas-car" class="nav-link" data-scroll-target="#clustering-on-the-dataset-traffic-accidents-and-vehicles-gas-car">Clustering on the dataset: Traffic Accidents and Vehicles (gas car)</a></li>
   </ul>
 </nav>
     </div>
@@ -271,8 +272,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 C:\Users\23898\anaconda\lib\site-packages\sklearn\cluster\_kmeans.py:1436: UserWarning: KMeans is known to have a memory leak on Windows with MKL, when there are less chunks than available threads. You can avoid it by setting the environment variable OMP_NUM_THREADS=2.
   warnings.warn(</code></pre>
 </div>
-<div class="cell-output cell-output-display" data-execution_count="3">
-<pre><code>&lt;matplotlib.collections.PathCollection at 0x1dcee569810&gt;</code></pre>
+<div class="cell-output cell-output-display" data-execution_count="8">
+<pre><code>&lt;matplotlib.collections.PathCollection at 0x1dce919afe0&gt;</code></pre>
 </div>
 <div class="cell-output cell-output-display">
 <p><img src="clustering_files/figure-html/cell-4-output-3.png" width="558" height="411"></p>
@@ -292,8 +293,8 @@ C:\Users\23898\anaconda\lib\site-packages\sklearn\cluster\_kmeans.py:1436: UserW
 C:\Users\23898\anaconda\lib\site-packages\sklearn\cluster\_kmeans.py:1436: UserWarning: KMeans is known to have a memory leak on Windows with MKL, when there are less chunks than available threads. You can avoid it by setting the environment variable OMP_NUM_THREADS=2.
   warnings.warn(</code></pre>
 </div>
-<div class="cell-output cell-output-display" data-execution_count="4">
-<pre><code>&lt;matplotlib.collections.PathCollection at 0x1dceea45a20&gt;</code></pre>
+<div class="cell-output cell-output-display" data-execution_count="9">
+<pre><code>&lt;matplotlib.collections.PathCollection at 0x1dced82c7c0&gt;</code></pre>
 </div>
 <div class="cell-output cell-output-display">
 <p><img src="clustering_files/figure-html/cell-5-output-3.png" width="558" height="411"></p>
@@ -312,7 +313,7 @@ C:\Users\23898\anaconda\lib\site-packages\sklearn\cluster\_kmeans.py:1436: UserW
 <span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>melt_car <span class="op">=</span> pd.melt(df,id_vars<span class="op">=</span><span class="st">'cluster'</span>,var_name<span class="op">=</span><span class="st">"predictor"</span>,value_name<span class="op">=</span><span class="st">"percent"</span>,</span>
 <span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>                 value_vars<span class="op">=</span>[<span class="st">'CP'</span>,<span class="st">'tsla+cp'</span>, <span class="st">'VTAD'</span>, <span class="st">'Claimed'</span>, <span class="st">'Tesla_occupant'</span>,<span class="st">'Other_vehicle'</span>] )</span>
 <span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>sns.violinplot(data<span class="op">=</span>melt_car,y<span class="op">=</span><span class="st">'predictor'</span>,x<span class="op">=</span><span class="st">'percent'</span>,hue<span class="op">=</span><span class="st">'cluster'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="5">
+<div class="cell-output cell-output-display" data-execution_count="10">
 <pre><code>&lt;Axes: xlabel='percent', ylabel='predictor'&gt;</code></pre>
 </div>
 <div class="cell-output cell-output-display">
@@ -323,9 +324,12 @@ C:\Users\23898\anaconda\lib\site-packages\sklearn\cluster\_kmeans.py:1436: UserW
 <section id="in-summary-1" class="level3">
 <h3 class="anchored" data-anchor-id="in-summary-1">In summary:</h3>
 <p>From the presented plot, it is now evident that distinct clusters of states may necessitate varied interventions, such as implementing safety measures like road cushioning or enforcing more stringent traffic laws tailored to each group’s specific characteristics.</p>
-
-
 </section>
+</section>
+<section id="clustering-on-the-dataset-traffic-accidents-and-vehicles-gas-car" class="level2">
+<h2 class="anchored" data-anchor-id="clustering-on-the-dataset-traffic-accidents-and-vehicles-gas-car">Clustering on the dataset: Traffic Accidents and Vehicles (gas car)</h2>
+
+
 </section>
 
 </main> <!-- /main -->
