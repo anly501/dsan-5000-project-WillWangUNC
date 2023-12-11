@@ -204,6 +204,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#start-pca-on-the-dataset-with-number-of-components-equal-to-2" id="toc-start-pca-on-the-dataset-with-number-of-components-equal-to-2" class="nav-link" data-scroll-target="#start-pca-on-the-dataset-with-number-of-components-equal-to-2">Start PCA on the dataset with number of components equal to 2</a></li>
   <li><a href="#in-summary" id="toc-in-summary" class="nav-link" data-scroll-target="#in-summary">In summary:</a></li>
   </ul></li>
+  <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion">Conclusion:</a></li>
   </ul>
 </nav>
     </div>
@@ -280,12 +281,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'Proportion of variance explained'</span>)</span>
 <span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>plt.xticks([<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="2">
-<pre><code>([&lt;matplotlib.axis.XTick at 0x2234f5db4c0&gt;,
-  &lt;matplotlib.axis.XTick at 0x2234f5db490&gt;,
-  &lt;matplotlib.axis.XTick at 0x2234f5db0a0&gt;,
-  &lt;matplotlib.axis.XTick at 0x2234f7d8430&gt;,
-  &lt;matplotlib.axis.XTick at 0x2234f7d8ee0&gt;,
-  &lt;matplotlib.axis.XTick at 0x2234f7d9990&gt;],
+<pre><code>([&lt;matplotlib.axis.XTick at 0x1db34a4b6a0&gt;,
+  &lt;matplotlib.axis.XTick at 0x1db34a4b670&gt;,
+  &lt;matplotlib.axis.XTick at 0x1db34a4b280&gt;,
+  &lt;matplotlib.axis.XTick at 0x1db3031c6a0&gt;,
+  &lt;matplotlib.axis.XTick at 0x1db3031d150&gt;,
+  &lt;matplotlib.axis.XTick at 0x1db3031dc00&gt;],
  [Text(1, 0, '1'),
   Text(2, 0, '2'),
   Text(3, 0, '3'),
@@ -396,8 +397,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'tsne component 1'</span>)</span>
 <span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'tsne component 2'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
-<pre><code>C:\Users\23898\AppData\Local\Temp\ipykernel_20076\977625591.py:2: UserWarning: No data for colormapping provided via 'c'. Parameters 'cmap' will be ignored
-  plt.scatter(tsne_df.iloc[:,0], tsne_df.iloc[:,1], cmap="brg", s=40)</code></pre>
+<pre><code>C:\Users\23898\AppData\Local\Temp\ipykernel_14648\977625591.py:2: UserWarning:
+
+No data for colormapping provided via 'c'. Parameters 'cmap' will be ignored
+</code></pre>
 </div>
 <div class="cell-output cell-output-display" data-execution_count="6">
 <pre><code>Text(0, 0.5, 'tsne component 2')</code></pre>
@@ -462,28 +465,28 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <tbody>
 <tr class="odd">
 <td data-quarto-table-cell-role="th">0</td>
-<td>-1.897439</td>
-<td>-1.586021</td>
+<td>-1.931754</td>
+<td>-1.645722</td>
 </tr>
 <tr class="even">
 <td data-quarto-table-cell-role="th">1</td>
-<td>-2.366626</td>
-<td>-1.582004</td>
+<td>-2.390462</td>
+<td>-1.449822</td>
 </tr>
 <tr class="odd">
 <td data-quarto-table-cell-role="th">2</td>
-<td>-1.868297</td>
-<td>-0.569858</td>
+<td>-1.883538</td>
+<td>-0.586596</td>
 </tr>
 <tr class="even">
 <td data-quarto-table-cell-role="th">3</td>
-<td>-2.319698</td>
-<td>-0.338332</td>
+<td>-2.306050</td>
+<td>-0.303891</td>
 </tr>
 <tr class="odd">
 <td data-quarto-table-cell-role="th">4</td>
-<td>-2.184419</td>
-<td>-0.264836</td>
+<td>-2.142726</td>
+<td>-0.338274</td>
 </tr>
 </tbody>
 </table>
@@ -520,8 +523,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb16-9"><a href="#cb16-9" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'PC1'</span>)</span>
 <span id="cb16-10"><a href="#cb16-10" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'PC2'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
-<pre><code>C:\Users\23898\anaconda\lib\site-packages\sklearn\base.py:464: UserWarning: X does not have valid feature names, but PCA was fitted with feature names
-  warnings.warn(</code></pre>
+<pre><code>C:\Users\23898\anaconda\lib\site-packages\sklearn\base.py:464: UserWarning:
+
+X does not have valid feature names, but PCA was fitted with feature names
+</code></pre>
 </div>
 <div class="cell-output cell-output-display" data-execution_count="10">
 <pre><code>Text(0, 0.5, 'PC2')</code></pre>
@@ -530,9 +535,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p><img src="dimreduction_files/figure-html/cell-11-output-3.png" width="662" height="523"></p>
 </div>
 </div>
-
-
 </section>
+</section>
+<section id="conclusion" class="level2">
+<h2 class="anchored" data-anchor-id="conclusion">Conclusion:</h2>
+<ol type="1">
+<li>PCA and t-SNE may not perform optimally independently and often benefit from auxiliary techniques such as clustering, notably K-Means.</li>
+<li>While PCA and t-SNE yield different outputs, the computational efficiency of t-SNE is hindered by its quadratic time complexity and stochastic nature. Therefore, in scenarios where efficiency is crucial, PCA might be the preferred choice for dimension reduction.</li>
+</ol>
+
+
 </section>
 
 </main> <!-- /main -->
