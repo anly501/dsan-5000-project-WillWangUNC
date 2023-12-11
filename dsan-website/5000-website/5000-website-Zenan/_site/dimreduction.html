@@ -274,12 +274,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'Proportion of variance explained'</span>)</span>
 <span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>plt.xticks([<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="2">
-<pre><code>([&lt;matplotlib.axis.XTick at 0x2de10bcf4c0&gt;,
-  &lt;matplotlib.axis.XTick at 0x2de10bcf490&gt;,
-  &lt;matplotlib.axis.XTick at 0x2de10bcf0a0&gt;,
-  &lt;matplotlib.axis.XTick at 0x2de10db8430&gt;,
-  &lt;matplotlib.axis.XTick at 0x2de10db8ee0&gt;,
-  &lt;matplotlib.axis.XTick at 0x2de10db9990&gt;],
+<pre><code>([&lt;matplotlib.axis.XTick at 0x214e64bb4c0&gt;,
+  &lt;matplotlib.axis.XTick at 0x214e64bb490&gt;,
+  &lt;matplotlib.axis.XTick at 0x214e64bb0a0&gt;,
+  &lt;matplotlib.axis.XTick at 0x214e66bc3a0&gt;,
+  &lt;matplotlib.axis.XTick at 0x214e66bce50&gt;,
+  &lt;matplotlib.axis.XTick at 0x214e66bd900&gt;],
  [Text(1, 0, '1'),
   Text(2, 0, '2'),
   Text(3, 0, '3'),
@@ -331,7 +331,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="cell" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>tsne <span class="op">=</span> TSNE(n_components<span class="op">=</span><span class="dv">2</span>)</span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>X_tsne <span class="op">=</span> tsne.fit_transform(features_scaled)</span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>tsne_df <span class="op">=</span> pd.DataFrame(data <span class="op">=</span> X_tsne, columns <span class="op">=</span> [<span class="st">'tsne comp. 1'</span>, <span class="st">'tsne comp. 2'</span>])</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>tsne_df <span class="op">=</span> pd.DataFrame(data <span class="op">=</span> X_tsne, columns <span class="op">=</span> [<span class="st">'tsne component 1'</span>, <span class="st">'tsne component 2'</span>])</span>
 <span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(tsne_df.shape)</span>
 <span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>tsne_df.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -345,8 +345,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <thead>
 <tr class="header">
 <th data-quarto-table-cell-role="th"></th>
-<th data-quarto-table-cell-role="th">tsne comp. 1</th>
-<th data-quarto-table-cell-role="th">tsne comp. 2</th>
+<th data-quarto-table-cell-role="th">tsne component 1</th>
+<th data-quarto-table-cell-role="th">tsne component 2</th>
 </tr>
 </thead>
 <tbody>
@@ -390,7 +390,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'tsne component 1'</span>)</span>
 <span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'tsne component 2'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
-<pre><code>C:\Users\23898\AppData\Local\Temp\ipykernel_8104\977625591.py:2: UserWarning: No data for colormapping provided via 'c'. Parameters 'cmap' will be ignored
+<pre><code>C:\Users\23898\AppData\Local\Temp\ipykernel_17388\977625591.py:2: UserWarning: No data for colormapping provided via 'c'. Parameters 'cmap' will be ignored
   plt.scatter(tsne_df.iloc[:,0], tsne_df.iloc[:,1], cmap="brg", s=40)</code></pre>
 </div>
 <div class="cell-output cell-output-display" data-execution_count="6">

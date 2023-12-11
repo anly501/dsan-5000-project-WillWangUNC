@@ -65,8 +65,8 @@ Question:  Is an accident involving an electric vehicle (EV) more likely to resu
 ### Predict the accident outcome:
 Question: Is there a model available for predicting accident outcomes irrespective of whether the vehicle is electric or gasoline-powered?
 
-### Economic Viability and Affordability:
-Question: How have the costs of electric vehicles and traditional cars evolved over time, and what factors contribute to the perceived affordability of each option? Can we predict future price trends?
+### The cause of the frequent accidents of EVs and solution:
+Question: What might account for the frequent accidents of EVs? 
 
 ### Battery Technology Analysis:
 Question: What advancements in battery technology have had the most significant impact on the performance and cost-effectiveness of electric vehicles, and how do these innovations compare with improvements in internal combustion engine technology?

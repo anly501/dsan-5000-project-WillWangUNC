@@ -20,6 +20,40 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -136,7 +170,23 @@ ul.task-list li input[type="checkbox"] {
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#clustering-on-the-dataset-tesla-deaths---deaths" id="toc-clustering-on-the-dataset-tesla-deaths---deaths" class="nav-link active" data-scroll-target="#clustering-on-the-dataset-tesla-deaths---deaths">Clustering on the dataset: Tesla Deaths - Deaths</a>
+  <ul class="collapse">
+  <li><a href="#brief-introduction-of-clustering" id="toc-brief-introduction-of-clustering" class="nav-link" data-scroll-target="#brief-introduction-of-clustering">Brief introduction of Clustering</a></li>
+  <li><a href="#summary-of-the-dimension-reduction-effort" id="toc-summary-of-the-dimension-reduction-effort" class="nav-link" data-scroll-target="#summary-of-the-dimension-reduction-effort">Summary of the dimension reduction effort:</a></li>
+  <li><a href="#import-kmeans-library-and-use-a-for-loop-to-view-the-explanatory-power-of-some-k-values" id="toc-import-kmeans-library-and-use-a-for-loop-to-view-the-explanatory-power-of-some-k-values" class="nav-link" data-scroll-target="#import-kmeans-library-and-use-a-for-loop-to-view-the-explanatory-power-of-some-k-values">Import ‘KMeans’ library and use a for-loop to view the explanatory power of some K values</a></li>
+  <li><a href="#the-plot-above-does-not-clearly-indicate-a-strong-preference-for-any-specific-k-value.-therefore-opting-for-a-cluster-count-of-3-or-4-seems-to-be-a-reasonable-choice-based-on-the-observed-data-patterns." id="toc-the-plot-above-does-not-clearly-indicate-a-strong-preference-for-any-specific-k-value.-therefore-opting-for-a-cluster-count-of-3-or-4-seems-to-be-a-reasonable-choice-based-on-the-observed-data-patterns." class="nav-link" data-scroll-target="#the-plot-above-does-not-clearly-indicate-a-strong-preference-for-any-specific-k-value.-therefore-opting-for-a-cluster-count-of-3-or-4-seems-to-be-a-reasonable-choice-based-on-the-observed-data-patterns.">The plot above does not clearly indicate a strong preference for any specific K-value. Therefore, opting for a cluster count of 3 or 4 seems to be a reasonable choice based on the observed data patterns.</a></li>
+  <li><a href="#use-4-as-the-number-of-cluster-and-refit-the-model" id="toc-use-4-as-the-number-of-cluster-and-refit-the-model" class="nav-link" data-scroll-target="#use-4-as-the-number-of-cluster-and-refit-the-model">Use 4 as the number of cluster and refit the model</a></li>
+  <li><a href="#in-summary" id="toc-in-summary" class="nav-link" data-scroll-target="#in-summary">In summary:</a></li>
+  <li><a href="#visualize-the-results-using-a-violin-plot" id="toc-visualize-the-results-using-a-violin-plot" class="nav-link" data-scroll-target="#visualize-the-results-using-a-violin-plot">Visualize the results using a violin plot</a></li>
+  <li><a href="#in-summary-1" id="toc-in-summary-1" class="nav-link" data-scroll-target="#in-summary-1">In summary:</a></li>
+  </ul></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -158,8 +208,125 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
+<section id="clustering-on-the-dataset-tesla-deaths---deaths" class="level2">
+<h2 class="anchored" data-anchor-id="clustering-on-the-dataset-tesla-deaths---deaths">Clustering on the dataset: Tesla Deaths - Deaths</h2>
+<section id="brief-introduction-of-clustering" class="level3">
+<h3 class="anchored" data-anchor-id="brief-introduction-of-clustering">Brief introduction of Clustering</h3>
+<p>Clustering is a method used in machine learning and data analysis to group similar data points together based on certain features or characteristics. The goal of clustering is to partition a dataset into subsets, or clusters, where data points within the same cluster are more similar to each other than to those in other clusters. This helps in identifying patterns, structures, or hidden relationships within the data.</p>
+</section>
+<section id="summary-of-the-dimension-reduction-effort" class="level3">
+<h3 class="anchored" data-anchor-id="summary-of-the-dimension-reduction-effort">Summary of the dimension reduction effort:</h3>
+<p>In this analysis, the feature data X pertains to the state the accident took place, while the Y variables include ‘CP,’ ‘tsla+cp,’ ‘VTAD,’ ‘Claimed,’ ‘Tesla_occupant,’ and ‘Other_vehicle.’ Notably, conventional visualization techniques like PCA and t-SNE prove ineffective due to the absence of a distinct separation between clusters. Consequently, clustering methods such as K-means are employed in this section for a more suitable exploration of the data’s inherent patterns.</p>
+<div class="cell" data-execution_count="1">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.preprocessing <span class="im">import</span> StandardScaler</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.decomposition <span class="im">import</span> PCA </span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.manifold <span class="im">import</span> TSNE</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.discriminant_analysis <span class="im">import</span> LinearDiscriminantAnalysis <span class="im">as</span> LDA</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.cluster <span class="im">import</span> KMeans</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.preprocessing <span class="im">import</span> StandardScaler</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.cluster <span class="im">import</span> KMeans</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+</section>
+<section id="import-kmeans-library-and-use-a-for-loop-to-view-the-explanatory-power-of-some-k-values" class="level3">
+<h3 class="anchored" data-anchor-id="import-kmeans-library-and-use-a-for-loop-to-view-the-explanatory-power-of-some-k-values">Import ‘KMeans’ library and use a for-loop to view the explanatory power of some K values</h3>
+<div class="cell" data-execution_count="2">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.read_csv(<span class="st">'./cleandata/cleanTelsa.csv'</span>)</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>features <span class="op">=</span> df[[<span class="st">'CP'</span>,<span class="st">'tsla+cp'</span>, <span class="st">'VTAD'</span>, <span class="st">'Claimed'</span>, <span class="st">'Tesla_occupant'</span>,<span class="st">'Other_vehicle'</span>]]</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>target <span class="op">=</span> df[<span class="st">'State'</span>]</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>scaler <span class="op">=</span> StandardScaler()</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>features_scaled <span class="op">=</span> scaler.fit_transform(features)</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>ks <span class="op">=</span> <span class="bu">range</span>(<span class="dv">1</span>, <span class="dv">10</span>)</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>inertias <span class="op">=</span> []</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> k <span class="kw">in</span> ks:</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>    km <span class="op">=</span> KMeans(n_clusters<span class="op">=</span>k, random_state<span class="op">=</span><span class="dv">8</span>)</span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>    km.fit(features_scaled)</span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>    inertias.append(km.inertia_)</span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>plt.plot(ks, inertias, marker<span class="op">=</span><span class="st">'o'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<p><img src="clustering_files/figure-html/cell-3-output-1.png" width="583" height="411"></p>
+</div>
+</div>
+</section>
+<section id="the-plot-above-does-not-clearly-indicate-a-strong-preference-for-any-specific-k-value.-therefore-opting-for-a-cluster-count-of-3-or-4-seems-to-be-a-reasonable-choice-based-on-the-observed-data-patterns." class="level3">
+<h3 class="anchored" data-anchor-id="the-plot-above-does-not-clearly-indicate-a-strong-preference-for-any-specific-k-value.-therefore-opting-for-a-cluster-count-of-3-or-4-seems-to-be-a-reasonable-choice-based-on-the-observed-data-patterns.">The plot above does not clearly indicate a strong preference for any specific K-value. Therefore, opting for a cluster count of 3 or 4 seems to be a reasonable choice based on the observed data patterns.</h3>
+<div class="cell" data-execution_count="3">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.decomposition <span class="im">import</span> PCA</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>pca <span class="op">=</span> PCA(n_components<span class="op">=</span><span class="dv">2</span>)</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>p_comps <span class="op">=</span> pca.fit_transform(features_scaled)</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>p_comp1 <span class="op">=</span> p_comps[:,<span class="dv">0</span>]</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>p_comp2 <span class="op">=</span> p_comps[:,<span class="dv">1</span>]</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>km <span class="op">=</span> KMeans(n_clusters<span class="op">=</span><span class="dv">3</span>,random_state<span class="op">=</span><span class="dv">10</span>)</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>km.fit(features_scaled)</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>plt.scatter(p_comps[:,<span class="dv">0</span>],p_comps[:,<span class="dv">1</span>],c<span class="op">=</span>km.labels_)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>C:\Users\23898\anaconda\lib\site-packages\sklearn\cluster\_kmeans.py:1412: FutureWarning: The default value of `n_init` will change from 10 to 'auto' in 1.4. Set the value of `n_init` explicitly to suppress the warning
+  super()._check_params_vs_input(X, default_n_init=10)
+C:\Users\23898\anaconda\lib\site-packages\sklearn\cluster\_kmeans.py:1436: UserWarning: KMeans is known to have a memory leak on Windows with MKL, when there are less chunks than available threads. You can avoid it by setting the environment variable OMP_NUM_THREADS=2.
+  warnings.warn(</code></pre>
+</div>
+<div class="cell-output cell-output-display" data-execution_count="3">
+<pre><code>&lt;matplotlib.collections.PathCollection at 0x1dcee569810&gt;</code></pre>
+</div>
+<div class="cell-output cell-output-display">
+<p><img src="clustering_files/figure-html/cell-4-output-3.png" width="558" height="411"></p>
+</div>
+</div>
+</section>
+<section id="use-4-as-the-number-of-cluster-and-refit-the-model" class="level3">
+<h3 class="anchored" data-anchor-id="use-4-as-the-number-of-cluster-and-refit-the-model">Use 4 as the number of cluster and refit the model</h3>
+<p>It appears that there isn’t a substantial difference between utilizing k=3 and k=4. Therefore, for the sake of diversity, we will adhere to using k=4.</p>
+<div class="cell" data-execution_count="4">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>km <span class="op">=</span> KMeans(n_clusters<span class="op">=</span><span class="dv">4</span>,random_state<span class="op">=</span><span class="dv">10</span>)</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>km.fit(features_scaled)</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>plt.scatter(p_comps[:,<span class="dv">0</span>],p_comps[:,<span class="dv">1</span>],c<span class="op">=</span>km.labels_)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>C:\Users\23898\anaconda\lib\site-packages\sklearn\cluster\_kmeans.py:1412: FutureWarning: The default value of `n_init` will change from 10 to 'auto' in 1.4. Set the value of `n_init` explicitly to suppress the warning
+  super()._check_params_vs_input(X, default_n_init=10)
+C:\Users\23898\anaconda\lib\site-packages\sklearn\cluster\_kmeans.py:1436: UserWarning: KMeans is known to have a memory leak on Windows with MKL, when there are less chunks than available threads. You can avoid it by setting the environment variable OMP_NUM_THREADS=2.
+  warnings.warn(</code></pre>
+</div>
+<div class="cell-output cell-output-display" data-execution_count="4">
+<pre><code>&lt;matplotlib.collections.PathCollection at 0x1dceea45a20&gt;</code></pre>
+</div>
+<div class="cell-output cell-output-display">
+<p><img src="clustering_files/figure-html/cell-5-output-3.png" width="558" height="411"></p>
+</div>
+</div>
+</section>
+<section id="in-summary" class="level3">
+<h3 class="anchored" data-anchor-id="in-summary">In summary:</h3>
+<p>A logical progression in our analysis involves examining the distinctions among the three clusters concerning the three features employed for clustering. Instead of relying on scaled features, we revert to using the unscaled features to facilitate a more interpretable exploration of the differences.</p>
+</section>
+<section id="visualize-the-results-using-a-violin-plot" class="level3">
+<h3 class="anchored" data-anchor-id="visualize-the-results-using-a-violin-plot">Visualize the results using a violin plot</h3>
+<div class="cell" data-execution_count="5">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> seaborn <span class="im">as</span> sns</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>df[<span class="st">'cluster'</span>] <span class="op">=</span> km.labels_</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>melt_car <span class="op">=</span> pd.melt(df,id_vars<span class="op">=</span><span class="st">'cluster'</span>,var_name<span class="op">=</span><span class="st">"predictor"</span>,value_name<span class="op">=</span><span class="st">"percent"</span>,</span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>                 value_vars<span class="op">=</span>[<span class="st">'CP'</span>,<span class="st">'tsla+cp'</span>, <span class="st">'VTAD'</span>, <span class="st">'Claimed'</span>, <span class="st">'Tesla_occupant'</span>,<span class="st">'Other_vehicle'</span>] )</span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>sns.violinplot(data<span class="op">=</span>melt_car,y<span class="op">=</span><span class="st">'predictor'</span>,x<span class="op">=</span><span class="st">'percent'</span>,hue<span class="op">=</span><span class="st">'cluster'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="5">
+<pre><code>&lt;Axes: xlabel='percent', ylabel='predictor'&gt;</code></pre>
+</div>
+<div class="cell-output cell-output-display">
+<p><img src="clustering_files/figure-html/cell-6-output-2.png" width="669" height="429"></p>
+</div>
+</div>
+</section>
+<section id="in-summary-1" class="level3">
+<h3 class="anchored" data-anchor-id="in-summary-1">In summary:</h3>
+<p>From the presented plot, it is now evident that distinct clusters of states may necessitate varied interventions, such as implementing safety measures like road cushioning or enforcing more stringent traffic laws tailored to each group’s specific characteristics.</p>
 
 
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
