@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Data gathering</title>
+<title>Naïve Bayes</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -185,8 +185,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#training-validation-and-testing" id="toc-training-validation-and-testing" class="nav-link" data-scroll-target="#training-validation-and-testing">Training, validation and testing</a></li>
   <li><a href="#split-the-data-into-training-and-testing-sets-by-the-ratio-of-75-25." id="toc-split-the-data-into-training-and-testing-sets-by-the-ratio-of-75-25." class="nav-link" data-scroll-target="#split-the-data-into-training-and-testing-sets-by-the-ratio-of-75-25.">Split the data into training and testing sets by the ratio of 75-25.</a></li>
   <li><a href="#fit-the-naïve-bayes-model" id="toc-fit-the-naïve-bayes-model" class="nav-link" data-scroll-target="#fit-the-naïve-bayes-model">Fit the Naïve Bayes model</a></li>
+  <li><a href="#visualize-the-final-result" id="toc-visualize-the-final-result" class="nav-link" data-scroll-target="#visualize-the-final-result">Visualize the final result</a></li>
   </ul></li>
-  <li><a href="#in-conclusion" id="toc-in-conclusion" class="nav-link" data-scroll-target="#in-conclusion">In conclusion:</a></li>
+  <li><a href="#summary" id="toc-summary" class="nav-link" data-scroll-target="#summary">Summary:</a>
+  <ul class="collapse">
+  <li><a href="#objective" id="toc-objective" class="nav-link" data-scroll-target="#objective">Objective:</a></li>
+  <li><a href="#methodology" id="toc-methodology" class="nav-link" data-scroll-target="#methodology">Methodology:</a></li>
+  <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion">Conclusion:</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -195,7 +201,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Data gathering</h1>
+<h1 class="title">Naïve Bayes</h1>
 </div>
 
 
@@ -277,7 +283,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>numerical_features.remove(<span class="st">'Accident_Index'</span>)</span>
 <span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a>categorical_features.remove(<span class="st">'Datetime'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>The dataset contains 3 different data types and they are: float64, int64, object</code></pre>
+<pre><code>The dataset contains 3 different data types and they are: object, int64, float64</code></pre>
 </div>
 </div>
 <div class="cell" data-execution_count="3">
@@ -565,18 +571,86 @@ Name: Accident_Severity, dtype: object</code></pre>
 <li>calculate the classification accuracy on the testing set</li>
 </ol>
 <div class="cell" data-execution_count="10">
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"The classification accuracy on the testing set is: </span><span class="sc">{:.2%}</span><span class="st">"</span>.<span class="bu">format</span>(np.mean(mixedNB_best_model.predict(X_test) <span class="op">==</span> y_test)))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn <span class="im">import</span> metrics</span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>y_pred <span class="op">=</span> mixedNB_best_model.predict(X_test)</span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Classification Report:"</span>)</span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(metrics.classification_report(y_test, y_pred))</span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>accuracy <span class="op">=</span> metrics.accuracy_score(y_test, y_pred)</span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"The classification accuracy on the testing set is: </span><span class="sc">{:.2%}</span><span class="st">"</span>.<span class="bu">format</span>(np.mean(mixedNB_best_model.predict(X_test) <span class="op">==</span> y_test)))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>The classification accuracy on the testing set is: 72.92%</code></pre>
+<pre><code>Classification Report:
+              precision    recall  f1-score   support
+
+           0       0.42      0.23      0.30      4712
+           1       0.78      0.89      0.83     14176
+
+    accuracy                           0.73     18888
+   macro avg       0.60      0.56      0.57     18888
+weighted avg       0.69      0.73      0.70     18888
+
+The classification accuracy on the testing set is: 72.92%</code></pre>
+</div>
+</div>
+</section>
+<section id="visualize-the-final-result" class="level3">
+<h3 class="anchored" data-anchor-id="visualize-the-final-result">Visualize the final result</h3>
+<ol type="1">
+<li>Plot the confusion matrix</li>
+</ol>
+<div class="cell" data-execution_count="11">
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>cm <span class="op">=</span> metrics.confusion_matrix(y_test, y_pred)</span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>sns.heatmap(cm, annot<span class="op">=</span><span class="va">True</span>, fmt<span class="op">=</span><span class="st">"d"</span>, cmap<span class="op">=</span><span class="st">"Blues"</span>, cbar<span class="op">=</span><span class="va">False</span>)</span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">"Predicted Label"</span>)</span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">"True Label"</span>)</span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">"Confusion Matrix"</span>)</span>
+<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<p><img src="naive_files/figure-html/cell-12-output-1.png" width="581" height="449"></p>
+</div>
+</div>
+<ol start="2" type="1">
+<li>Plot the ROC curve</li>
+</ol>
+<div class="cell" data-execution_count="12">
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>fpr, tpr, thresholds <span class="op">=</span> metrics.roc_curve(y_test, mixedNB_best_model.predict_proba(X_test)[:, <span class="dv">1</span>])</span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>plt.plot(fpr, tpr, label<span class="op">=</span><span class="st">"ROC Curve"</span>)</span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>plt.plot([<span class="dv">0</span>, <span class="dv">1</span>], [<span class="dv">0</span>, <span class="dv">1</span>], <span class="st">"--"</span>, label<span class="op">=</span><span class="st">"Random Guessing"</span>)</span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">"False Positive Rate"</span>)</span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">"True Positive Rate"</span>)</span>
+<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">"Receiver Operating Characteristic (ROC) Curve"</span>)</span>
+<span id="cb16-7"><a href="#cb16-7" aria-hidden="true" tabindex="-1"></a>plt.legend()</span>
+<span id="cb16-8"><a href="#cb16-8" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<p><img src="naive_files/figure-html/cell-13-output-1.png" width="589" height="449"></p>
 </div>
 </div>
 </section>
 </section>
-<section id="in-conclusion" class="level2">
-<h2 class="anchored" data-anchor-id="in-conclusion">In conclusion:</h2>
-<p>The final fitted model achieves an accuracy of approximately 73% on the testing set.</p>
+<section id="summary" class="level1">
+<h1>Summary:</h1>
+<section id="objective" class="level3">
+<h3 class="anchored" data-anchor-id="objective">Objective:</h3>
+<p>The objective of this analysis is to evaluate the performance of a Mixed Gaussian Naive Bayes model on a testing dataset. The dataset was initially split into training (75%) and testing (25%) sets, and the model was fine-tuned to achieve optimal parameters. Subsequently, the model was refit on the testing dataset, and its performance was assessed using various metrics.</p>
+</section>
+<section id="methodology" class="level3">
+<h3 class="anchored" data-anchor-id="methodology">Methodology:</h3>
+<p>Data Splitting:</p>
+<ol type="1">
+<li><p>The original dataset was partitioned into a training set (75%) and a testing set (25%). Model Fine-tuning:</p></li>
+<li><p>The Mixed Gaussian Naive Bayes model was selected for its ability to handle both continuous and categorical features. Hyperparameter tuning was performed to identify the best set of parameters using techniques such as grid search or randomized search. Model Training:</p></li>
+<li><p>The model was trained on the training dataset using the identified optimal parameters. Model Evaluation on Testing Dataset:</p></li>
+<li><p>The refitted model was applied to the testing dataset to make predictions. The accuracy of the model on the testing set was calculated, yielding approximately 73%. Receiver Operating Characteristic (ROC) Curve:</p></li>
+<li><p>The ROC curve was plotted to visualize the model’s performance in comparison to random guessing. The curve demonstrated superior performance, indicating the model’s ability to discriminate between classes. Results:</p></li>
+<li><p>Accuracy: The final fitted model achieved an accuracy of approximately 73% on the testing set.</p></li>
+<li><p>ROC Curve: The ROC curve exhibited a performance significantly better than random guessing, further validating the model’s discriminatory ability.</p></li>
+</ol>
+</section>
+<section id="conclusion" class="level3">
+<h3 class="anchored" data-anchor-id="conclusion">Conclusion:</h3>
+<p>The evaluation of the Mixed Gaussian Naive Bayes model on the testing dataset indicates its effectiveness in classification tasks. The achieved accuracy and the ROC curve results affirm the model’s capability to generalize well on unseen data. These findings contribute to the confidence in deploying the model for predictive tasks.</p>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->

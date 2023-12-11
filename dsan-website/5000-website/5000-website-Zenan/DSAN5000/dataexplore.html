@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Data gathering</title>
+<title>Data exploring</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -210,6 +210,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#look-at-the-heatmap-of-the-numerical-variables" id="toc-look-at-the-heatmap-of-the-numerical-variables" class="nav-link" data-scroll-target="#look-at-the-heatmap-of-the-numerical-variables">Look at the heatmap of the numerical variables</a></li>
   <li><a href="#the-above-heatmap-does-not-indicate-any-unusual-correlation." id="toc-the-above-heatmap-does-not-indicate-any-unusual-correlation." class="nav-link" data-scroll-target="#the-above-heatmap-does-not-indicate-any-unusual-correlation.">The above heatmap does not indicate any unusual correlation.</a></li>
   </ul></li>
+  <li><a href="#tools-and-software" id="toc-tools-and-software" class="nav-link" data-scroll-target="#tools-and-software">Tools and software</a></li>
   </ul>
 </nav>
     </div>
@@ -218,7 +219,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Data gathering</h1>
+<h1 class="title">Data exploring</h1>
 </div>
 
 
@@ -302,117 +303,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="cell" data-execution_count="2">
 <details>
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>df.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>df.head()</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>df.to_csv(<span class="st">'./cleandata/cleanTelsa.csv'</span>, index<span class="op">=</span><span class="va">False</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
-<div class="cell-output cell-output-display" data-execution_count="2">
-<div>
-
-
-<table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
-<thead>
-<tr class="header">
-<th data-quarto-table-cell-role="th"></th>
-<th data-quarto-table-cell-role="th">Date</th>
-<th data-quarto-table-cell-role="th">Country</th>
-<th data-quarto-table-cell-role="th">State</th>
-<th data-quarto-table-cell-role="th">Description</th>
-<th data-quarto-table-cell-role="th">Deaths</th>
-<th data-quarto-table-cell-role="th">Tesla_driver</th>
-<th data-quarto-table-cell-role="th">Tesla_occupant</th>
-<th data-quarto-table-cell-role="th">Other_vehicle</th>
-<th data-quarto-table-cell-role="th">CP</th>
-<th data-quarto-table-cell-role="th">tsla+cp</th>
-<th data-quarto-table-cell-role="th">Model</th>
-<th data-quarto-table-cell-role="th">Claimed</th>
-<th data-quarto-table-cell-role="th">VTAD</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">0</td>
-<td>1/17/2023</td>
-<td>USA</td>
-<td>CA</td>
-<td>Tesla crashes into back of semi</td>
-<td>1.0</td>
-<td>1</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>1</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-</tr>
-<tr class="even">
-<td data-quarto-table-cell-role="th">1</td>
-<td>1/7/2023</td>
-<td>Canada</td>
-<td>-</td>
-<td>Tesla crashes</td>
-<td>1.0</td>
-<td>1</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>1</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-</tr>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">2</td>
-<td>1/7/2023</td>
-<td>USA</td>
-<td>WA</td>
-<td>Tesla hits pole, catches on fire</td>
-<td>1.0</td>
-<td>0</td>
-<td>1</td>
-<td>0</td>
-<td>0</td>
-<td>1</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-</tr>
-<tr class="even">
-<td data-quarto-table-cell-role="th">3</td>
-<td>12/22/2022</td>
-<td>USA</td>
-<td>GA</td>
-<td>Tesla crashes and burns</td>
-<td>1.0</td>
-<td>1</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>1</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-</tr>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">4</td>
-<td>12/19/2022</td>
-<td>Canada</td>
-<td>-</td>
-<td>Tesla crashes into storefront</td>
-<td>1.0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>1</td>
-<td>1</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-</tr>
-</tbody>
-</table>
-
-</div>
-</div>
 </div>
 </section>
 </section>
@@ -558,8 +451,10 @@ Name: Date, Length: 294, dtype: object</code></pre>
 <span id="cb11-25"><a href="#cb11-25" aria-hidden="true" tabindex="-1"></a>clusters <span class="op">=</span> kmeans.predict(X)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stderr">
-<pre><code>C:\Users\23898\anaconda\lib\site-packages\sklearn\cluster\_kmeans.py:1412: FutureWarning: The default value of `n_init` will change from 10 to 'auto' in 1.4. Set the value of `n_init` explicitly to suppress the warning
-  super()._check_params_vs_input(X, default_n_init=10)</code></pre>
+<pre><code>C:\Users\23898\anaconda\lib\site-packages\sklearn\cluster\_kmeans.py:1412: FutureWarning:
+
+The default value of `n_init` will change from 10 to 'auto' in 1.4. Set the value of `n_init` explicitly to suppress the warning
+</code></pre>
 </div>
 </div>
 </section>
@@ -1420,9 +1315,13 @@ Engine_CC</code></pre>
 </section>
 <section id="the-above-heatmap-does-not-indicate-any-unusual-correlation." class="level3">
 <h3 class="anchored" data-anchor-id="the-above-heatmap-does-not-indicate-any-unusual-correlation.">The above heatmap does not indicate any unusual correlation.</h3>
-
-
 </section>
+</section>
+<section id="tools-and-software" class="level2">
+<h2 class="anchored" data-anchor-id="tools-and-software">Tools and software</h2>
+<p>The creation of this tab primarily involves Python, utilizing essential libraries such as Pandas, Missingno, NLTK, and Seaborn.</p>
+
+
 </section>
 
 </main> <!-- /main -->

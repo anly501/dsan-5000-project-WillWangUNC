@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Data gathering</title>
+<title>Data cleaning</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -215,7 +215,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Data gathering</h1>
+<h1 class="title">Data cleaning</h1>
 </div>
 
 
@@ -551,60 +551,54 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="this-dataset-looks-good-so-far-and-will-be-stored.-i-will-do-further-cleaning-if-nececssary-in-further-analysis." class="level3">
 <h3 class="anchored" data-anchor-id="this-dataset-looks-good-so-far-and-will-be-stored.-i-will-do-further-cleaning-if-nececssary-in-further-analysis.">This dataset looks good so far and will be stored. I will do further cleaning if nececssary in further analysis.</h3>
-<div class="cell" data-execution_count="8">
-<details>
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>df.to_csv(<span class="st">'./cleandata/cleanTelsa.csv'</span>, index<span class="op">=</span><span class="va">False</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-</div>
 </section>
 </section>
 <section id="second-data-uk-road-safety-traffic-accidents-and-vehicles-gas-car" class="level2">
 <h2 class="anchored" data-anchor-id="second-data-uk-road-safety-traffic-accidents-and-vehicles-gas-car">Second data: UK Road Safety: Traffic Accidents and Vehicles (gas car)</h2>
 <section id="check-data-types-and-define-x-predictor-and-y-response-for-further-analysis-and-visualize-the-response-variable" class="level3">
 <h3 class="anchored" data-anchor-id="check-data-types-and-define-x-predictor-and-y-response-for-further-analysis-and-visualize-the-response-variable">Check data types and define X (predictor) and y (response) for further analysis and visualize the response variable</h3>
-<div class="cell" data-execution_count="9">
+<div class="cell" data-execution_count="8">
 <details>
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>data <span class="op">=</span> pd.read_csv(<span class="st">'./Data/RoadAccident.csv'</span>)</span>
-<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>column_datatypes <span class="op">=</span> <span class="bu">set</span>()</span>
-<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> column <span class="kw">in</span> data.columns:</span>
-<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>    column_datatypes.add(<span class="bu">str</span>(data[column].dtype))</span>
-<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"The dataset contains </span><span class="sc">{}</span><span class="st"> different data types and they are: </span><span class="sc">{}</span><span class="st">"</span>.<span class="bu">format</span>(<span class="bu">len</span>(column_datatypes), <span class="st">", "</span>.join(column_datatypes)))</span>
-<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a>X <span class="op">=</span> data.drop(columns<span class="op">=</span><span class="st">'Accident_Severity'</span>)</span>
-<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> data[<span class="st">'Accident_Severity'</span>]</span>
-<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a>count <span class="op">=</span> pd.value_counts(y, sort <span class="op">=</span> <span class="va">True</span>)</span>
-<span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a>count.plot(kind <span class="op">=</span> <span class="st">'bar'</span>, rot<span class="op">=</span><span class="dv">0</span>)</span>
-<span id="cb12-10"><a href="#cb12-10" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">"Distribution of Accident Severity "</span>)</span>
-<span id="cb12-11"><a href="#cb12-11" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">"Result"</span>)</span>
-<span id="cb12-12"><a href="#cb12-12" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">"Count"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>data <span class="op">=</span> pd.read_csv(<span class="st">'./Data/RoadAccident.csv'</span>)</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>column_datatypes <span class="op">=</span> <span class="bu">set</span>()</span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> column <span class="kw">in</span> data.columns:</span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>    column_datatypes.add(<span class="bu">str</span>(data[column].dtype))</span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"The dataset contains </span><span class="sc">{}</span><span class="st"> different data types and they are: </span><span class="sc">{}</span><span class="st">"</span>.<span class="bu">format</span>(<span class="bu">len</span>(column_datatypes), <span class="st">", "</span>.join(column_datatypes)))</span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>X <span class="op">=</span> data.drop(columns<span class="op">=</span><span class="st">'Accident_Severity'</span>)</span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> data[<span class="st">'Accident_Severity'</span>]</span>
+<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a>count <span class="op">=</span> pd.value_counts(y, sort <span class="op">=</span> <span class="va">True</span>)</span>
+<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a>count.plot(kind <span class="op">=</span> <span class="st">'bar'</span>, rot<span class="op">=</span><span class="dv">0</span>)</span>
+<span id="cb11-10"><a href="#cb11-10" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">"Distribution of Accident Severity "</span>)</span>
+<span id="cb11-11"><a href="#cb11-11" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">"Result"</span>)</span>
+<span id="cb11-12"><a href="#cb11-12" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">"Count"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
-<pre><code>The dataset contains 3 different data types and they are: object, float64, int64</code></pre>
+<pre><code>The dataset contains 3 different data types and they are: float64, object, int64</code></pre>
 </div>
-<div class="cell-output cell-output-display" data-execution_count="9">
+<div class="cell-output cell-output-display" data-execution_count="8">
 <pre><code>Text(0, 0.5, 'Count')</code></pre>
 </div>
 <div class="cell-output cell-output-display">
-<p><img src="dataclean_files/figure-html/cell-10-output-3.png" width="610" height="449"></p>
+<p><img src="dataclean_files/figure-html/cell-9-output-3.png" width="610" height="449"></p>
 </div>
 </div>
 </section>
 <section id="check-how-many-numerical-variables-there-are-in-the-dataset" class="level3">
 <h3 class="anchored" data-anchor-id="check-how-many-numerical-variables-there-are-in-the-dataset">Check how many numerical variables there are in the dataset</h3>
-<div class="cell" data-execution_count="10">
+<div class="cell" data-execution_count="9">
 <details>
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>numerical_features <span class="op">=</span> <span class="bu">list</span>()</span>
-<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>categorical_features <span class="op">=</span> <span class="bu">list</span>()</span>
-<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> column <span class="kw">in</span> X.columns:</span>
-<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a>    <span class="co"># In the dataset we only have float and int64.</span></span>
-<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> (data[column].dtype <span class="op">==</span> <span class="st">'float64'</span> <span class="kw">or</span> data[column].dtype <span class="op">==</span> <span class="st">'int64'</span>):</span>
-<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a>        numerical_features.append(column)</span>
-<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Categorical</span></span>
-<span id="cb15-8"><a href="#cb15-8" aria-hidden="true" tabindex="-1"></a>    <span class="cf">elif</span> (data[column].dtype <span class="op">==</span> <span class="st">'object'</span>):</span>
-<span id="cb15-9"><a href="#cb15-9" aria-hidden="true" tabindex="-1"></a>        categorical_features.append(column)</span>
-<span id="cb15-10"><a href="#cb15-10" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'There are </span><span class="sc">{}</span><span class="st"> numerical features in the dataset.'</span>.<span class="bu">format</span>(<span class="bu">len</span>(numerical_features)))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>numerical_features <span class="op">=</span> <span class="bu">list</span>()</span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>categorical_features <span class="op">=</span> <span class="bu">list</span>()</span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> column <span class="kw">in</span> X.columns:</span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>    <span class="co"># In the dataset we only have float and int64.</span></span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> (data[column].dtype <span class="op">==</span> <span class="st">'float64'</span> <span class="kw">or</span> data[column].dtype <span class="op">==</span> <span class="st">'int64'</span>):</span>
+<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a>        numerical_features.append(column)</span>
+<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Categorical</span></span>
+<span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a>    <span class="cf">elif</span> (data[column].dtype <span class="op">==</span> <span class="st">'object'</span>):</span>
+<span id="cb14-9"><a href="#cb14-9" aria-hidden="true" tabindex="-1"></a>        categorical_features.append(column)</span>
+<span id="cb14-10"><a href="#cb14-10" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'There are </span><span class="sc">{}</span><span class="st"> numerical features in the dataset.'</span>.<span class="bu">format</span>(<span class="bu">len</span>(numerical_features)))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>There are 15 numerical features in the dataset.</code></pre>
@@ -613,16 +607,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="see-the-distribution-of-each-variable-to-determine-any-possible-column-to-drop" class="level3">
 <h3 class="anchored" data-anchor-id="see-the-distribution-of-each-variable-to-determine-any-possible-column-to-drop">See the distribution of each variable to determine any possible column to drop</h3>
-<div class="cell" data-execution_count="11">
+<div class="cell" data-execution_count="10">
 <details>
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>X_num_total <span class="op">=</span> X[numerical_features]</span>
-<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>X_num_total.hist(bins<span class="op">=</span><span class="dv">60</span>,figsize<span class="op">=</span>(<span class="dv">20</span>, <span class="dv">10</span>))</span>
-<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>plt.show()</span>
-<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'Number of uniques values of Accident Index: </span><span class="sc">{}</span><span class="st">'</span>.<span class="bu">format</span>(X_num_total[<span class="st">'Accident_Index'</span>].nunique()))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>X_num_total <span class="op">=</span> X[numerical_features]</span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>X_num_total.hist(bins<span class="op">=</span><span class="dv">60</span>,figsize<span class="op">=</span>(<span class="dv">20</span>, <span class="dv">10</span>))</span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>plt.show()</span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'Number of uniques values of Accident Index: </span><span class="sc">{}</span><span class="st">'</span>.<span class="bu">format</span>(X_num_total[<span class="st">'Accident_Index'</span>].nunique()))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-display">
-<p><img src="dataclean_files/figure-html/cell-12-output-1.png" width="1559" height="801"></p>
+<p><img src="dataclean_files/figure-html/cell-11-output-1.png" width="1559" height="801"></p>
 </div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Number of uniques values of Accident Index: 75550</code></pre>
@@ -634,12 +628,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="now-we-should-check-if-there-is-any-categorical-variable-that-is-uninformative-and-should-be-dropped" class="level3">
 <h3 class="anchored" data-anchor-id="now-we-should-check-if-there-is-any-categorical-variable-that-is-uninformative-and-should-be-dropped">Now we should check if there is any categorical variable that is uninformative and should be dropped</h3>
-<div class="cell" data-execution_count="12">
+<div class="cell" data-execution_count="11">
 <details>
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'There are </span><span class="sc">{}</span><span class="st"> categorical features in the dataset.'</span>.<span class="bu">format</span>(<span class="bu">len</span>(categorical_features)))</span>
-<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>X_cat_total <span class="op">=</span> X[categorical_features]</span>
-<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'Unique values for each categorical column are:</span><span class="ch">\n</span><span class="st"> </span><span class="sc">{}</span><span class="st">'</span>.<span class="bu">format</span>(X_cat_total.nunique()))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'There are </span><span class="sc">{}</span><span class="st"> categorical features in the dataset.'</span>.<span class="bu">format</span>(<span class="bu">len</span>(categorical_features)))</span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>X_cat_total <span class="op">=</span> X[categorical_features]</span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'Unique values for each categorical column are:</span><span class="ch">\n</span><span class="st"> </span><span class="sc">{}</span><span class="st">'</span>.<span class="bu">format</span>(X_cat_total.nunique()))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>There are 17 categorical features in the dataset.
@@ -664,12 +658,12 @@ Vehicle_Manoeuvre             11
 dtype: int64</code></pre>
 </div>
 </div>
-<div class="cell" data-execution_count="13">
+<div class="cell" data-execution_count="12">
 <details>
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>data[<span class="st">'Datetime'</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>data[<span class="st">'Datetime'</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
-<div class="cell-output cell-output-display" data-execution_count="13">
+<div class="cell-output cell-output-display" data-execution_count="12">
 <pre><code>0        1/19/2010 17:30
 1         2/8/2010 11:24
 2          3/3/2010 6:25
@@ -687,34 +681,34 @@ Name: Datetime, Length: 75550, dtype: object</code></pre>
 </section>
 <section id="the-categorical-value-datetime-gives-no-useful-information-and-should-be-dropped-as-well" class="level3">
 <h3 class="anchored" data-anchor-id="the-categorical-value-datetime-gives-no-useful-information-and-should-be-dropped-as-well">The categorical value ‘Datetime’ gives no useful information and should be dropped as well</h3>
-<div class="cell" data-execution_count="14">
+<div class="cell" data-execution_count="13">
 <details>
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>X <span class="op">=</span> X.drop(columns<span class="op">=</span>[<span class="st">'Accident_Index'</span>,<span class="st">'Datetime'</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>X <span class="op">=</span> X.drop(columns<span class="op">=</span>[<span class="st">'Accident_Index'</span>,<span class="st">'Datetime'</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 </section>
 <section id="check-the-correlation-between-the-numerical-features-to-see-if-there-is-any-further-issue" class="level3">
 <h3 class="anchored" data-anchor-id="check-the-correlation-between-the-numerical-features-to-see-if-there-is-any-further-issue">Check the correlation between the numerical features to see if there is any further issue</h3>
-<div class="cell" data-execution_count="15">
+<div class="cell" data-execution_count="14">
 <details>
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>plt.subplots(figsize<span class="op">=</span>(<span class="dv">15</span>,<span class="dv">8</span>))</span>
-<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a>sns.heatmap(X_num_total.corr(), cmap<span class="op">=</span><span class="st">"YlGnBu"</span>, annot<span class="op">=</span><span class="va">True</span>)</span>
-<span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'Correlation Matrix'</span>)</span>
-<span id="cb24-4"><a href="#cb24-4" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>plt.subplots(figsize<span class="op">=</span>(<span class="dv">15</span>,<span class="dv">8</span>))</span>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a>sns.heatmap(X_num_total.corr(), cmap<span class="op">=</span><span class="st">"YlGnBu"</span>, annot<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'Correlation Matrix'</span>)</span>
+<span id="cb23-4"><a href="#cb23-4" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-display">
-<p><img src="dataclean_files/figure-html/cell-16-output-1.png" width="1183" height="774"></p>
+<p><img src="dataclean_files/figure-html/cell-15-output-1.png" width="1183" height="774"></p>
 </div>
 </div>
 </section>
 <section id="this-dataset-looks-good-so-far-and-will-be-stored.-i-will-do-further-cleaning-if-nececssary-in-further-analysis.-1" class="level3">
 <h3 class="anchored" data-anchor-id="this-dataset-looks-good-so-far-and-will-be-stored.-i-will-do-further-cleaning-if-nececssary-in-further-analysis.-1">This dataset looks good so far and will be stored. I will do further cleaning if nececssary in further analysis.</h3>
-<div class="cell" data-execution_count="16">
+<div class="cell" data-execution_count="15">
 <details>
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>X.to_csv(<span class="st">'./cleandata/cleanUKgas.csv'</span>, index<span class="op">=</span><span class="va">False</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>X.to_csv(<span class="st">'./cleandata/cleanUKgas.csv'</span>, index<span class="op">=</span><span class="va">False</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 </section>
@@ -723,70 +717,70 @@ Name: Datetime, Length: 75550, dtype: object</code></pre>
 <h2 class="anchored" data-anchor-id="third-dataset-acquired-using-news-api-and-focused-on-the-topic-of-tesla-related-accident">Third dataset (acquired using News-API and focused on the topic of ‘Tesla-related accident’)</h2>
 <section id="this-dataset-has-two-columns-and-i-will-compute-the-frequency-of-some-negative-words-in-both-columns-and-visualize-the-result" class="level3">
 <h3 class="anchored" data-anchor-id="this-dataset-has-two-columns-and-i-will-compute-the-frequency-of-some-negative-words-in-both-columns-and-visualize-the-result">This dataset has two columns, and I will compute the frequency of some negative words in both columns and visualize the result</h3>
+<div class="cell" data-execution_count="16">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.read_csv(<span class="st">'./Data/newapiTesla.csv'</span>)</span>
+<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> count_word_frequencies(data_frame, column_name, target_words):</span>
+<span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a>    text <span class="op">=</span> <span class="st">' '</span>.join(data_frame[column_name])</span>
+<span id="cb25-4"><a href="#cb25-4" aria-hidden="true" tabindex="-1"></a>    words <span class="op">=</span> text.split()</span>
+<span id="cb25-5"><a href="#cb25-5" aria-hidden="true" tabindex="-1"></a>    word_counts <span class="op">=</span> {word: words.count(word) <span class="cf">for</span> word <span class="kw">in</span> <span class="bu">set</span>(target_words)}</span>
+<span id="cb25-6"><a href="#cb25-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> word_counts</span>
+<span id="cb25-7"><a href="#cb25-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb25-8"><a href="#cb25-8" aria-hidden="true" tabindex="-1"></a>target_words <span class="op">=</span> [<span class="st">'deadly'</span>, <span class="st">'flawed'</span>, <span class="st">'death'</span>, <span class="st">'injury'</span>, <span class="st">'casualty'</span>, <span class="st">'accident'</span>, <span class="st">'casualties'</span>, <span class="st">'problem'</span>, <span class="st">'bad'</span>, <span class="st">'negative'</span>]</span>
+<span id="cb25-9"><a href="#cb25-9" aria-hidden="true" tabindex="-1"></a>word_frequencies <span class="op">=</span> count_word_frequencies(df, <span class="st">'title'</span>, target_words)</span>
+<span id="cb25-10"><a href="#cb25-10" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> word, count <span class="kw">in</span> word_frequencies.items():</span>
+<span id="cb25-11"><a href="#cb25-11" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"</span><span class="sc">{</span>word<span class="sc">}</span><span class="ss">: </span><span class="sc">{</span>count<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb25-12"><a href="#cb25-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb25-13"><a href="#cb25-13" aria-hidden="true" tabindex="-1"></a>plt.bar(word_frequencies.keys(), word_frequencies.values())</span>
+<span id="cb25-14"><a href="#cb25-14" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'Words'</span>)</span>
+<span id="cb25-15"><a href="#cb25-15" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'Frequency'</span>)</span>
+<span id="cb25-16"><a href="#cb25-16" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'Word Frequencies in title'</span>)</span>
+<span id="cb25-17"><a href="#cb25-17" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>flawed: 1
+injury: 0
+casualties: 0
+problem: 0
+bad: 0
+deadly: 0
+casualty: 0
+accident: 9
+death: 1
+negative: 0</code></pre>
+</div>
+<div class="cell-output cell-output-display">
+<p><img src="dataclean_files/figure-html/cell-17-output-2.png" width="576" height="449"></p>
+</div>
+</div>
 <div class="cell" data-execution_count="17">
 <details>
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.read_csv(<span class="st">'./Data/newapiTesla.csv'</span>)</span>
-<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> count_word_frequencies(data_frame, column_name, target_words):</span>
-<span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a>    text <span class="op">=</span> <span class="st">' '</span>.join(data_frame[column_name])</span>
-<span id="cb26-4"><a href="#cb26-4" aria-hidden="true" tabindex="-1"></a>    words <span class="op">=</span> text.split()</span>
-<span id="cb26-5"><a href="#cb26-5" aria-hidden="true" tabindex="-1"></a>    word_counts <span class="op">=</span> {word: words.count(word) <span class="cf">for</span> word <span class="kw">in</span> <span class="bu">set</span>(target_words)}</span>
-<span id="cb26-6"><a href="#cb26-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> word_counts</span>
-<span id="cb26-7"><a href="#cb26-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb26-8"><a href="#cb26-8" aria-hidden="true" tabindex="-1"></a>target_words <span class="op">=</span> [<span class="st">'deadly'</span>, <span class="st">'flawed'</span>, <span class="st">'death'</span>, <span class="st">'injury'</span>, <span class="st">'casualty'</span>, <span class="st">'accident'</span>, <span class="st">'casualties'</span>, <span class="st">'problem'</span>, <span class="st">'bad'</span>, <span class="st">'negative'</span>]</span>
-<span id="cb26-9"><a href="#cb26-9" aria-hidden="true" tabindex="-1"></a>word_frequencies <span class="op">=</span> count_word_frequencies(df, <span class="st">'title'</span>, target_words)</span>
-<span id="cb26-10"><a href="#cb26-10" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> word, count <span class="kw">in</span> word_frequencies.items():</span>
-<span id="cb26-11"><a href="#cb26-11" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"</span><span class="sc">{</span>word<span class="sc">}</span><span class="ss">: </span><span class="sc">{</span>count<span class="sc">}</span><span class="ss">"</span>)</span>
-<span id="cb26-12"><a href="#cb26-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb26-13"><a href="#cb26-13" aria-hidden="true" tabindex="-1"></a>plt.bar(word_frequencies.keys(), word_frequencies.values())</span>
-<span id="cb26-14"><a href="#cb26-14" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'Words'</span>)</span>
-<span id="cb26-15"><a href="#cb26-15" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'Frequency'</span>)</span>
-<span id="cb26-16"><a href="#cb26-16" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'Word Frequencies in title'</span>)</span>
-<span id="cb26-17"><a href="#cb26-17" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a>word_frequencies <span class="op">=</span> count_word_frequencies(df, <span class="st">'content'</span>, target_words)</span>
+<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> word, count <span class="kw">in</span> word_frequencies.items():</span>
+<span id="cb27-3"><a href="#cb27-3" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"</span><span class="sc">{</span>word<span class="sc">}</span><span class="ss">: </span><span class="sc">{</span>count<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb27-4"><a href="#cb27-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-5"><a href="#cb27-5" aria-hidden="true" tabindex="-1"></a>plt.bar(word_frequencies.keys(), word_frequencies.values())</span>
+<span id="cb27-6"><a href="#cb27-6" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'Words'</span>)</span>
+<span id="cb27-7"><a href="#cb27-7" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'Frequency'</span>)</span>
+<span id="cb27-8"><a href="#cb27-8" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'Word Frequencies in content'</span>)</span>
+<span id="cb27-9"><a href="#cb27-9" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
-<pre><code>accident: 1
-negative: 0
-death: 1
-problem: 0
-flawed: 1
+<pre><code>flawed: 0
 injury: 0
 casualties: 0
-deadly: 0
-bad: 0
-casualty: 0</code></pre>
-</div>
-<div class="cell-output cell-output-display">
-<p><img src="dataclean_files/figure-html/cell-18-output-2.png" width="589" height="449"></p>
-</div>
-</div>
-<div class="cell" data-execution_count="18">
-<details>
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a>word_frequencies <span class="op">=</span> count_word_frequencies(df, <span class="st">'content'</span>, target_words)</span>
-<span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> word, count <span class="kw">in</span> word_frequencies.items():</span>
-<span id="cb28-3"><a href="#cb28-3" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"</span><span class="sc">{</span>word<span class="sc">}</span><span class="ss">: </span><span class="sc">{</span>count<span class="sc">}</span><span class="ss">"</span>)</span>
-<span id="cb28-4"><a href="#cb28-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-5"><a href="#cb28-5" aria-hidden="true" tabindex="-1"></a>plt.bar(word_frequencies.keys(), word_frequencies.values())</span>
-<span id="cb28-6"><a href="#cb28-6" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'Words'</span>)</span>
-<span id="cb28-7"><a href="#cb28-7" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'Frequency'</span>)</span>
-<span id="cb28-8"><a href="#cb28-8" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'Word Frequencies in content'</span>)</span>
-<span id="cb28-9"><a href="#cb28-9" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-<div class="cell-output cell-output-stdout">
-<pre><code>accident: 7
-negative: 0
-death: 2
-problem: 0
-flawed: 0
-injury: 0
-casualties: 0
-deadly: 0
+problem: 1
 bad: 2
-casualty: 0</code></pre>
+deadly: 0
+casualty: 0
+accident: 13
+death: 1
+negative: 0</code></pre>
 </div>
 <div class="cell-output cell-output-display">
-<p><img src="dataclean_files/figure-html/cell-19-output-2.png" width="576" height="449"></p>
+<p><img src="dataclean_files/figure-html/cell-18-output-2.png" width="585" height="449"></p>
 </div>
 </div>
 </section>
