@@ -24,7 +24,7 @@ website:
         text: Clustering
       - href: dimreduction.ipynb
         text: Dimensionality reduction
-      - href: decisiontree.qmd
+      - href: decisiontree.ipynb
         text: Decision Trees
       - href: conclusion.qmd
         text: Conclusions
