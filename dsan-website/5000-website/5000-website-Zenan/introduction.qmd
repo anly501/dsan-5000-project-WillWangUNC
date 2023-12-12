@@ -55,12 +55,12 @@ Electric vehicles are often considered more environmentally friendly due to thei
 
 ### In conclusion, the competition between electric and gasoline vehicles is a multifaceted issue, with ongoing debates about the environmental impact, technological advancements, infrastructure development, economic factors, and consumer preferences. The future trajectory will likely involve a combination of market-driven forces, government policies, and technological breakthroughs, and diverse perspectives will continue to shape the discourse in this rapidly evolving landscape.
 
-## 10 Questions I would to answer to better explore my topic:
+## Questions I would to answer to better explore my topic:
 ### Safety:
 Question: Is an electric vehicle (EV) less controllable and more prone to casualties in the event of a crash?
 
 ### Accident severity:
-Question:  Is an accident involving an electric vehicle (EV) more likely to result in minor or severe outcomes?
+Question: Is an accident involving an electric vehicle (EV) more likely to result in minor or severe outcomes?
 
 ### Predict the accident outcome:
 Question: Is there a model available for predicting accident outcomes irrespective of whether the vehicle is electric or gasoline-powered?
@@ -68,20 +68,17 @@ Question: Is there a model available for predicting accident outcomes irrespecti
 ### The cause of the frequent accidents of EVs and solution:
 Question: What might account for the frequent accidents of EVs? 
 
-### Battery Technology Analysis:
-Question: What advancements in battery technology have had the most significant impact on the performance and cost-effectiveness of electric vehicles, and how do these innovations compare with improvements in internal combustion engine technology?
+### Which models to choose:
+Question: Which models should we opt for when predicting the outcome of an accident based on the input features of the involved cars?
+
+### Effectiveness of the selected models:
+Question: Does the selected model work well to predict the outcome of a simulated accident? 
 
 ### Government Policy Impact:
-Question: How do government policies, such as subsidies, incentives, and regulations, influence the market share and growth of electric vehicles? Can we identify policy measures that have been particularly effective?
-
-### Energy Source Analysis:
-Question: What is the current and projected mix of energy sources used to generate electricity for electric vehicles, and how does this impact the overall environmental benefits of EVs in different regions?
-Consumer Perception and Sentiment Analysis:
-
-Question: How do sentiments expressed on social media and online forums regarding electric vehicles versus gasoline cars correlate with actual market trends? Can sentiment analysis predict shifts in consumer preferences?
+Question: How do government policies, such as subsidies, incentives, and regulations, influence the the general safety of EV drivers? Can we identify policy measures that have been particularly effective?
 
 ### Predictive Maintenance for EVs:
-Question: Can we develop predictive maintenance models for electric vehicles based on data related to battery health, charging patterns, and driving conditions, to enhance the reliability and longevity of EVs?
+Question: Can we develop predictive maintenance models for electric vehicles based on data related to driving conditions to enhance the reliability of EVs?
 
-### Market Share Forecasting:
-Question: Using historical sales data, technological trends, and economic indicators, can we build a model to forecast the future market share of electric vehicles versus traditional cars, taking into account regional variations and global market dynamics?
+### Accident distribution of EV:
+Question: Is there a specific region where electric vehicles are more prone to accidents?
