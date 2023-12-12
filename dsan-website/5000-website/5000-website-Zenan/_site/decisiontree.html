@@ -191,6 +191,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#now-lets-visualize-the-decision-tree.-however-since-the-number-of-layers-is-somewhat-big-and-the-number-of-features-is-large-the-visualization-might-not-be-informative." id="toc-now-lets-visualize-the-decision-tree.-however-since-the-number-of-layers-is-somewhat-big-and-the-number-of-features-is-large-the-visualization-might-not-be-informative." class="nav-link" data-scroll-target="#now-lets-visualize-the-decision-tree.-however-since-the-number-of-layers-is-somewhat-big-and-the-number-of-features-is-large-the-visualization-might-not-be-informative.">Now let’s visualize the decision tree. However, since the number of layers is somewhat big and the number of features is large, the visualization might not be informative.</a></li>
   </ul></li>
   <li><a href="#in-summary" id="toc-in-summary" class="nav-link" data-scroll-target="#in-summary">In summary:</a></li>
+  <li><a href="#use-random-forest-classifier" id="toc-use-random-forest-classifier" class="nav-link" data-scroll-target="#use-random-forest-classifier">Use Random Forest Classifier</a>
+  <ul class="collapse">
+  <li><a href="#we-will-employ-the-identical-training-and-testing-sets-as-utilized-in-the-preceding-decision-tree-section-for-training-the-random-forest-classifier." id="toc-we-will-employ-the-identical-training-and-testing-sets-as-utilized-in-the-preceding-decision-tree-section-for-training-the-random-forest-classifier." class="nav-link" data-scroll-target="#we-will-employ-the-identical-training-and-testing-sets-as-utilized-in-the-preceding-decision-tree-section-for-training-the-random-forest-classifier.">We will employ the identical training and testing sets as utilized in the preceding decision tree section for training the random forest classifier.</a></li>
+  <li><a href="#check-accuracy-score-for-the-model" id="toc-check-accuracy-score-for-the-model" class="nav-link" data-scroll-target="#check-accuracy-score-for-the-model">Check accuracy score for the model</a></li>
+  <li><a href="#now-lets-pick-a-random-forest-classifier-with-parameter-n_estimators-equal-to-50-and-compute-the-feature-scores" id="toc-now-lets-pick-a-random-forest-classifier-with-parameter-n_estimators-equal-to-50-and-compute-the-feature-scores" class="nav-link" data-scroll-target="#now-lets-pick-a-random-forest-classifier-with-parameter-n_estimators-equal-to-50-and-compute-the-feature-scores">Now let’s pick a random forest classifier with parameter ‘n_estimators’ equal to 50 and compute the feature scores</a></li>
+  </ul></li>
+  <li><a href="#lets-visualize-the-feature-scores" id="toc-lets-visualize-the-feature-scores" class="nav-link" data-scroll-target="#lets-visualize-the-feature-scores">Let’s visualize the feature scores</a></li>
+  <li><a href="#in-summary-1" id="toc-in-summary-1" class="nav-link" data-scroll-target="#in-summary-1">In summary:</a></li>
   </ul>
 </nav>
     </div>
@@ -270,7 +278,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a>X.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
-<pre><code>The dataset contains 3 different data types and they are: float64, int64, object</code></pre>
+<pre><code>The dataset contains 3 different data types and they are: object, float64, int64</code></pre>
 </div>
 <div class="cell-output cell-output-display" data-execution_count="2">
 <div>
@@ -508,13 +516,13 @@ POSITIVE RECALL (Y=1): 1.0
 POSITIVE PRECISION (Y=1): 1.0
 [[45409     0]
  [    0 15031]]
-ACCURACY: 0.6620780939774984
-NEGATIVE RECALL (Y=0): 0.7669086402266289
-NEGATIVE PRECISION (Y=0): 0.7779274425287356
-POSITIVE RECALL (Y=1): 0.35159937073938125
-POSITIVE PRECISION (Y=1): 0.33744338198288876
-[[8663 2633]
- [2473 1341]]</code></pre>
+ACCURACY: 0.6595632031767041
+NEGATIVE RECALL (Y=0): 0.7646954674220963
+NEGATIVE PRECISION (Y=0): 0.7765192376842862
+POSITIVE RECALL (Y=1): 0.3481908757210278
+POSITIVE PRECISION (Y=1): 0.3331660812844957
+[[8638 2658]
+ [2486 1328]]</code></pre>
 </div>
 <div class="cell-output cell-output-display">
 <p><img src="decisiontree_files/figure-html/cell-6-output-2.png" width="647" height="509"></p>
@@ -592,21 +600,21 @@ POSITIVE PRECISION (Y=1): 0.33744338198288876
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>------TRAINING------
-ACCURACY: 0.8977994705493051
-NEGATIVE RECALL (Y=0): 0.9704684093461649
-NEGATIVE PRECISION (Y=0): 0.901112383445117
-POSITIVE RECALL (Y=1): 0.6782649191670548
-POSITIVE PRECISION (Y=1): 0.8837552011095701
-[[44068  1341]
- [ 4836 10195]]
+ACCURACY: 0.8980972865651886
+NEGATIVE RECALL (Y=0): 0.9707326741394877
+NEGATIVE PRECISION (Y=0): 0.9012471887139645
+POSITIVE RECALL (Y=1): 0.678664094205309
+POSITIVE PRECISION (Y=1): 0.8847354726799653
+[[44080  1329]
+ [ 4830 10201]]
 ------TEST------
-ACCURACY: 0.7031105228325613
-NEGATIVE RECALL (Y=0): 0.8416253541076487
-NEGATIVE PRECISION (Y=0): 0.7790068829891839
-POSITIVE RECALL (Y=1): 0.29286837965390666
-POSITIVE PRECISION (Y=1): 0.38437715072264284
-[[9507 1789]
- [2697 1117]]</code></pre>
+ACCURACY: 0.7015883520847122
+NEGATIVE RECALL (Y=0): 0.8402089235127479
+NEGATIVE PRECISION (Y=0): 0.778269782697827
+POSITIVE RECALL (Y=1): 0.2910330361824856
+POSITIVE PRECISION (Y=1): 0.38078902229845624
+[[9491 1805]
+ [2704 1110]]</code></pre>
 </div>
 <div class="cell-output cell-output-display">
 <p><img src="decisiontree_files/figure-html/cell-9-output-2.png" width="647" height="509"></p>
@@ -638,6 +646,64 @@ POSITIVE PRECISION (Y=1): 0.38437715072264284
 <section id="in-summary" class="level2">
 <h2 class="anchored" data-anchor-id="in-summary">In summary:</h2>
 <p>Even with a thoughtfully selected number of layers, the decision tree model remains ineffective in capturing instances of the positive class. Hence, we might choose a more complex model such as random forest.</p>
+</section>
+<section id="use-random-forest-classifier" class="level2">
+<h2 class="anchored" data-anchor-id="use-random-forest-classifier">Use Random Forest Classifier</h2>
+<section id="we-will-employ-the-identical-training-and-testing-sets-as-utilized-in-the-preceding-decision-tree-section-for-training-the-random-forest-classifier." class="level3">
+<h3 class="anchored" data-anchor-id="we-will-employ-the-identical-training-and-testing-sets-as-utilized-in-the-preceding-decision-tree-section-for-training-the-random-forest-classifier.">We will employ the identical training and testing sets as utilized in the preceding decision tree section for training the random forest classifier.</h3>
+<div class="cell" data-execution_count="10">
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.ensemble <span class="im">import</span> RandomForestClassifier</span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>rfc <span class="op">=</span> RandomForestClassifier(random_state<span class="op">=</span><span class="dv">0</span>)</span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>rfc.fit(x_train, y_train)</span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>y_pred <span class="op">=</span> rfc.predict(x_test)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="check-accuracy-score-for-the-model" class="level3">
+<h3 class="anchored" data-anchor-id="check-accuracy-score-for-the-model">Check accuracy score for the model</h3>
+<div class="cell" data-execution_count="11">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'Model accuracy score with 10 decision-trees (default): </span><span class="sc">{0:0.4f}</span><span class="st">'</span>. <span class="bu">format</span>(accuracy_score(y_test, y_pred)))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>Model accuracy score with 10 decision-trees (default): 0.7621</code></pre>
+</div>
+</div>
+</section>
+<section id="now-lets-pick-a-random-forest-classifier-with-parameter-n_estimators-equal-to-50-and-compute-the-feature-scores" class="level3">
+<h3 class="anchored" data-anchor-id="now-lets-pick-a-random-forest-classifier-with-parameter-n_estimators-equal-to-50-and-compute-the-feature-scores">Now let’s pick a random forest classifier with parameter ‘n_estimators’ equal to 50 and compute the feature scores</h3>
+<div class="cell" data-execution_count="12">
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>rfc_50 <span class="op">=</span> RandomForestClassifier(n_estimators<span class="op">=</span><span class="dv">50</span>, random_state<span class="op">=</span><span class="dv">0</span>)</span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>rfc_50.fit(x_train, y_train)</span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>y_pred_50 <span class="op">=</span> rfc_50.predict(x_test)</span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'Model accuracy score with 100 decision-trees : </span><span class="sc">{0:0.4f}</span><span class="st">'</span>. <span class="bu">format</span>(accuracy_score(y_test, y_pred_50)))</span>
+<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a>feature_scores <span class="op">=</span> pd.Series(rfc_50.feature_importances_, index<span class="op">=</span>x_train.columns).sort_values(ascending<span class="op">=</span><span class="va">False</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Model accuracy score with 100 decision-trees : 0.7611</code></pre>
+</div>
+</div>
+</section>
+</section>
+<section id="lets-visualize-the-feature-scores" class="level2">
+<h2 class="anchored" data-anchor-id="lets-visualize-the-feature-scores">Let’s visualize the feature scores</h2>
+<div class="cell" data-execution_count="13">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>sns.barplot(x<span class="op">=</span>feature_scores, y<span class="op">=</span>feature_scores.index)</span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'Feature Score'</span>)</span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'Features'</span>)</span>
+<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">"Visualizing Influential Features"</span>)</span>
+<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-display">
+<p><img src="decisiontree_files/figure-html/cell-14-output-1.png" width="744" height="455"></p>
+</div>
+</div>
+</section>
+<section id="in-summary-1" class="level2">
+<h2 class="anchored" data-anchor-id="in-summary-1">In summary:</h2>
+<p>From the above feature score results, ‘Hour_of_Day’ is the most influential feature.</p>
 
 
 </section>
