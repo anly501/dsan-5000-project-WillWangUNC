@@ -1,3 +1,3 @@
 # 501-project-template
 * this directory structure is a "recommendation" NOT a rule
-* include general information here for anyone trying to clone your repository and re-create your results
+* a guide towards my project: dsan-website/5000-website/5000-website-Zenan
